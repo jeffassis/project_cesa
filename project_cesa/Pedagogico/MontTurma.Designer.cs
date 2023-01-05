@@ -33,6 +33,11 @@ namespace project_cesa.Pedagogico
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmMontTurma));
             this.panel1 = new System.Windows.Forms.Panel();
+            this.btnImprimir = new System.Windows.Forms.Button();
+            this.btnFechar = new System.Windows.Forms.Button();
+            this.btnDelete = new System.Windows.Forms.Button();
+            this.btnSave = new System.Windows.Forms.Button();
+            this.btnNovo = new System.Windows.Forms.Button();
             this.grid = new System.Windows.Forms.DataGridView();
             this.label1 = new System.Windows.Forms.Label();
             this.txtAluno = new System.Windows.Forms.TextBox();
@@ -40,11 +45,6 @@ namespace project_cesa.Pedagogico
             this.btnAluno = new System.Windows.Forms.Button();
             this.cbTurma = new System.Windows.Forms.ComboBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.btnImprimir = new System.Windows.Forms.Button();
-            this.btnFechar = new System.Windows.Forms.Button();
-            this.btnDelete = new System.Windows.Forms.Button();
-            this.btnSave = new System.Windows.Forms.Button();
-            this.btnNovo = new System.Windows.Forms.Button();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.grid)).BeginInit();
@@ -62,6 +62,68 @@ namespace project_cesa.Pedagogico
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(430, 47);
             this.panel1.TabIndex = 23;
+            // 
+            // btnImprimir
+            // 
+            this.btnImprimir.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnImprimir.Image = global::project_cesa.Properties.Resources.imprimir_24;
+            this.btnImprimir.Location = new System.Drawing.Point(140, 3);
+            this.btnImprimir.Name = "btnImprimir";
+            this.btnImprimir.Size = new System.Drawing.Size(36, 36);
+            this.btnImprimir.TabIndex = 5;
+            this.toolTip1.SetToolTip(this.btnImprimir, "Imprimir Turma");
+            this.btnImprimir.UseVisualStyleBackColor = true;
+            this.btnImprimir.Click += new System.EventHandler(this.btnImprimir_Click);
+            // 
+            // btnFechar
+            // 
+            this.btnFechar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnFechar.Image = global::project_cesa.Properties.Resources.bt_fechar_24;
+            this.btnFechar.Location = new System.Drawing.Point(382, 3);
+            this.btnFechar.Name = "btnFechar";
+            this.btnFechar.Size = new System.Drawing.Size(36, 36);
+            this.btnFechar.TabIndex = 4;
+            this.toolTip1.SetToolTip(this.btnFechar, "Fechar");
+            this.btnFechar.UseVisualStyleBackColor = true;
+            this.btnFechar.Click += new System.EventHandler(this.btnFechar_Click);
+            // 
+            // btnDelete
+            // 
+            this.btnDelete.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnDelete.Enabled = false;
+            this.btnDelete.Image = global::project_cesa.Properties.Resources.bt_delete;
+            this.btnDelete.Location = new System.Drawing.Point(96, 3);
+            this.btnDelete.Name = "btnDelete";
+            this.btnDelete.Size = new System.Drawing.Size(36, 36);
+            this.btnDelete.TabIndex = 3;
+            this.toolTip1.SetToolTip(this.btnDelete, "Remover alunos");
+            this.btnDelete.UseVisualStyleBackColor = true;
+            this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
+            // 
+            // btnSave
+            // 
+            this.btnSave.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnSave.Enabled = false;
+            this.btnSave.Image = global::project_cesa.Properties.Resources.bt_save_24;
+            this.btnSave.Location = new System.Drawing.Point(54, 3);
+            this.btnSave.Name = "btnSave";
+            this.btnSave.Size = new System.Drawing.Size(36, 36);
+            this.btnSave.TabIndex = 1;
+            this.toolTip1.SetToolTip(this.btnSave, "Adicionar alunos");
+            this.btnSave.UseVisualStyleBackColor = true;
+            this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
+            // 
+            // btnNovo
+            // 
+            this.btnNovo.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnNovo.Image = global::project_cesa.Properties.Resources.bt_novo_24;
+            this.btnNovo.Location = new System.Drawing.Point(12, 3);
+            this.btnNovo.Name = "btnNovo";
+            this.btnNovo.Size = new System.Drawing.Size(36, 36);
+            this.btnNovo.TabIndex = 0;
+            this.toolTip1.SetToolTip(this.btnNovo, "Novo registro");
+            this.btnNovo.UseVisualStyleBackColor = true;
+            this.btnNovo.Click += new System.EventHandler(this.btnNovo_Click);
             // 
             // grid
             // 
@@ -147,67 +209,6 @@ namespace project_cesa.Pedagogico
             this.label3.Size = new System.Drawing.Size(53, 15);
             this.label3.TabIndex = 34;
             this.label3.Text = "Turma.:";
-            // 
-            // btnImprimir
-            // 
-            this.btnImprimir.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnImprimir.Image = global::project_cesa.Properties.Resources.imprimir_24;
-            this.btnImprimir.Location = new System.Drawing.Point(140, 3);
-            this.btnImprimir.Name = "btnImprimir";
-            this.btnImprimir.Size = new System.Drawing.Size(36, 36);
-            this.btnImprimir.TabIndex = 5;
-            this.toolTip1.SetToolTip(this.btnImprimir, "Imprimir Turma");
-            this.btnImprimir.UseVisualStyleBackColor = true;
-            // 
-            // btnFechar
-            // 
-            this.btnFechar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnFechar.Image = global::project_cesa.Properties.Resources.bt_fechar_24;
-            this.btnFechar.Location = new System.Drawing.Point(382, 3);
-            this.btnFechar.Name = "btnFechar";
-            this.btnFechar.Size = new System.Drawing.Size(36, 36);
-            this.btnFechar.TabIndex = 4;
-            this.toolTip1.SetToolTip(this.btnFechar, "Fechar");
-            this.btnFechar.UseVisualStyleBackColor = true;
-            this.btnFechar.Click += new System.EventHandler(this.btnFechar_Click);
-            // 
-            // btnDelete
-            // 
-            this.btnDelete.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnDelete.Enabled = false;
-            this.btnDelete.Image = global::project_cesa.Properties.Resources.bt_delete;
-            this.btnDelete.Location = new System.Drawing.Point(96, 3);
-            this.btnDelete.Name = "btnDelete";
-            this.btnDelete.Size = new System.Drawing.Size(36, 36);
-            this.btnDelete.TabIndex = 3;
-            this.toolTip1.SetToolTip(this.btnDelete, "Remover alunos");
-            this.btnDelete.UseVisualStyleBackColor = true;
-            this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
-            // 
-            // btnSave
-            // 
-            this.btnSave.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnSave.Enabled = false;
-            this.btnSave.Image = global::project_cesa.Properties.Resources.bt_save_24;
-            this.btnSave.Location = new System.Drawing.Point(54, 3);
-            this.btnSave.Name = "btnSave";
-            this.btnSave.Size = new System.Drawing.Size(36, 36);
-            this.btnSave.TabIndex = 1;
-            this.toolTip1.SetToolTip(this.btnSave, "Adicionar alunos");
-            this.btnSave.UseVisualStyleBackColor = true;
-            this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
-            // 
-            // btnNovo
-            // 
-            this.btnNovo.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnNovo.Image = global::project_cesa.Properties.Resources.bt_novo_24;
-            this.btnNovo.Location = new System.Drawing.Point(12, 3);
-            this.btnNovo.Name = "btnNovo";
-            this.btnNovo.Size = new System.Drawing.Size(36, 36);
-            this.btnNovo.TabIndex = 0;
-            this.toolTip1.SetToolTip(this.btnNovo, "Novo registro");
-            this.btnNovo.UseVisualStyleBackColor = true;
-            this.btnNovo.Click += new System.EventHandler(this.btnNovo_Click);
             // 
             // FrmMontTurma
             // 

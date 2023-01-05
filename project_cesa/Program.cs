@@ -13,6 +13,9 @@ namespace project_cesa
         public static string nomeAluno;
         public static string idAluno;
 
+
+        public static string idSerieTurma;
+
         /// <summary>
         /// Ponto de entrada principal para o aplicativo.
         /// </summary>

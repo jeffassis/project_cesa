@@ -24,8 +24,10 @@ namespace project_cesa.Pedagogico
             grid.Columns[1].HeaderText = "ALUNO";
             grid.Columns[2].HeaderText = "SERIE";
             grid.Columns[3].HeaderText = "TURMA";
+            grid.Columns[4].HeaderText = "ID_TURMA";
 
             grid.Columns[0].Visible = false;
+            grid.Columns[4].Visible = false;
 
             grid.Columns[1].Width = 170;
             grid.Columns[3].Width = 88;
@@ -38,7 +40,8 @@ namespace project_cesa.Pedagogico
 	                    tbd.id,
 	                    tba.nome,
                         tbt.serie,
-                        tbt.nome                        
+                        tbt.nome,
+                        tbt.id_turma
                     FROM
 	                    tb_aluno_turma as tbd
                     INNER JOIN
@@ -108,14 +111,16 @@ namespace project_cesa.Pedagogico
 
         private void FrmMontTurma_Activated(object sender, EventArgs e)
         {
-            txtAluno.Text = Program.nomeAluno;
+            txtAluno.Text = Program.nomeAluno;            
         }
 
         private void cbTurma_SelectionChangeCommitted(object sender, EventArgs e)
-        {
+        {            
             if (cbTurma.SelectedValue != null)
-            {
+            {                
                 Listar();
+                // Passo o id da turma para o relatorio
+                Program.idSerieTurma = cbTurma.SelectedValue.ToString();
             }
         }
 
@@ -169,6 +174,12 @@ namespace project_cesa.Pedagogico
             btnDelete.Enabled = true;
             btnSave.Enabled = false;
             habilitarCampos();
+        }
+
+        private void btnImprimir_Click(object sender, EventArgs e)
+        {
+            Relatorios.Relatorio_Turma form = new Relatorios.Relatorio_Turma();
+            form.ShowDialog();
         }
     }
 }
