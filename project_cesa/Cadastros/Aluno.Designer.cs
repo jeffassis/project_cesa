@@ -185,14 +185,15 @@ namespace project_cesa.Cadastros
             // 
             // txtData
             // 
-            this.txtData.CustomFormat = "dd-MM-yyyy";
+            this.txtData.CustomFormat = "yyyy-MM-dd";
             this.txtData.Enabled = false;
             this.txtData.Font = new System.Drawing.Font("Calisto MT", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtData.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.txtData.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.txtData.Location = new System.Drawing.Point(12, 317);
             this.txtData.Name = "txtData";
             this.txtData.Size = new System.Drawing.Size(111, 23);
             this.txtData.TabIndex = 7;
+            this.txtData.Value = new System.DateTime(2023, 1, 7, 0, 0, 0, 0);
             // 
             // label8
             // 

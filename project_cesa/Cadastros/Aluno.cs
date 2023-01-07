@@ -37,16 +37,18 @@ namespace project_cesa.Cadastros
             grid.Columns[2].Visible = false;
             grid.Columns[4].Visible = false;
             grid.Columns[5].Visible = false;
+            grid.Columns[7].Visible = false;
             grid.Columns[8].Visible = false;
             grid.Columns[9].Visible = false;
 
-            //grid.Columns[1].Width = 200;
+            grid.Columns[1].Width = 160;
+            grid.Columns[3].Width = 140;
         }
 
         private void Listar()
         {
             string queryListar = "SELECT * FROM tb_aluno ORDER BY nome asc";
-            grid.DataSource = Conexao.dql(queryListar);          
+            grid.DataSource = Conexao.dql(queryListar);      
 
             FormatarDG();
         }
@@ -82,6 +84,7 @@ namespace project_cesa.Cadastros
             txtData.Enabled = false;
             txtTelefone.Enabled = false;
             cbSangue.Enabled = false;
+            txtBuscarNome.Focus();
         }
 
         private void limparCampos()
@@ -91,7 +94,7 @@ namespace project_cesa.Cadastros
             txtEndereco.Text = "";
             txtBairro.Text = "";
             txtCep.Text = "";
-            txtData.Text = "";
+            //txtData.Text = "";
             txtTelefone.Text = "";
             cbSangue.SelectedIndex = -1;
         }        
@@ -231,7 +234,7 @@ namespace project_cesa.Cadastros
             txtEndereco.Text = grid.CurrentRow.Cells[3].Value.ToString();
             txtBairro.Text = grid.CurrentRow.Cells[4].Value.ToString();
             txtCep.Text = grid.CurrentRow.Cells[5].Value.ToString();
-            txtData.Text = grid.CurrentRow.Cells[6].Value.ToString();
+            txtData.Text= grid.CurrentRow.Cells[6].Value.ToString();
             txtTelefone.Text = grid.CurrentRow.Cells[7].Value.ToString();
             cbSangue.Text = grid.CurrentRow.Cells[8].Value.ToString();
             pictureBox1.Text = grid.CurrentRow.Cells[9].Value.ToString();

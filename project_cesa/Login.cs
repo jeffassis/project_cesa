@@ -52,8 +52,8 @@ namespace project_cesa
                 form1.lbl_nomeUsuario.Text = dt.Rows[0].Field<string>("nome");
                 form1.pictureBox1.Image = Properties.Resources.led_green;
 
-                Globais.nivel = int.Parse(dt.Rows[0].Field<Int64>("nivel").ToString());
-                Globais.logado = true;
+                Program.nivel = int.Parse(dt.Rows[0].Field<Int64>("nivel").ToString());
+                Program.logado = true;
                 this.Close();
             }
             else

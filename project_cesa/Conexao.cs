@@ -16,7 +16,7 @@ namespace project_cesa
         // Abre a conexao com banco de dados
         public static MySqlConnection ConexaoBanco()
         {
-            conn = new MySqlConnection(Globais.caminhoBanco);
+            conn = new MySqlConnection(Program.caminhoBanco);
             conn.Open();
             return conn;
         }

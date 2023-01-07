@@ -52,8 +52,11 @@
       <HintPath>..\packages\Microsoft.SqlServer.Types.14.0.314.76\lib\net40\Microsoft.SqlServer.Types.dll</HintPath>
     </Reference>
     <Reference Include="MySql.Data, Version=8.0.16.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL" />
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Xaml" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -63,6 +66,9 @@
     <Reference Include="System.Net.Http" />
     <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
+    <Reference Include="UIAutomationProvider" />
+    <Reference Include="WindowsBase" />
+    <Reference Include="WindowsFormsIntegration" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Cadastros\Aluno.cs">
@@ -84,18 +90,29 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
-    <Compile Include="Globais.cs" />
     <Compile Include="Login.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Login.Designer.cs">
       <DependentUpon>Login.cs</DependentUpon>
     </Compile>
+    <Compile Include="Pedagogico\Disciplina.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Pedagogico\Disciplina.Designer.cs">
+      <DependentUpon>Disciplina.cs</DependentUpon>
+    </Compile>
     <Compile Include="Pedagogico\Horario.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Pedagogico\Horario.Designer.cs">
       <DependentUpon>Horario.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Pedagogico\MontHorario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Pedagogico\MontHorario.Designer.cs">
+      <DependentUpon>MontHorario.cs</DependentUpon>
     </Compile>
     <Compile Include="Pedagogico\MontTurma.cs">
       <SubType>Form</SubType>
@@ -119,6 +136,12 @@
       <DependentUpon>project_escolaDataSet.xsd</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Relatorios\Relatorio_Horario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Relatorios\Relatorio_Horario.Designer.cs">
+      <DependentUpon>Relatorio_Horario.cs</DependentUpon>
+    </Compile>
     <Compile Include="Relatorios\Relatorio_Turma.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -138,8 +161,14 @@
     <EmbeddedResource Include="Login.resx">
       <DependentUpon>Login.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Pedagogico\Disciplina.resx">
+      <DependentUpon>Disciplina.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Pedagogico\Horario.resx">
       <DependentUpon>Horario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pedagogico\MontHorario.resx">
+      <DependentUpon>MontHorario.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Pedagogico\MontTurma.resx">
       <DependentUpon>MontTurma.cs</DependentUpon>
@@ -157,9 +186,13 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="Relatorios\Relatorio_Horario.resx">
+      <DependentUpon>Relatorio_Horario.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Relatorios\Relatorio_Turma.resx">
       <DependentUpon>Relatorio_Turma.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Relatorios\RelHorario.rdlc" />
     <EmbeddedResource Include="Relatorios\RelTurma1.rdlc" />
     <None Include="packages.config" />
     <None Include="project_escolaDataSet.xsc">

@@ -146,6 +146,7 @@
             this.disciplinasToolStripMenuItem.Name = "disciplinasToolStripMenuItem";
             this.disciplinasToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.disciplinasToolStripMenuItem.Text = "Disciplinas";
+            this.disciplinasToolStripMenuItem.Click += new System.EventHandler(this.disciplinasToolStripMenuItem_Click);
             // 
             // horáriosToolStripMenuItem
             // 
@@ -172,6 +173,7 @@
             this.montagemDeHoráriosToolStripMenuItem.Name = "montagemDeHoráriosToolStripMenuItem";
             this.montagemDeHoráriosToolStripMenuItem.Size = new System.Drawing.Size(202, 22);
             this.montagemDeHoráriosToolStripMenuItem.Text = "Montagem de Horários";
+            this.montagemDeHoráriosToolStripMenuItem.Click += new System.EventHandler(this.montagemDeHoráriosToolStripMenuItem_Click);
             // 
             // notasToolStripMenuItem
             // 
