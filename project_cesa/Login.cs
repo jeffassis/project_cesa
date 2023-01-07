@@ -49,7 +49,7 @@ namespace project_cesa
             if (dt.Rows.Count == 1)
             {
                 form1.lbl_acesso.Text = dt.Rows[0].ItemArray[5].ToString();
-                form1.lbl_nomeUsuario.Text = dt.Rows[0].Field<string>("nome");
+                form1.lbl_nomeUsuario.Text = dt.Rows[0].Field<string>("username");
                 form1.pictureBox1.Image = Properties.Resources.led_green;
 
                 Program.nivel = int.Parse(dt.Rows[0].Field<Int64>("nivel").ToString());

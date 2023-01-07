@@ -108,5 +108,11 @@ namespace project_cesa
             Pedagogico.FrmMontHorario form = new Pedagogico.FrmMontHorario();
             abreForm(1, form);
         }
+
+        private void gestãoDeUsuáriosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Cadastros.FrmUsuario form = new Cadastros.FrmUsuario();
+            abreForm(2, form);
+        }
     }
 }

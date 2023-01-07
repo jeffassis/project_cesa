@@ -67,7 +67,7 @@ namespace project_cesa.Pedagogico
             // 
             this.btnImprimir.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnImprimir.Image = global::project_cesa.Properties.Resources.imprimir_24;
-            this.btnImprimir.Location = new System.Drawing.Point(140, 3);
+            this.btnImprimir.Location = new System.Drawing.Point(223, 3);
             this.btnImprimir.Name = "btnImprimir";
             this.btnImprimir.Size = new System.Drawing.Size(36, 36);
             this.btnImprimir.TabIndex = 5;
