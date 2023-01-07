@@ -30,36 +30,29 @@ namespace project_cesa.Relatorios
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            Microsoft.Reporting.WinForms.ReportDataSource reportDataSource1 = new Microsoft.Reporting.WinForms.ReportDataSource();
             System.Windows.Forms.Label nomeLabel;
-            this.reportViewer1 = new Microsoft.Reporting.WinForms.ReportViewer();
-            this.txt_nome = new System.Windows.Forms.TextBox();
-            this.button1 = new System.Windows.Forms.Button();
+            Microsoft.Reporting.WinForms.ReportDataSource reportDataSource2 = new Microsoft.Reporting.WinForms.ReportDataSource();
             this.montTurmaBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.project_escolaDataSet = new project_cesa.project_escolaDataSet();
+            this.reportViewer1 = new Microsoft.Reporting.WinForms.ReportViewer();
+            this.button1 = new System.Windows.Forms.Button();
             this.montTurmaTableAdapter = new project_cesa.project_escolaDataSetTableAdapters.MontTurmaTableAdapter();
             this.tableAdapterManager = new project_cesa.project_escolaDataSetTableAdapters.TableAdapterManager();
+            this.cbTurma = new System.Windows.Forms.ComboBox();
             nomeLabel = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.montTurmaBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.project_escolaDataSet)).BeginInit();
             this.SuspendLayout();
             // 
-            // reportViewer1
+            // montTurmaBindingSource
             // 
-            this.reportViewer1.Dock = System.Windows.Forms.DockStyle.Fill;
-            reportDataSource1.Name = "DS_MontTurma";
-            reportDataSource1.Value = this.montTurmaBindingSource;
-            this.reportViewer1.LocalReport.DataSources.Add(reportDataSource1);
-            this.reportViewer1.LocalReport.ReportEmbeddedResource = "project_cesa.Relatorios.RelTurma1.rdlc";
-            this.reportViewer1.Location = new System.Drawing.Point(0, 0);
-            this.reportViewer1.Name = "reportViewer1";
-            this.reportViewer1.ServerReport.BearerToken = null;
-            this.reportViewer1.ShowBackButton = false;
-            this.reportViewer1.ShowFindControls = false;
-            this.reportViewer1.ShowRefreshButton = false;
-            this.reportViewer1.ShowStopButton = false;
-            this.reportViewer1.Size = new System.Drawing.Size(712, 467);
-            this.reportViewer1.TabIndex = 0;
+            this.montTurmaBindingSource.DataMember = "MontTurma";
+            this.montTurmaBindingSource.DataSource = this.project_escolaDataSet;
+            // 
+            // project_escolaDataSet
+            // 
+            this.project_escolaDataSet.DataSetName = "project_escolaDataSet";
+            this.project_escolaDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // nomeLabel
             // 
@@ -74,13 +67,22 @@ namespace project_cesa.Relatorios
             nomeLabel.TabIndex = 3;
             nomeLabel.Text = "TURMA:";
             // 
-            // txt_nome
+            // reportViewer1
             // 
-            this.txt_nome.Font = new System.Drawing.Font("Calisto MT", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_nome.Location = new System.Drawing.Point(512, 4);
-            this.txt_nome.Name = "txt_nome";
-            this.txt_nome.Size = new System.Drawing.Size(121, 20);
-            this.txt_nome.TabIndex = 1;
+            this.reportViewer1.Dock = System.Windows.Forms.DockStyle.Fill;
+            reportDataSource2.Name = "DS_MontTurma";
+            reportDataSource2.Value = this.montTurmaBindingSource;
+            this.reportViewer1.LocalReport.DataSources.Add(reportDataSource2);
+            this.reportViewer1.LocalReport.ReportEmbeddedResource = "project_cesa.Relatorios.RelTurma1.rdlc";
+            this.reportViewer1.Location = new System.Drawing.Point(0, 0);
+            this.reportViewer1.Name = "reportViewer1";
+            this.reportViewer1.ServerReport.BearerToken = null;
+            this.reportViewer1.ShowBackButton = false;
+            this.reportViewer1.ShowFindControls = false;
+            this.reportViewer1.ShowRefreshButton = false;
+            this.reportViewer1.ShowStopButton = false;
+            this.reportViewer1.Size = new System.Drawing.Size(712, 467);
+            this.reportViewer1.TabIndex = 0;
             // 
             // button1
             // 
@@ -92,16 +94,6 @@ namespace project_cesa.Relatorios
             this.button1.TabIndex = 2;
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
-            // 
-            // montTurmaBindingSource
-            // 
-            this.montTurmaBindingSource.DataMember = "MontTurma";
-            this.montTurmaBindingSource.DataSource = this.project_escolaDataSet;
-            // 
-            // project_escolaDataSet
-            // 
-            this.project_escolaDataSet.DataSetName = "project_escolaDataSet";
-            this.project_escolaDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // montTurmaTableAdapter
             // 
@@ -124,13 +116,21 @@ namespace project_cesa.Relatorios
             this.tableAdapterManager.tb_userTableAdapter = null;
             this.tableAdapterManager.UpdateOrder = project_cesa.project_escolaDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
             // 
+            // cbTurma
+            // 
+            this.cbTurma.FormattingEnabled = true;
+            this.cbTurma.Location = new System.Drawing.Point(508, 2);
+            this.cbTurma.Name = "cbTurma";
+            this.cbTurma.Size = new System.Drawing.Size(121, 21);
+            this.cbTurma.TabIndex = 4;
+            // 
             // Relatorio_Turma
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.InactiveCaption;
             this.ClientSize = new System.Drawing.Size(712, 467);
-            this.Controls.Add(this.txt_nome);
+            this.Controls.Add(this.cbTurma);
             this.Controls.Add(this.button1);
             this.Controls.Add(nomeLabel);
             this.Controls.Add(this.reportViewer1);
@@ -153,6 +153,6 @@ namespace project_cesa.Relatorios
         private System.Windows.Forms.BindingSource montTurmaBindingSource;
         private project_escolaDataSetTableAdapters.TableAdapterManager tableAdapterManager;
         private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.TextBox txt_nome;
+        private System.Windows.Forms.ComboBox cbTurma;
     }
 }
