@@ -126,6 +126,12 @@
     <Compile Include="Pedagogico\MontTurma.Designer.cs">
       <DependentUpon>MontTurma.cs</DependentUpon>
     </Compile>
+    <Compile Include="Pedagogico\Notas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Pedagogico\Notas.Designer.cs">
+      <DependentUpon>Notas.cs</DependentUpon>
+    </Compile>
     <Compile Include="Pedagogico\Turma.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -181,6 +187,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Pedagogico\MontTurma.resx">
       <DependentUpon>MontTurma.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pedagogico\Notas.resx">
+      <DependentUpon>Notas.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Pedagogico\Turma.resx">
       <DependentUpon>Turma.cs</DependentUpon>
@@ -321,6 +330,11 @@
   <ItemGroup>
     <None Include="Resources\pesquisa_16.png" />
     <None Include="Resources\users.png" />
+    <None Include="Resources\manutencao_20.png" />
+    <None Include="Resources\bancoDados_20.png" />
+    <None Include="Resources\caveira_20.png" />
+    <None Include="Resources\arma_20.png" />
+    <None Include="Resources\carrinho_compras_20.png" />
     <Content Include="SqlServerTypes\readme.htm" />
     <Content Include="SqlServerTypes\x64\msvcr120.dll">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>

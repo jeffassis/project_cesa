@@ -73,6 +73,26 @@ namespace project_cesa.Properties {
         /// <summary>
         ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap arma_20 {
+            get {
+                object obj = ResourceManager.GetObject("arma_20", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap bancoDados_20 {
+            get {
+                object obj = ResourceManager.GetObject("bancoDados_20", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap bt_delete {
             get {
                 object obj = ResourceManager.GetObject("bt_delete", resourceCulture);
@@ -136,6 +156,26 @@ namespace project_cesa.Properties {
         internal static System.Drawing.Bitmap btn_plus_20 {
             get {
                 object obj = ResourceManager.GetObject("btn_plus_20", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap carrinho_compras_20 {
+            get {
+                object obj = ResourceManager.GetObject("carrinho_compras_20", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap caveira_20 {
+            get {
+                object obj = ResourceManager.GetObject("caveira_20", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -226,6 +266,16 @@ namespace project_cesa.Properties {
         internal static System.Drawing.Bitmap logON {
             get {
                 object obj = ResourceManager.GetObject("logON", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap manutencao_20 {
+            get {
+                object obj = ResourceManager.GetObject("manutencao_20", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

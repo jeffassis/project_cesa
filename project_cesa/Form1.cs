@@ -114,5 +114,25 @@ namespace project_cesa
             Cadastros.FrmUsuario form = new Cadastros.FrmUsuario();
             abreForm(2, form);
         }
+
+        private void lançamentoDeNotasToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Pedagogico.FrmNotas form = new Pedagogico.FrmNotas();
+            abreForm(0, form);
+        }
+
+        private void sobreNósToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show(@"Quality Engineer: Jefferson Assis "+"\n"+
+                "Tel:(21) 981792-2516"+"\n"+
+                "Email: jeff-assis@hotmail.com" + "\n"+
+                "Github: jeffassis", "Sistema Desenvolvido...", MessageBoxButtons.OK, MessageBoxIcon.Information);
+        }
+
+        private void turmasToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            Relatorios.Relatorio_Turma form = new Relatorios.Relatorio_Turma();
+            form.ShowDialog();
+        }
     }
 }
