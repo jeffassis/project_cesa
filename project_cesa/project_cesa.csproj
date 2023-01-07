@@ -83,6 +83,12 @@
     <Compile Include="Cadastros\Responsavel.Designer.cs">
       <DependentUpon>Responsavel.cs</DependentUpon>
     </Compile>
+    <Compile Include="Cadastros\Usuario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Cadastros\Usuario.Designer.cs">
+      <DependentUpon>Usuario.cs</DependentUpon>
+    </Compile>
     <Compile Include="Conexao.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
@@ -154,6 +160,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Cadastros\Responsavel.resx">
       <DependentUpon>Responsavel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Cadastros\Usuario.resx">
+      <DependentUpon>Usuario.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
@@ -310,6 +319,8 @@
     <None Include="Resources\imprimir_24.png" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Resources\pesquisa_16.png" />
+    <None Include="Resources\users.png" />
     <Content Include="SqlServerTypes\readme.htm" />
     <Content Include="SqlServerTypes\x64\msvcr120.dll">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>

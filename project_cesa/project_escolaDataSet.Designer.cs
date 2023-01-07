@@ -3068,9 +3068,9 @@ namespace project_cesa {
             
             private global::System.Data.DataColumn columnserie;
             
-            private global::System.Data.DataColumn columnExpr1;
-            
             private global::System.Data.DataColumn columnid_turma;
+            
+            private global::System.Data.DataColumn columnturma;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
@@ -3131,17 +3131,17 @@ namespace project_cesa {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public global::System.Data.DataColumn Expr1Column {
+            public global::System.Data.DataColumn id_turmaColumn {
                 get {
-                    return this.columnExpr1;
+                    return this.columnid_turma;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public global::System.Data.DataColumn id_turmaColumn {
+            public global::System.Data.DataColumn turmaColumn {
                 get {
-                    return this.columnid_turma;
+                    return this.columnturma;
                 }
             }
             
@@ -3182,14 +3182,14 @@ namespace project_cesa {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public MontTurmaRow AddMontTurmaRow(string nome, string serie, string Expr1) {
+            public MontTurmaRow AddMontTurmaRow(string nome, string serie, string turma) {
                 MontTurmaRow rowMontTurmaRow = ((MontTurmaRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         null,
                         nome,
                         serie,
-                        Expr1,
-                        null};
+                        null,
+                        turma};
                 rowMontTurmaRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowMontTurmaRow);
                 return rowMontTurmaRow;
@@ -3222,8 +3222,8 @@ namespace project_cesa {
                 this.columnid = base.Columns["id"];
                 this.columnnome = base.Columns["nome"];
                 this.columnserie = base.Columns["serie"];
-                this.columnExpr1 = base.Columns["Expr1"];
                 this.columnid_turma = base.Columns["id_turma"];
+                this.columnturma = base.Columns["turma"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -3235,10 +3235,10 @@ namespace project_cesa {
                 base.Columns.Add(this.columnnome);
                 this.columnserie = new global::System.Data.DataColumn("serie", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnserie);
-                this.columnExpr1 = new global::System.Data.DataColumn("Expr1", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnExpr1);
                 this.columnid_turma = new global::System.Data.DataColumn("id_turma", typeof(int), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnid_turma);
+                this.columnturma = new global::System.Data.DataColumn("turma", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnturma);
                 this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
                                 this.columnid}, true));
                 this.columnid.AutoIncrement = true;
@@ -3250,12 +3250,12 @@ namespace project_cesa {
                 this.columnnome.MaxLength = 50;
                 this.columnserie.AllowDBNull = false;
                 this.columnserie.MaxLength = 20;
-                this.columnExpr1.AllowDBNull = false;
-                this.columnExpr1.MaxLength = 20;
                 this.columnid_turma.AutoIncrement = true;
                 this.columnid_turma.AutoIncrementSeed = -1;
                 this.columnid_turma.AutoIncrementStep = -1;
                 this.columnid_turma.AllowDBNull = false;
+                this.columnturma.AllowDBNull = false;
+                this.columnturma.MaxLength = 20;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -5664,23 +5664,23 @@ namespace project_cesa {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public string Expr1 {
-                get {
-                    return ((string)(this[this.tableMontTurma.Expr1Column]));
-                }
-                set {
-                    this[this.tableMontTurma.Expr1Column] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public int id_turma {
                 get {
                     return ((int)(this[this.tableMontTurma.id_turmaColumn]));
                 }
                 set {
                     this[this.tableMontTurma.id_turmaColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public string turma {
+                get {
+                    return ((string)(this[this.tableMontTurma.turmaColumn]));
+                }
+                set {
+                    this[this.tableMontTurma.turmaColumn] = value;
                 }
             }
         }
@@ -10284,8 +10284,8 @@ namespace project_cesa.project_escolaDataSetTableAdapters {
             tableMapping.ColumnMappings.Add("id", "id");
             tableMapping.ColumnMappings.Add("nome", "nome");
             tableMapping.ColumnMappings.Add("serie", "serie");
-            tableMapping.ColumnMappings.Add("Expr1", "Expr1");
             tableMapping.ColumnMappings.Add("id_turma", "id_turma");
+            tableMapping.ColumnMappings.Add("turma", "turma");
             this._adapter.TableMappings.Add(tableMapping);
         }
         
@@ -10302,19 +10302,20 @@ namespace project_cesa.project_escolaDataSetTableAdapters {
             this._commandCollection = new global::MySql.Data.MySqlClient.MySqlCommand[1];
             this._commandCollection[0] = new global::MySql.Data.MySqlClient.MySqlCommand();
             this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = @"SELECT        tbd.id, tba.nome, tbt.serie, tbt.nome AS Expr1, tbt.id_turma
+            this._commandCollection[0].CommandText = @"SELECT        tbd.id, tba.nome, tbt.serie, tbt.nome AS turma, tbt.id_turma
 FROM            tb_aluno_turma tbd INNER JOIN
                          tb_aluno tba ON tba.id_aluno = tbd.aluno_id INNER JOIN
                          tb_turma tbt ON tbt.id_turma = tbd.turma_id
-WHERE        (tbt.id_turma = @id)
+WHERE        (tbt.nome LIKE '%' + @id + '%')
 ORDER BY tba.nome";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
             global::MySql.Data.MySqlClient.MySqlParameter param = new global::MySql.Data.MySqlClient.MySqlParameter();
             param.ParameterName = "@id";
-            param.DbType = global::System.Data.DbType.Int32;
-            param.MySqlDbType = global::MySql.Data.MySqlClient.MySqlDbType.Int32;
+            param.DbType = global::System.Data.DbType.String;
+            param.MySqlDbType = global::MySql.Data.MySqlClient.MySqlDbType.VarChar;
+            param.Size = 20;
             param.IsNullable = true;
-            param.SourceColumn = "id_turma";
+            param.SourceColumn = "turma";
             param.SourceVersion = global::System.Data.DataRowVersion.Current;
             this._commandCollection[0].Parameters.Add(param);
         }
@@ -10323,9 +10324,14 @@ ORDER BY tba.nome";
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
-        public virtual int Fill(project_escolaDataSet.MontTurmaDataTable dataTable, int id) {
+        public virtual int Fill(project_escolaDataSet.MontTurmaDataTable dataTable, string id) {
             this.Adapter.SelectCommand = this.CommandCollection[0];
-            this.Adapter.SelectCommand.Parameters[0].Value = ((int)(id));
+            if ((id == null)) {
+                throw new global::System.ArgumentNullException("id");
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[0].Value = ((string)(id));
+            }
             if ((this.ClearBeforeFill == true)) {
                 dataTable.Clear();
             }
@@ -10337,9 +10343,14 @@ ORDER BY tba.nome";
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
-        public virtual project_escolaDataSet.MontTurmaDataTable GetData(int id) {
+        public virtual project_escolaDataSet.MontTurmaDataTable GetData(string id) {
             this.Adapter.SelectCommand = this.CommandCollection[0];
-            this.Adapter.SelectCommand.Parameters[0].Value = ((int)(id));
+            if ((id == null)) {
+                throw new global::System.ArgumentNullException("id");
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[0].Value = ((string)(id));
+            }
             project_escolaDataSet.MontTurmaDataTable dataTable = new project_escolaDataSet.MontTurmaDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;

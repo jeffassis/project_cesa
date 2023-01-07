@@ -40,6 +40,7 @@
             this.horáriosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.cadastroDeHoráriosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.montagemDeHoráriosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.horárioAlunoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.notasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.lançamentoDeNotasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.boletimAlunoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -49,6 +50,7 @@
             this.montagemDeTurmasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.Relatorios = new System.Windows.Forms.ToolStripMenuItem();
             this.Usuarios = new System.Windows.Forms.ToolStripMenuItem();
+            this.gestãoDeUsuáriosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.Login = new System.Windows.Forms.ToolStripMenuItem();
             this.logONToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.logOFFToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -144,7 +146,7 @@
             this.disciplinasToolStripMenuItem.Font = new System.Drawing.Font("Calisto MT", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.disciplinasToolStripMenuItem.Image = global::project_cesa.Properties.Resources.disciplina;
             this.disciplinasToolStripMenuItem.Name = "disciplinasToolStripMenuItem";
-            this.disciplinasToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.disciplinasToolStripMenuItem.Size = new System.Drawing.Size(137, 22);
             this.disciplinasToolStripMenuItem.Text = "Disciplinas";
             this.disciplinasToolStripMenuItem.Click += new System.EventHandler(this.disciplinasToolStripMenuItem_Click);
             // 
@@ -152,28 +154,36 @@
             // 
             this.horáriosToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.cadastroDeHoráriosToolStripMenuItem,
-            this.montagemDeHoráriosToolStripMenuItem});
+            this.montagemDeHoráriosToolStripMenuItem,
+            this.horárioAlunoToolStripMenuItem});
             this.horáriosToolStripMenuItem.Font = new System.Drawing.Font("Calisto MT", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.horáriosToolStripMenuItem.Image = global::project_cesa.Properties.Resources.clock1;
             this.horáriosToolStripMenuItem.Name = "horáriosToolStripMenuItem";
-            this.horáriosToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.horáriosToolStripMenuItem.Size = new System.Drawing.Size(137, 22);
             this.horáriosToolStripMenuItem.Text = "Horários";
             // 
             // cadastroDeHoráriosToolStripMenuItem
             // 
             this.cadastroDeHoráriosToolStripMenuItem.Image = global::project_cesa.Properties.Resources.menuCadastro;
             this.cadastroDeHoráriosToolStripMenuItem.Name = "cadastroDeHoráriosToolStripMenuItem";
-            this.cadastroDeHoráriosToolStripMenuItem.Size = new System.Drawing.Size(202, 22);
+            this.cadastroDeHoráriosToolStripMenuItem.Size = new System.Drawing.Size(196, 22);
             this.cadastroDeHoráriosToolStripMenuItem.Text = "Cadastros de Horários";
             this.cadastroDeHoráriosToolStripMenuItem.Click += new System.EventHandler(this.cadastroDeHoráriosToolStripMenuItem_Click);
             // 
             // montagemDeHoráriosToolStripMenuItem
             // 
-            this.montagemDeHoráriosToolStripMenuItem.Image = global::project_cesa.Properties.Resources.montar_20;
+            this.montagemDeHoráriosToolStripMenuItem.Image = global::project_cesa.Properties.Resources.professor;
             this.montagemDeHoráriosToolStripMenuItem.Name = "montagemDeHoráriosToolStripMenuItem";
-            this.montagemDeHoráriosToolStripMenuItem.Size = new System.Drawing.Size(202, 22);
-            this.montagemDeHoráriosToolStripMenuItem.Text = "Montagem de Horários";
+            this.montagemDeHoráriosToolStripMenuItem.Size = new System.Drawing.Size(196, 22);
+            this.montagemDeHoráriosToolStripMenuItem.Text = "Horário Professor";
             this.montagemDeHoráriosToolStripMenuItem.Click += new System.EventHandler(this.montagemDeHoráriosToolStripMenuItem_Click);
+            // 
+            // horárioAlunoToolStripMenuItem
+            // 
+            this.horárioAlunoToolStripMenuItem.Image = global::project_cesa.Properties.Resources.aluno;
+            this.horárioAlunoToolStripMenuItem.Name = "horárioAlunoToolStripMenuItem";
+            this.horárioAlunoToolStripMenuItem.Size = new System.Drawing.Size(196, 22);
+            this.horárioAlunoToolStripMenuItem.Text = "Horário Aluno";
             // 
             // notasToolStripMenuItem
             // 
@@ -184,7 +194,7 @@
             this.notasToolStripMenuItem.Font = new System.Drawing.Font("Calisto MT", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.notasToolStripMenuItem.Image = global::project_cesa.Properties.Resources.notas;
             this.notasToolStripMenuItem.Name = "notasToolStripMenuItem";
-            this.notasToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.notasToolStripMenuItem.Size = new System.Drawing.Size(137, 22);
             this.notasToolStripMenuItem.Text = "Notas";
             // 
             // lançamentoDeNotasToolStripMenuItem
@@ -213,7 +223,7 @@
             this.turmasToolStripMenuItem.Font = new System.Drawing.Font("Calisto MT", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.turmasToolStripMenuItem.Image = global::project_cesa.Properties.Resources.turma;
             this.turmasToolStripMenuItem.Name = "turmasToolStripMenuItem";
-            this.turmasToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.turmasToolStripMenuItem.Size = new System.Drawing.Size(137, 22);
             this.turmasToolStripMenuItem.Text = "Turmas";
             // 
             // cadastrosDeTurmasToolStripMenuItem
@@ -242,11 +252,21 @@
             // 
             // Usuarios
             // 
+            this.Usuarios.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.gestãoDeUsuáriosToolStripMenuItem});
             this.Usuarios.Font = new System.Drawing.Font("Calisto MT", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Usuarios.Image = global::project_cesa.Properties.Resources.menuUser;
             this.Usuarios.Name = "Usuarios";
             this.Usuarios.Size = new System.Drawing.Size(84, 20);
             this.Usuarios.Text = "Usuários";
+            // 
+            // gestãoDeUsuáriosToolStripMenuItem
+            // 
+            this.gestãoDeUsuáriosToolStripMenuItem.Image = global::project_cesa.Properties.Resources.users;
+            this.gestãoDeUsuáriosToolStripMenuItem.Name = "gestãoDeUsuáriosToolStripMenuItem";
+            this.gestãoDeUsuáriosToolStripMenuItem.Size = new System.Drawing.Size(181, 22);
+            this.gestãoDeUsuáriosToolStripMenuItem.Text = "Gestão de Usuários";
+            this.gestãoDeUsuáriosToolStripMenuItem.Click += new System.EventHandler(this.gestãoDeUsuáriosToolStripMenuItem_Click);
             // 
             // Login
             // 
@@ -487,6 +507,8 @@
         private System.Windows.Forms.ToolStripMenuItem lançamentoDeNotasToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem boletimAlunoToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem boletimFinalToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem horárioAlunoToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem gestãoDeUsuáriosToolStripMenuItem;
     }
 }
 

@@ -20,9 +20,15 @@ namespace project_cesa.Relatorios
         private void Relatorio_Turma_Load(object sender, EventArgs e)
         {
             // TODO: esta linha de código carrega dados na tabela 'project_escolaDataSet.MontTurma'. Você pode movê-la ou removê-la conforme necessário.
-            this.montTurmaTableAdapter.Fill(this.project_escolaDataSet.MontTurma, Convert.ToInt32(Program.idSerieTurma));
+            txt_nome.Focus();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            this.montTurmaTableAdapter.Fill(this.project_escolaDataSet.MontTurma, txt_nome.Text);
 
             this.reportViewer1.RefreshReport();
+            txt_nome.Focus();
         }
     }
 }

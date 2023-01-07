@@ -75,7 +75,7 @@ namespace project_cesa.Pedagogico
         private void desabilitarCampos()
         {
             txtAluno.Enabled = false;
-            cbTurma.Enabled = false;
+            //cbTurma.Enabled = false;
             btnAluno.Enabled = false;
         }
 
@@ -119,8 +119,6 @@ namespace project_cesa.Pedagogico
             if (cbTurma.SelectedValue != null)
             {                
                 Listar();
-                // Passo o id da turma para o relatorio
-                Program.idSerieTurma = cbTurma.SelectedValue.ToString();
             }
         }
 

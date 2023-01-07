@@ -61,9 +61,9 @@ namespace project_cesa.Pedagogico
             this.label1.Font = new System.Drawing.Font("Calisto MT", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(17, 27);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(253, 28);
+            this.label1.Size = new System.Drawing.Size(239, 28);
             this.label1.TabIndex = 26;
-            this.label1.Text = "Montagem de Horário";
+            this.label1.Text = "Horário de Professor";
             // 
             // btnAluno
             // 
@@ -309,7 +309,7 @@ namespace project_cesa.Pedagogico
             this.MinimizeBox = false;
             this.Name = "FrmMontHorario";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Montagem de Horário";
+            this.Text = "Horário de Professor";
             this.Activated += new System.EventHandler(this.FrmMontHorario_Activated);
             this.Load += new System.EventHandler(this.FrmMontHorario_Load);
             this.panel1.ResumeLayout(false);
