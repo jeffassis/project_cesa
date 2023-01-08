@@ -20,7 +20,7 @@ namespace project_cesa
         }
 
         // Funcao para abir os formularios com parametros de nivel e chamada do Form
-        private void abreForm(int nivel, Form f)
+        private void AbreForm(int nivel, Form f)
         {
             if (Program.logado)
             {
@@ -45,13 +45,13 @@ namespace project_cesa
             lblHora.Text = DateTime.Now.ToString("HH:mm:ss");
         }
 
-        private void logONToolStripMenuItem_Click(object sender, EventArgs e)
+        private void LoginLogOn_Click(object sender, EventArgs e)
         {
             Login Login = new Login(this);
             Login.ShowDialog();
         }
 
-        private void logOFFToolStripMenuItem_Click(object sender, EventArgs e)
+        private void LoginLogOff_Click(object sender, EventArgs e)
         {
             lbl_acesso.Text = "0";
             lbl_nomeUsuario.Text = "---";
@@ -61,78 +61,90 @@ namespace project_cesa
             Program.logado = false;
         }
 
-        private void timer1_Tick(object sender, EventArgs e)
+        private void Timer1_Tick(object sender, EventArgs e)
         {
             lblHora.Text = DateTime.Now.ToString("HH:mm:ss");
         }
 
-        private void alunoToolStripMenuItem_Click(object sender, EventArgs e)
+        private void CadastrosAlunos_Click(object sender, EventArgs e)
         {
             Program.chamadaAlunos = "NovoAluno";
             Cadastros.FrmAluno form = new Cadastros.FrmAluno();
-            abreForm(1, form);
+            AbreForm(1, form);
         }
 
-        private void responsávelToolStripMenuItem_Click(object sender, EventArgs e)
+        private void CadastrosResponsavel_Click(object sender, EventArgs e)
         {
             Cadastros.FrmResponsavel form = new Cadastros.FrmResponsavel();
-            abreForm(1, form);
+            AbreForm(1, form);
         }
 
-        private void cadastrosDeTurmasToolStripMenuItem_Click(object sender, EventArgs e)
+        private void PedagogicoTurmaCad_Click(object sender, EventArgs e)
         {
             Pedagogico.FrmTurma form = new Pedagogico.FrmTurma();
-            abreForm(1, form);
+            AbreForm(1, form);
         }
 
-        private void cadastroDeHoráriosToolStripMenuItem_Click(object sender, EventArgs e)
+        private void PedagogicoHorarioCad_Click(object sender, EventArgs e)
         {
             Pedagogico.FrmHorario form = new Pedagogico.FrmHorario();
-            abreForm(1, form);
+            AbreForm(1, form);
         }
 
-        private void montagemDeTurmasToolStripMenuItem_Click(object sender, EventArgs e)
+        private void PedagogicoTurmaMont_Click(object sender, EventArgs e)
         {
             Pedagogico.FrmMontTurma form = new Pedagogico.FrmMontTurma();
-            abreForm(1, form);
+            AbreForm(1, form);
         }
 
-        private void disciplinasToolStripMenuItem_Click(object sender, EventArgs e)
+        private void PedagogicoDisciplina_Click(object sender, EventArgs e)
         {
             Pedagogico.FrmDisciplina form = new Pedagogico.FrmDisciplina();
-            abreForm(1, form);
+            AbreForm(1, form);
         }
 
-        private void montagemDeHoráriosToolStripMenuItem_Click(object sender, EventArgs e)
+        private void PedagogicoHorarioProfessor_Click(object sender, EventArgs e)
         {
             Pedagogico.FrmMontHorario form = new Pedagogico.FrmMontHorario();
-            abreForm(1, form);
+            AbreForm(1, form);
         }
 
-        private void gestãoDeUsuáriosToolStripMenuItem_Click(object sender, EventArgs e)
+        private void UsuariosGestao_Click(object sender, EventArgs e)
         {
             Cadastros.FrmUsuario form = new Cadastros.FrmUsuario();
-            abreForm(2, form);
+            AbreForm(2, form);
         }
 
-        private void lançamentoDeNotasToolStripMenuItem_Click(object sender, EventArgs e)
+        private void PedagogicoNotaLanca_Click(object sender, EventArgs e)
         {
             Pedagogico.FrmNotas form = new Pedagogico.FrmNotas();
-            abreForm(0, form);
+            AbreForm(0, form);
         }
 
-        private void sobreNósToolStripMenuItem_Click(object sender, EventArgs e)
+        private void FerramentasBackup_Click(object sender, EventArgs e)
+        {
+            Ferramentas.FrmBackup form = new Ferramentas.FrmBackup();
+            AbreForm(2, form);
+        }    
+
+        private void FerramentasSobre_Click(object sender, EventArgs e)
         {
             MessageBox.Show(@"Quality Engineer: Jefferson Assis "+"\n"+
                 "Tel:(21) 981792-2516"+"\n"+
                 "Email: jeff-assis@hotmail.com" + "\n"+
-                "Github: jeffassis", "Sistema Desenvolvido...", MessageBoxButtons.OK, MessageBoxIcon.Information);
-        }
+                "Github: jeffassis", "Sobre Nós", MessageBoxButtons.OK, MessageBoxIcon.Information);
+        }      
 
-        private void turmasToolStripMenuItem1_Click(object sender, EventArgs e)
+        private void RelatoriosTurmas_Click(object sender, EventArgs e)
         {
             Relatorios.Relatorio_Turma form = new Relatorios.Relatorio_Turma();
-            form.ShowDialog();
+            AbreForm(0, form);
+        }
+
+        private void CadastrosProfessor_Click(object sender, EventArgs e)
+        {
+            Cadastros.FrmProfessor form = new Cadastros.FrmProfessor();
+            AbreForm(0, form);
         }
     }
 }

@@ -20,17 +20,17 @@ namespace project_cesa.Pedagogico
 
         private void FormatarDG()
         {
-            grid.Columns[0].HeaderText = "ID";
-            grid.Columns[1].HeaderText = "ALUNO";
-            grid.Columns[2].HeaderText = "SERIE";
-            grid.Columns[3].HeaderText = "TURMA";
-            grid.Columns[4].HeaderText = "ID_TURMA";
+            Grid.Columns[0].HeaderText = "ID";
+            Grid.Columns[1].HeaderText = "ALUNO";
+            Grid.Columns[2].HeaderText = "SERIE";
+            Grid.Columns[3].HeaderText = "TURMA";
+            Grid.Columns[4].HeaderText = "ID_TURMA";
 
-            grid.Columns[0].Visible = false;
-            grid.Columns[4].Visible = false;
+            Grid.Columns[0].Visible = false;
+            Grid.Columns[4].Visible = false;
 
-            grid.Columns[1].Width = 170;
-            grid.Columns[3].Width = 88;
+            Grid.Columns[1].Width = 170;
+            Grid.Columns[3].Width = 88;
         }
 
         private void Listar()
@@ -49,8 +49,8 @@ namespace project_cesa.Pedagogico
                     INNER JOIN
 	                    tb_turma as tbt ON tbt.id_turma=tbd.turma_id
                     WHERE
-	                    tbt.id_turma=" + cbTurma.SelectedValue;
-            grid.DataSource = Conexao.dql(queryListar);
+	                    tbt.id_turma=" + CbTurma.SelectedValue;
+            Grid.DataSource = Conexao.dql(queryListar);
 
             FormatarDG();
         }
@@ -58,28 +58,28 @@ namespace project_cesa.Pedagogico
         private void CarregarComboBox()
         {
             string ano = "SELECT * FROM tb_turma ORDER BY nome";
-            cbTurma.Items.Clear();
-            cbTurma.DataSource = Conexao.dql(ano);
-            cbTurma.DisplayMember = "nome";
-            cbTurma.ValueMember = "id_turma";
+            CbTurma.Items.Clear();
+            CbTurma.DataSource = Conexao.dql(ano);
+            CbTurma.DisplayMember = "nome";
+            CbTurma.ValueMember = "id_turma";
         }      
 
-        private void habilitarCampos()
+        private void HabilitarCampos()
         {
             //txtAluno.Enabled = true;
-            cbTurma.Enabled = true;
-            btnAluno.Enabled = true;
+            CbTurma.Enabled = true;
+            BtnAluno.Enabled = true;
             txtAluno.Focus();
         }
 
-        private void desabilitarCampos()
+        private void DesabilitarCampos()
         {
             txtAluno.Enabled = false;
             //cbTurma.Enabled = false;
-            btnAluno.Enabled = false;
+            BtnAluno.Enabled = false;
         }
 
-        private void limparCampos()
+        private void LimparCampos()
         {
             txtAluno.Text = "";         
         }
@@ -89,20 +89,20 @@ namespace project_cesa.Pedagogico
             CarregarComboBox();     
         }
 
-        private void btnFechar_Click(object sender, EventArgs e)
+        private void BtnFechar_Click(object sender, EventArgs e)
         {
             Close();
         }
 
-        private void btnNovo_Click(object sender, EventArgs e)
+        private void BtnNovo_Click(object sender, EventArgs e)
         {
-            habilitarCampos();
-            limparCampos();
-            btnSave.Enabled = true;
-            btnDelete.Enabled = false;
+            HabilitarCampos();
+            LimparCampos();
+            BtnSave.Enabled = true;
+            BtnDelete.Enabled = false;
         }
 
-        private void btnAluno_Click(object sender, EventArgs e)
+        private void BtnAluno_Click(object sender, EventArgs e)
         {
             Program.chamadaAlunos = "aluno";
             Cadastros.FrmAluno form = new Cadastros.FrmAluno();
@@ -114,15 +114,15 @@ namespace project_cesa.Pedagogico
             txtAluno.Text = Program.nomeAluno;            
         }
 
-        private void cbTurma_SelectionChangeCommitted(object sender, EventArgs e)
+        private void CbTurma_SelectionChangeCommitted(object sender, EventArgs e)
         {            
-            if (cbTurma.SelectedValue != null)
+            if (CbTurma.SelectedValue != null)
             {                
                 Listar();
             }
         }
 
-        private void btnSave_Click(object sender, EventArgs e)
+        private void BtnSave_Click(object sender, EventArgs e)
         {
             // VERIFICA SE O NOME ESTA VAZIO
             if (txtAluno.Text.ToString().Trim() == "")
@@ -132,23 +132,22 @@ namespace project_cesa.Pedagogico
                 txtAluno.Focus();
                 return;
             }
-            string queryAdd = "";
-            queryAdd = String.Format(@"INSERT INTO tb_aluno_turma 
+            string queryAdd = String.Format(@"INSERT INTO tb_aluno_turma 
                             (aluno_id, turma_id)
                                 VALUES ({0}, {1})
-                    ", Program.idAluno, cbTurma.SelectedValue);
+                    ", Program.idAluno, CbTurma.SelectedValue);
 
             Conexao.dml(queryAdd);
             MessageBox.Show("Dados inseridos com sucesso!", "Dados Adicionados", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
-            btnSave.Enabled = false;
-            btnDelete.Enabled = false;
-            desabilitarCampos();
-            limparCampos();
+            BtnSave.Enabled = false;
+            BtnDelete.Enabled = false;
+            DesabilitarCampos();
+            LimparCampos();
             Listar();
         }
 
-        private void btnDelete_Click(object sender, EventArgs e)
+        private void BtnDelete_Click(object sender, EventArgs e)
         {
             // Cria um Dialogo para confirmar a exclusao de dados
             DialogResult res = MessageBox.Show("Confirma exclusão?", "Excluir?", MessageBoxButtons.YesNo);
@@ -157,24 +156,24 @@ namespace project_cesa.Pedagogico
                 string queryDelete = "DELETE FROM tb_aluno_turma WHERE id=" + idSelecionado;
                 Conexao.dml(queryDelete);
                 MessageBox.Show("Registro Excluido com Sucesso!", "Registro Excluido", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                grid.Rows.Remove(grid.CurrentRow);
+                Grid.Rows.Remove(Grid.CurrentRow);
             }
-            btnSave.Enabled = false;
-            btnDelete.Enabled = false;
-            desabilitarCampos();
-            limparCampos();
+            BtnSave.Enabled = false;
+            BtnDelete.Enabled = false;
+            DesabilitarCampos();
+            LimparCampos();
         }
 
-        private void grid_CellClick(object sender, DataGridViewCellEventArgs e)
+        private void Grid_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            idSelecionado = grid.CurrentRow.Cells[0].Value.ToString();
+            idSelecionado = Grid.CurrentRow.Cells[0].Value.ToString();
 
-            btnDelete.Enabled = true;
-            btnSave.Enabled = false;
-            habilitarCampos();
+            BtnDelete.Enabled = true;
+            BtnSave.Enabled = false;
+            HabilitarCampos();
         }
 
-        private void btnImprimir_Click(object sender, EventArgs e)
+        private void BtnImprimir_Click(object sender, EventArgs e)
         {
             Relatorios.Relatorio_Turma form = new Relatorios.Relatorio_Turma();
             form.ShowDialog();

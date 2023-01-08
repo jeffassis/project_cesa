@@ -51,19 +51,19 @@ namespace project_cesa.Cadastros
             this.cbSangue = new System.Windows.Forms.ComboBox();
             this.panel1 = new System.Windows.Forms.Panel();
             this.label10 = new System.Windows.Forms.Label();
-            this.btnFechar = new System.Windows.Forms.Button();
-            this.btnDelete = new System.Windows.Forms.Button();
-            this.btnUpdate = new System.Windows.Forms.Button();
-            this.btnSave = new System.Windows.Forms.Button();
-            this.btnNovo = new System.Windows.Forms.Button();
-            this.grid = new System.Windows.Forms.DataGridView();
+            this.BtnFechar = new System.Windows.Forms.Button();
+            this.BtnDelete = new System.Windows.Forms.Button();
+            this.BtnUpdate = new System.Windows.Forms.Button();
+            this.BtnSave = new System.Windows.Forms.Button();
+            this.BtnNovo = new System.Windows.Forms.Button();
+            this.Grid = new System.Windows.Forms.DataGridView();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             this.btnPesquisa = new System.Windows.Forms.Button();
             this.btnFoto = new System.Windows.Forms.Button();
-            this.txtBuscarNome = new System.Windows.Forms.TextBox();
+            this.TxtBuscarNome = new System.Windows.Forms.TextBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.grid)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Grid)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -247,11 +247,11 @@ namespace project_cesa.Cadastros
             // panel1
             // 
             this.panel1.Controls.Add(this.label10);
-            this.panel1.Controls.Add(this.btnFechar);
-            this.panel1.Controls.Add(this.btnDelete);
-            this.panel1.Controls.Add(this.btnUpdate);
-            this.panel1.Controls.Add(this.btnSave);
-            this.panel1.Controls.Add(this.btnNovo);
+            this.panel1.Controls.Add(this.BtnFechar);
+            this.panel1.Controls.Add(this.BtnDelete);
+            this.panel1.Controls.Add(this.BtnUpdate);
+            this.panel1.Controls.Add(this.BtnSave);
+            this.panel1.Controls.Add(this.BtnNovo);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.panel1.Location = new System.Drawing.Point(0, 419);
             this.panel1.Name = "panel1";
@@ -268,73 +268,73 @@ namespace project_cesa.Cadastros
             this.label10.TabIndex = 5;
             this.label10.Text = "Obs: Campos com (*) não podem ser vazios!";
             // 
-            // btnFechar
+            // BtnFechar
             // 
-            this.btnFechar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnFechar.Image = global::project_cesa.Properties.Resources.bt_fechar_24;
-            this.btnFechar.Location = new System.Drawing.Point(790, 4);
-            this.btnFechar.Name = "btnFechar";
-            this.btnFechar.Size = new System.Drawing.Size(36, 36);
-            this.btnFechar.TabIndex = 4;
-            this.toolTip1.SetToolTip(this.btnFechar, "Fechar");
-            this.btnFechar.UseVisualStyleBackColor = true;
-            this.btnFechar.Click += new System.EventHandler(this.btnFechar_Click);
+            this.BtnFechar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.BtnFechar.Image = global::project_cesa.Properties.Resources.bt_fechar_24;
+            this.BtnFechar.Location = new System.Drawing.Point(790, 4);
+            this.BtnFechar.Name = "BtnFechar";
+            this.BtnFechar.Size = new System.Drawing.Size(36, 36);
+            this.BtnFechar.TabIndex = 4;
+            this.toolTip1.SetToolTip(this.BtnFechar, "Fechar");
+            this.BtnFechar.UseVisualStyleBackColor = true;
+            this.BtnFechar.Click += new System.EventHandler(this.BtnFechar_Click);
             // 
-            // btnDelete
+            // BtnDelete
             // 
-            this.btnDelete.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnDelete.Enabled = false;
-            this.btnDelete.Image = global::project_cesa.Properties.Resources.bt_delete;
-            this.btnDelete.Location = new System.Drawing.Point(138, 3);
-            this.btnDelete.Name = "btnDelete";
-            this.btnDelete.Size = new System.Drawing.Size(36, 36);
-            this.btnDelete.TabIndex = 3;
-            this.toolTip1.SetToolTip(this.btnDelete, "Remover dados");
-            this.btnDelete.UseVisualStyleBackColor = true;
-            this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
+            this.BtnDelete.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.BtnDelete.Enabled = false;
+            this.BtnDelete.Image = global::project_cesa.Properties.Resources.bt_delete;
+            this.BtnDelete.Location = new System.Drawing.Point(138, 3);
+            this.BtnDelete.Name = "BtnDelete";
+            this.BtnDelete.Size = new System.Drawing.Size(36, 36);
+            this.BtnDelete.TabIndex = 3;
+            this.toolTip1.SetToolTip(this.BtnDelete, "Remover dados");
+            this.BtnDelete.UseVisualStyleBackColor = true;
+            this.BtnDelete.Click += new System.EventHandler(this.BtnDelete_Click);
             // 
-            // btnUpdate
+            // BtnUpdate
             // 
-            this.btnUpdate.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnUpdate.Enabled = false;
-            this.btnUpdate.Image = global::project_cesa.Properties.Resources.bt_update_24;
-            this.btnUpdate.Location = new System.Drawing.Point(96, 3);
-            this.btnUpdate.Name = "btnUpdate";
-            this.btnUpdate.Size = new System.Drawing.Size(36, 36);
-            this.btnUpdate.TabIndex = 2;
-            this.toolTip1.SetToolTip(this.btnUpdate, "Atualizar dados");
-            this.btnUpdate.UseVisualStyleBackColor = true;
-            this.btnUpdate.Click += new System.EventHandler(this.btnUpdate_Click);
+            this.BtnUpdate.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.BtnUpdate.Enabled = false;
+            this.BtnUpdate.Image = global::project_cesa.Properties.Resources.bt_update_24;
+            this.BtnUpdate.Location = new System.Drawing.Point(96, 3);
+            this.BtnUpdate.Name = "BtnUpdate";
+            this.BtnUpdate.Size = new System.Drawing.Size(36, 36);
+            this.BtnUpdate.TabIndex = 2;
+            this.toolTip1.SetToolTip(this.BtnUpdate, "Atualizar dados");
+            this.BtnUpdate.UseVisualStyleBackColor = true;
+            this.BtnUpdate.Click += new System.EventHandler(this.BtnUpdate_Click);
             // 
-            // btnSave
+            // BtnSave
             // 
-            this.btnSave.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnSave.Enabled = false;
-            this.btnSave.Image = global::project_cesa.Properties.Resources.bt_save_24;
-            this.btnSave.Location = new System.Drawing.Point(54, 3);
-            this.btnSave.Name = "btnSave";
-            this.btnSave.Size = new System.Drawing.Size(36, 36);
-            this.btnSave.TabIndex = 1;
-            this.toolTip1.SetToolTip(this.btnSave, "Salvar dados");
-            this.btnSave.UseVisualStyleBackColor = true;
-            this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
+            this.BtnSave.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.BtnSave.Enabled = false;
+            this.BtnSave.Image = global::project_cesa.Properties.Resources.bt_save_24;
+            this.BtnSave.Location = new System.Drawing.Point(54, 3);
+            this.BtnSave.Name = "BtnSave";
+            this.BtnSave.Size = new System.Drawing.Size(36, 36);
+            this.BtnSave.TabIndex = 1;
+            this.toolTip1.SetToolTip(this.BtnSave, "Salvar dados");
+            this.BtnSave.UseVisualStyleBackColor = true;
+            this.BtnSave.Click += new System.EventHandler(this.BtnSave_Click);
             // 
-            // btnNovo
+            // BtnNovo
             // 
-            this.btnNovo.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnNovo.Image = global::project_cesa.Properties.Resources.bt_novo_24;
-            this.btnNovo.Location = new System.Drawing.Point(12, 3);
-            this.btnNovo.Name = "btnNovo";
-            this.btnNovo.Size = new System.Drawing.Size(36, 36);
-            this.btnNovo.TabIndex = 0;
-            this.toolTip1.SetToolTip(this.btnNovo, "Novo registro");
-            this.btnNovo.UseVisualStyleBackColor = true;
-            this.btnNovo.Click += new System.EventHandler(this.btnNovo_Click);
+            this.BtnNovo.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.BtnNovo.Image = global::project_cesa.Properties.Resources.bt_novo_24;
+            this.BtnNovo.Location = new System.Drawing.Point(12, 3);
+            this.BtnNovo.Name = "BtnNovo";
+            this.BtnNovo.Size = new System.Drawing.Size(36, 36);
+            this.BtnNovo.TabIndex = 0;
+            this.toolTip1.SetToolTip(this.BtnNovo, "Novo registro");
+            this.BtnNovo.UseVisualStyleBackColor = true;
+            this.BtnNovo.Click += new System.EventHandler(this.BtnNovo_Click);
             // 
-            // grid
+            // Grid
             // 
-            this.grid.AllowUserToAddRows = false;
-            this.grid.AllowUserToDeleteRows = false;
+            this.Grid.AllowUserToAddRows = false;
+            this.Grid.AllowUserToDeleteRows = false;
             dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
             dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -342,18 +342,18 @@ namespace project_cesa.Cadastros
             dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Control;
             dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.WindowText;
             dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.grid.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
-            this.grid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.grid.EnableHeadersVisualStyles = false;
-            this.grid.Location = new System.Drawing.Point(276, 46);
-            this.grid.MultiSelect = false;
-            this.grid.Name = "grid";
-            this.grid.ReadOnly = true;
-            this.grid.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.grid.Size = new System.Drawing.Size(450, 350);
-            this.grid.TabIndex = 18;
-            this.grid.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.grid_CellClick);
-            this.grid.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.grid_CellDoubleClick);
+            this.Grid.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            this.Grid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.Grid.EnableHeadersVisualStyles = false;
+            this.Grid.Location = new System.Drawing.Point(276, 46);
+            this.Grid.MultiSelect = false;
+            this.Grid.Name = "Grid";
+            this.Grid.ReadOnly = true;
+            this.Grid.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.Grid.Size = new System.Drawing.Size(450, 350);
+            this.Grid.TabIndex = 18;
+            this.Grid.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.Grid_CellClick);
+            this.Grid.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.Grid_CellDoubleClick);
             // 
             // btnPesquisa
             // 
@@ -378,14 +378,14 @@ namespace project_cesa.Cadastros
             this.toolTip1.SetToolTip(this.btnFoto, "Inserir foto");
             this.btnFoto.UseVisualStyleBackColor = true;
             // 
-            // txtBuscarNome
+            // TxtBuscarNome
             // 
-            this.txtBuscarNome.Font = new System.Drawing.Font("Calisto MT", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtBuscarNome.Location = new System.Drawing.Point(324, 15);
-            this.txtBuscarNome.Name = "txtBuscarNome";
-            this.txtBuscarNome.Size = new System.Drawing.Size(243, 23);
-            this.txtBuscarNome.TabIndex = 1;
-            this.txtBuscarNome.TextChanged += new System.EventHandler(this.txtBuscarNome_TextChanged);
+            this.TxtBuscarNome.Font = new System.Drawing.Font("Calisto MT", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TxtBuscarNome.Location = new System.Drawing.Point(324, 15);
+            this.TxtBuscarNome.Name = "TxtBuscarNome";
+            this.TxtBuscarNome.Size = new System.Drawing.Size(243, 23);
+            this.TxtBuscarNome.TabIndex = 1;
+            this.TxtBuscarNome.TextChanged += new System.EventHandler(this.TxtBuscarNome_TextChanged);
             // 
             // pictureBox1
             // 
@@ -403,10 +403,10 @@ namespace project_cesa.Cadastros
             this.BackColor = System.Drawing.SystemColors.InactiveCaption;
             this.ClientSize = new System.Drawing.Size(838, 466);
             this.Controls.Add(this.btnPesquisa);
-            this.Controls.Add(this.txtBuscarNome);
+            this.Controls.Add(this.TxtBuscarNome);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.btnFoto);
-            this.Controls.Add(this.grid);
+            this.Controls.Add(this.Grid);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.cbSangue);
             this.Controls.Add(this.label9);
@@ -435,7 +435,7 @@ namespace project_cesa.Cadastros
             this.Load += new System.EventHandler(this.FrmAluno_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.grid)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Grid)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -462,17 +462,17 @@ namespace project_cesa.Cadastros
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.ComboBox cbSangue;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Button btnNovo;
-        private System.Windows.Forms.Button btnFechar;
-        private System.Windows.Forms.Button btnDelete;
-        private System.Windows.Forms.Button btnUpdate;
-        private System.Windows.Forms.Button btnSave;
-        private System.Windows.Forms.DataGridView grid;
+        private System.Windows.Forms.Button BtnNovo;
+        private System.Windows.Forms.Button BtnFechar;
+        private System.Windows.Forms.Button BtnDelete;
+        private System.Windows.Forms.Button BtnUpdate;
+        private System.Windows.Forms.Button BtnSave;
+        private System.Windows.Forms.DataGridView Grid;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Button btnFoto;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.ToolTip toolTip1;
-        private System.Windows.Forms.TextBox txtBuscarNome;
+        private System.Windows.Forms.TextBox TxtBuscarNome;
         private System.Windows.Forms.Button btnPesquisa;
     }
 }

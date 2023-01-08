@@ -22,46 +22,46 @@ namespace project_cesa.Cadastros
 
         private void FormatarDG()
         {
-            grid.Columns[0].HeaderText = "ID";
-            grid.Columns[1].HeaderText = "NOME";
-            grid.Columns[2].HeaderText = "EMAIL";
-            grid.Columns[3].HeaderText = "ENDERECO";
-            grid.Columns[4].HeaderText = "BAIRRO";
-            grid.Columns[5].HeaderText = "CEP";
-            grid.Columns[6].HeaderText = "NASCIMENTO";
-            grid.Columns[7].HeaderText = "TELEFONE";
-            grid.Columns[8].HeaderText = "SANGUE";
-            grid.Columns[9].HeaderText = "IMAGEM";
+            Grid.Columns[0].HeaderText = "ID";
+            Grid.Columns[1].HeaderText = "NOME";
+            Grid.Columns[2].HeaderText = "EMAIL";
+            Grid.Columns[3].HeaderText = "ENDERECO";
+            Grid.Columns[4].HeaderText = "BAIRRO";
+            Grid.Columns[5].HeaderText = "CEP";
+            Grid.Columns[6].HeaderText = "NASCIMENTO";
+            Grid.Columns[7].HeaderText = "TELEFONE";
+            Grid.Columns[8].HeaderText = "SANGUE";
+            Grid.Columns[9].HeaderText = "IMAGEM";
 
-            grid.Columns[0].Visible = false;
-            grid.Columns[2].Visible = false;
-            grid.Columns[4].Visible = false;
-            grid.Columns[5].Visible = false;
-            grid.Columns[7].Visible = false;
-            grid.Columns[8].Visible = false;
-            grid.Columns[9].Visible = false;
+            Grid.Columns[0].Visible = false;
+            Grid.Columns[2].Visible = false;
+            Grid.Columns[4].Visible = false;
+            Grid.Columns[5].Visible = false;
+            Grid.Columns[7].Visible = false;
+            Grid.Columns[8].Visible = false;
+            Grid.Columns[9].Visible = false;
 
-            grid.Columns[1].Width = 160;
-            grid.Columns[3].Width = 140;
+            Grid.Columns[1].Width = 160;
+            Grid.Columns[3].Width = 140;
         }
 
         private void Listar()
         {
             string queryListar = "SELECT * FROM tb_aluno ORDER BY nome asc";
-            grid.DataSource = Conexao.dql(queryListar);      
+            Grid.DataSource = Conexao.dql(queryListar);      
 
             FormatarDG();
         }
 
         private void BuscarNome()
         {           
-            string queryPesquisar = "SELECT * FROM tb_aluno WHERE nome like '" + txtBuscarNome.Text +"%"+"'  ORDER BY nome asc";
-            grid.DataSource = Conexao.dql(queryPesquisar);
+            string queryPesquisar = "SELECT * FROM tb_aluno WHERE nome like '" + TxtBuscarNome.Text +"%"+"'  ORDER BY nome asc";
+            Grid.DataSource = Conexao.dql(queryPesquisar);
 
             FormatarDG();
         }
 
-        private void habilitarCampos()
+        private void HabilitarCampos()
         {
             txtNome.Enabled = true;
             txtEmail.Enabled = true;
@@ -74,7 +74,7 @@ namespace project_cesa.Cadastros
             txtNome.Focus();
         }
 
-        private void desabilitarCampos()
+        private void DesabilitarCampos()
         {
             txtNome.Enabled = false;
             txtEmail.Enabled = false;
@@ -84,41 +84,41 @@ namespace project_cesa.Cadastros
             txtData.Enabled = false;
             txtTelefone.Enabled = false;
             cbSangue.Enabled = false;
-            txtBuscarNome.Focus();
+            TxtBuscarNome.Focus();
         }
 
-        private void limparCampos()
+        private void LimparCampos()
         {
             txtNome.Text = "";
             txtEmail.Text = "";
             txtEndereco.Text = "";
             txtBairro.Text = "";
             txtCep.Text = "";
-            //txtData.Text = "";
+            txtData.Value = DateTime.Today;
             txtTelefone.Text = "";
             cbSangue.SelectedIndex = -1;
         }        
 
-            private void FrmAluno_Load(object sender, EventArgs e)
+        private void FrmAluno_Load(object sender, EventArgs e)
         {
-                Listar();
+            Listar();
         }
 
-        private void btnFechar_Click(object sender, EventArgs e)
+        private void BtnFechar_Click(object sender, EventArgs e)
         {
             Close();
         }
 
-        private void btnNovo_Click(object sender, EventArgs e)
+        private void BtnNovo_Click(object sender, EventArgs e)
         {
-            btnSave.Enabled = true;
-            btnUpdate.Enabled = false;
-            btnDelete.Enabled = false;
-            habilitarCampos();
-            limparCampos();
+            BtnSave.Enabled = true;
+            BtnUpdate.Enabled = false;
+            BtnDelete.Enabled = false;
+            HabilitarCampos();
+            LimparCampos();
         }
 
-        private void btnSave_Click(object sender, EventArgs e)
+        private void BtnSave_Click(object sender, EventArgs e)
         {
             // VERIFICA SE O NOME ESTA VAZIO
             if (txtNome.Text.ToString().Trim() == "")
@@ -129,8 +129,7 @@ namespace project_cesa.Cadastros
                 return;
             }
             // ADICIONA A CONSULTA A STRING
-            string queryAdd = "";
-            queryAdd = String.Format(@"
+            string queryAdd = String.Format(@"
                        INSERT INTO tb_aluno 
                             (nome, email, endereco, bairro, cep, nascimento, telefone, sangue)
                                 VALUES ('{0}', '{1}', '{2}', '{3}', '{4}', '{5}', '{6}', '{7}')
@@ -150,15 +149,15 @@ namespace project_cesa.Cadastros
             Conexao.dml(queryAdd);
             MessageBox.Show("Dados inseridos com sucesso!", "Dados Adicionados", MessageBoxButtons.OK, MessageBoxIcon.Information);
             
-            btnSave.Enabled = false;
-            btnUpdate.Enabled = false;
-            btnDelete.Enabled = false;
-            desabilitarCampos();
-            limparCampos();
+            BtnSave.Enabled = false;
+            BtnUpdate.Enabled = false;
+            BtnDelete.Enabled = false;
+            DesabilitarCampos();
+            LimparCampos();
             Listar();
         }
 
-        private void btnUpdate_Click(object sender, EventArgs e)
+        private void BtnUpdate_Click(object sender, EventArgs e)
         {
             // VERIFICA SE O NOME ESTA VAZIO
             if (txtNome.Text.ToString().Trim() == "")
@@ -174,8 +173,7 @@ namespace project_cesa.Cadastros
                 if (res == DialogResult.Yes)
                 {
                     // ADICIONA A CONSULTA A STRING
-                    string queryUpdate = "";
-                    queryUpdate = String.Format(@"
+                    string queryUpdate = String.Format(@"
                         UPDATE tb_aluno SET 
                             nome='{0}', email='{1}', endereco='{2}', bairro='{3}', cep='{4}', nascimento='{5}', telefone='{6}', sangue='{7}'
                         WHERE
@@ -200,15 +198,15 @@ namespace project_cesa.Cadastros
                 }
 
             }
-            btnSave.Enabled = false;
-            btnUpdate.Enabled = false;
-            btnDelete.Enabled = false;            
-            desabilitarCampos();
-            limparCampos();
+            BtnSave.Enabled = false;
+            BtnUpdate.Enabled = false;
+            BtnDelete.Enabled = false;            
+            DesabilitarCampos();
+            LimparCampos();
             Listar();
         }
 
-        private void btnDelete_Click(object sender, EventArgs e)
+        private void BtnDelete_Click(object sender, EventArgs e)
         {
             // Cria um Dialogo para confirmar a exclusao de dados
             DialogResult res = MessageBox.Show("Confirma exclusão?", "Excluir?", MessageBoxButtons.YesNo);
@@ -217,47 +215,47 @@ namespace project_cesa.Cadastros
                 string queryDelete = "DELETE FROM tb_aluno WHERE id_aluno=" + idSelecionado;
                 Conexao.dml(queryDelete);
                 MessageBox.Show("Registro Excluido com Sucesso!", "Registro Excluido", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                grid.Rows.Remove(grid.CurrentRow);
+                Grid.Rows.Remove(Grid.CurrentRow);
             }
-            btnSave.Enabled = false;
-            btnUpdate.Enabled = false;
-            btnDelete.Enabled = false;
-            desabilitarCampos();
-            limparCampos();
+            BtnSave.Enabled = false;
+            BtnUpdate.Enabled = false;
+            BtnDelete.Enabled = false;
+            DesabilitarCampos();
+            LimparCampos();
         }
 
-        private void grid_CellClick(object sender, DataGridViewCellEventArgs e)
+        private void Grid_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            idSelecionado = grid.CurrentRow.Cells[0].Value.ToString();
-            txtNome.Text = grid.CurrentRow.Cells[1].Value.ToString();
-            txtEmail.Text = grid.CurrentRow.Cells[2].Value.ToString();
-            txtEndereco.Text = grid.CurrentRow.Cells[3].Value.ToString();
-            txtBairro.Text = grid.CurrentRow.Cells[4].Value.ToString();
-            txtCep.Text = grid.CurrentRow.Cells[5].Value.ToString();
-            txtData.Text= grid.CurrentRow.Cells[6].Value.ToString();
-            txtTelefone.Text = grid.CurrentRow.Cells[7].Value.ToString();
-            cbSangue.Text = grid.CurrentRow.Cells[8].Value.ToString();
-            pictureBox1.Text = grid.CurrentRow.Cells[9].Value.ToString();
+            idSelecionado = Grid.CurrentRow.Cells[0].Value.ToString();
+            txtNome.Text = Grid.CurrentRow.Cells[1].Value.ToString();
+            txtEmail.Text = Grid.CurrentRow.Cells[2].Value.ToString();
+            txtEndereco.Text = Grid.CurrentRow.Cells[3].Value.ToString();
+            txtBairro.Text = Grid.CurrentRow.Cells[4].Value.ToString();
+            txtCep.Text = Grid.CurrentRow.Cells[5].Value.ToString();
+            txtData.Text= Grid.CurrentRow.Cells[6].Value.ToString();
+            txtTelefone.Text = Grid.CurrentRow.Cells[7].Value.ToString();
+            cbSangue.Text = Grid.CurrentRow.Cells[8].Value.ToString();
+            pictureBox1.Text = Grid.CurrentRow.Cells[9].Value.ToString();
 
-            btnUpdate.Enabled = true;
-            btnDelete.Enabled = true;
-            btnSave.Enabled = false;
-            habilitarCampos();
+            BtnUpdate.Enabled = true;
+            BtnDelete.Enabled = true;
+            BtnSave.Enabled = false;
+            HabilitarCampos();
 
-            AlunoAntigo = grid.CurrentRow.Cells[1].Value.ToString();
+            AlunoAntigo = Grid.CurrentRow.Cells[1].Value.ToString();
         }
 
-        private void txtBuscarNome_TextChanged(object sender, EventArgs e)
+        private void TxtBuscarNome_TextChanged(object sender, EventArgs e)
         {
             BuscarNome();
         }
 
-        private void grid_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        private void Grid_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
             if (Program.chamadaAlunos == "aluno")
             {
-                Program.idAluno = grid.CurrentRow.Cells[0].Value.ToString();
-                Program.nomeAluno = grid.CurrentRow.Cells[1].Value.ToString();
+                Program.idAluno = Grid.CurrentRow.Cells[0].Value.ToString();
+                Program.nomeAluno = Grid.CurrentRow.Cells[1].Value.ToString();
                 Close();
             }
         }

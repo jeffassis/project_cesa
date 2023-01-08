@@ -16,9 +16,16 @@ namespace project_cesa
         // Abre a conexao com banco de dados
         public static MySqlConnection ConexaoBanco()
         {
-            conn = new MySqlConnection(Program.caminhoBanco);
-            conn.Open();
-            return conn;
+            try
+            {
+                conn = new MySqlConnection(Program.caminhoBanco);
+                conn.Open();
+                return conn;
+            }
+            catch (Exception ex)
+            {
+                throw ex;                
+            }
         }
 
         // Metodos Genericos
@@ -35,6 +42,8 @@ namespace project_cesa
                 da = new MySqlDataAdapter(cmd.CommandText, vcon);
                 da.Fill(dt);
                 vcon.Close();
+                vcon.Dispose();
+                vcon.ClearAllPoolsAsync();
                 return dt;
             }
             catch (Exception ex)
@@ -47,7 +56,6 @@ namespace project_cesa
         public static void dml(string q, string msgOK = null, string msgError = null)
         {
             MySqlDataAdapter da = null;
-            DataTable dt = new DataTable();
             try
             {
                 var vcon = ConexaoBanco();
@@ -56,6 +64,8 @@ namespace project_cesa
                 da = new MySqlDataAdapter(cmd.CommandText, vcon);
                 cmd.ExecuteNonQuery();
                 vcon.Close();
+                vcon.Dispose();
+                vcon.ClearAllPoolsAsync();
                 if (msgOK != null)
                 {
                     MessageBox.Show(msgOK);

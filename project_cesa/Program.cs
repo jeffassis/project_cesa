@@ -10,6 +10,7 @@ namespace project_cesa
     {
         // Variavel global de Conexao de dados
         public static string caminhoBanco = "SERVER=localhost; DATABASE=project_escola; UID=root; PWD=; PORT=;";
+        //public static string caminhoBanco = "SERVER=mysql835.umbler.com; DATABASE=project_escola; UID=jeffassis; PWD=jean1420; PORT=41890;";
 
         // Variaveis globais de controle de usuario
         public static string versao = "1.0";
@@ -19,10 +20,7 @@ namespace project_cesa
         // Variaveis globais cadastro Aluno
         public static string chamadaAlunos;
         public static string nomeAluno;
-        public static string idAluno;
-
-        // Variavel global cadastro Turma
-        public static string idSerieTurma;
+        public static string idAluno;        
 
         // Variaveis para chamar tela horario
         public static string chamadaHorario;
