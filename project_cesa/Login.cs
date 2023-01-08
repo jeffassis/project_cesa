@@ -22,11 +22,11 @@ namespace project_cesa
 
         private void Login_Load(object sender, EventArgs e)
         {
-            btnEntrar.Focus();
+            BtnEntrar.Focus();
         }
 
         // Funcao de validacao da entrada de user no sistema 
-        private void btnEntrar_Click(object sender, EventArgs e)
+        private void BtnEntrar_Click(object sender, EventArgs e)
         {
             Logar();
         }

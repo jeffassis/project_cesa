@@ -133,8 +133,14 @@
   <data name="pedagogico" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\pedagogico.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="carrinho_compras_20" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\carrinho_compras_20.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="logOFF" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\logOFF.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="bancoDados_48" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\bancoDados_48.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="montar_20" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\montar_20.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -153,6 +159,9 @@
   </data>
   <data name="led_red" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\led_red.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="ferramentas_20" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ferramentas_20.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="bt_save_24" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\bt_save_24.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -177,6 +186,9 @@
   </data>
   <data name="menuUser1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\menuUser1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="financeiro_20" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\financeiro_20.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="professor" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\professor.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -220,13 +232,16 @@
   <data name="turma" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\turma.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="lancamento_de_nota_20" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\lancamento_de_nota_20.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="bt_fechar_24" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\bt_fechar_24.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="notas" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\notas.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="carrinho_compras_20" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\carrinho_compras_20.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="mensalidade_20" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\mensalidade_20.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>
