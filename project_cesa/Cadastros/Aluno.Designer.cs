@@ -51,17 +51,17 @@ namespace project_cesa.Cadastros
             this.cbSangue = new System.Windows.Forms.ComboBox();
             this.panel1 = new System.Windows.Forms.Panel();
             this.label10 = new System.Windows.Forms.Label();
+            this.Grid = new System.Windows.Forms.DataGridView();
+            this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
+            this.TxtBuscarNome = new System.Windows.Forms.TextBox();
+            this.btnPesquisa = new System.Windows.Forms.Button();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.BtnFoto = new System.Windows.Forms.Button();
             this.BtnFechar = new System.Windows.Forms.Button();
             this.BtnDelete = new System.Windows.Forms.Button();
             this.BtnUpdate = new System.Windows.Forms.Button();
             this.BtnSave = new System.Windows.Forms.Button();
             this.BtnNovo = new System.Windows.Forms.Button();
-            this.Grid = new System.Windows.Forms.DataGridView();
-            this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
-            this.btnPesquisa = new System.Windows.Forms.Button();
-            this.btnFoto = new System.Windows.Forms.Button();
-            this.TxtBuscarNome = new System.Windows.Forms.TextBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Grid)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -268,6 +268,73 @@ namespace project_cesa.Cadastros
             this.label10.TabIndex = 5;
             this.label10.Text = "Obs: Campos com (*) não podem ser vazios!";
             // 
+            // Grid
+            // 
+            this.Grid.AllowUserToAddRows = false;
+            this.Grid.AllowUserToDeleteRows = false;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.Grid.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            this.Grid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.Grid.EnableHeadersVisualStyles = false;
+            this.Grid.Location = new System.Drawing.Point(276, 46);
+            this.Grid.MultiSelect = false;
+            this.Grid.Name = "Grid";
+            this.Grid.ReadOnly = true;
+            this.Grid.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.Grid.Size = new System.Drawing.Size(450, 350);
+            this.Grid.TabIndex = 18;
+            this.Grid.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.Grid_CellClick);
+            this.Grid.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.Grid_CellDoubleClick);
+            // 
+            // TxtBuscarNome
+            // 
+            this.TxtBuscarNome.Font = new System.Drawing.Font("Calisto MT", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TxtBuscarNome.Location = new System.Drawing.Point(324, 15);
+            this.TxtBuscarNome.Name = "TxtBuscarNome";
+            this.TxtBuscarNome.Size = new System.Drawing.Size(243, 23);
+            this.TxtBuscarNome.TabIndex = 1;
+            this.TxtBuscarNome.TextChanged += new System.EventHandler(this.TxtBuscarNome_TextChanged);
+            // 
+            // btnPesquisa
+            // 
+            this.btnPesquisa.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnPesquisa.Image = global::project_cesa.Properties.Resources.source_20;
+            this.btnPesquisa.Location = new System.Drawing.Point(573, 12);
+            this.btnPesquisa.Name = "btnPesquisa";
+            this.btnPesquisa.Size = new System.Drawing.Size(28, 28);
+            this.btnPesquisa.TabIndex = 21;
+            this.toolTip1.SetToolTip(this.btnPesquisa, "Pesquisar aluno");
+            this.btnPesquisa.UseVisualStyleBackColor = true;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pictureBox1.Location = new System.Drawing.Point(741, 236);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(85, 113);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 19;
+            this.pictureBox1.TabStop = false;
+            // 
+            // BtnFoto
+            // 
+            this.BtnFoto.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.BtnFoto.Enabled = false;
+            this.BtnFoto.Image = global::project_cesa.Properties.Resources.photo_24;
+            this.BtnFoto.Location = new System.Drawing.Point(767, 355);
+            this.BtnFoto.Name = "BtnFoto";
+            this.BtnFoto.Size = new System.Drawing.Size(36, 36);
+            this.BtnFoto.TabIndex = 6;
+            this.toolTip1.SetToolTip(this.BtnFoto, "Inserir foto");
+            this.BtnFoto.UseVisualStyleBackColor = true;
+            this.BtnFoto.Click += new System.EventHandler(this.BtnFoto_Click);
+            // 
             // BtnFechar
             // 
             this.BtnFechar.Cursor = System.Windows.Forms.Cursors.Hand;
@@ -331,71 +398,6 @@ namespace project_cesa.Cadastros
             this.BtnNovo.UseVisualStyleBackColor = true;
             this.BtnNovo.Click += new System.EventHandler(this.BtnNovo_Click);
             // 
-            // Grid
-            // 
-            this.Grid.AllowUserToAddRows = false;
-            this.Grid.AllowUserToDeleteRows = false;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.Grid.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
-            this.Grid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.Grid.EnableHeadersVisualStyles = false;
-            this.Grid.Location = new System.Drawing.Point(276, 46);
-            this.Grid.MultiSelect = false;
-            this.Grid.Name = "Grid";
-            this.Grid.ReadOnly = true;
-            this.Grid.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.Grid.Size = new System.Drawing.Size(450, 350);
-            this.Grid.TabIndex = 18;
-            this.Grid.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.Grid_CellClick);
-            this.Grid.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.Grid_CellDoubleClick);
-            // 
-            // btnPesquisa
-            // 
-            this.btnPesquisa.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnPesquisa.Image = global::project_cesa.Properties.Resources.source_20;
-            this.btnPesquisa.Location = new System.Drawing.Point(573, 12);
-            this.btnPesquisa.Name = "btnPesquisa";
-            this.btnPesquisa.Size = new System.Drawing.Size(28, 28);
-            this.btnPesquisa.TabIndex = 21;
-            this.toolTip1.SetToolTip(this.btnPesquisa, "Pesquisar aluno");
-            this.btnPesquisa.UseVisualStyleBackColor = true;
-            // 
-            // btnFoto
-            // 
-            this.btnFoto.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnFoto.Enabled = false;
-            this.btnFoto.Image = global::project_cesa.Properties.Resources.photo_24;
-            this.btnFoto.Location = new System.Drawing.Point(767, 355);
-            this.btnFoto.Name = "btnFoto";
-            this.btnFoto.Size = new System.Drawing.Size(36, 36);
-            this.btnFoto.TabIndex = 6;
-            this.toolTip1.SetToolTip(this.btnFoto, "Inserir foto");
-            this.btnFoto.UseVisualStyleBackColor = true;
-            // 
-            // TxtBuscarNome
-            // 
-            this.TxtBuscarNome.Font = new System.Drawing.Font("Calisto MT", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TxtBuscarNome.Location = new System.Drawing.Point(324, 15);
-            this.TxtBuscarNome.Name = "TxtBuscarNome";
-            this.TxtBuscarNome.Size = new System.Drawing.Size(243, 23);
-            this.TxtBuscarNome.TabIndex = 1;
-            this.TxtBuscarNome.TextChanged += new System.EventHandler(this.TxtBuscarNome_TextChanged);
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pictureBox1.Location = new System.Drawing.Point(741, 236);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(85, 113);
-            this.pictureBox1.TabIndex = 19;
-            this.pictureBox1.TabStop = false;
-            // 
             // FrmAluno
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -405,7 +407,7 @@ namespace project_cesa.Cadastros
             this.Controls.Add(this.btnPesquisa);
             this.Controls.Add(this.TxtBuscarNome);
             this.Controls.Add(this.pictureBox1);
-            this.Controls.Add(this.btnFoto);
+            this.Controls.Add(this.BtnFoto);
             this.Controls.Add(this.Grid);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.cbSangue);
@@ -469,7 +471,7 @@ namespace project_cesa.Cadastros
         private System.Windows.Forms.Button BtnSave;
         private System.Windows.Forms.DataGridView Grid;
         private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.Button btnFoto;
+        private System.Windows.Forms.Button BtnFoto;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.ToolTip toolTip1;
         private System.Windows.Forms.TextBox TxtBuscarNome;

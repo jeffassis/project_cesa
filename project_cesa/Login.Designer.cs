@@ -46,8 +46,7 @@ namespace project_cesa
             this.txtUser.Location = new System.Drawing.Point(236, 27);
             this.txtUser.Name = "txtUser";
             this.txtUser.Size = new System.Drawing.Size(151, 23);
-            this.txtUser.TabIndex = 2;
-            this.txtUser.Text = "admin";
+            this.txtUser.TabIndex = 1;
             // 
             // txtSenha
             // 
@@ -56,8 +55,7 @@ namespace project_cesa
             this.txtSenha.Name = "txtSenha";
             this.txtSenha.PasswordChar = '*';
             this.txtSenha.Size = new System.Drawing.Size(151, 23);
-            this.txtSenha.TabIndex = 3;
-            this.txtSenha.Text = "123";
+            this.txtSenha.TabIndex = 2;
             // 
             // label1
             // 
@@ -85,7 +83,7 @@ namespace project_cesa
             this.BtnEntrar.Location = new System.Drawing.Point(264, 106);
             this.BtnEntrar.Name = "BtnEntrar";
             this.BtnEntrar.Size = new System.Drawing.Size(75, 23);
-            this.BtnEntrar.TabIndex = 1;
+            this.BtnEntrar.TabIndex = 3;
             this.BtnEntrar.Text = "Entrar";
             this.BtnEntrar.UseVisualStyleBackColor = true;
             this.BtnEntrar.Click += new System.EventHandler(this.BtnEntrar_Click);
@@ -112,6 +110,7 @@ namespace project_cesa
             // 
             // Login
             // 
+            this.AcceptButton = this.BtnEntrar;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.InactiveCaption;

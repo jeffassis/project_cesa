@@ -56,6 +56,7 @@
             this.Usuarios = new System.Windows.Forms.ToolStripMenuItem();
             this.UsuariosGestao = new System.Windows.Forms.ToolStripMenuItem();
             this.Ferramentas = new System.Windows.Forms.ToolStripMenuItem();
+            this.FerramentasFoto = new System.Windows.Forms.ToolStripMenuItem();
             this.FerramentasSobre = new System.Windows.Forms.ToolStripMenuItem();
             this.FerramentasBackup = new System.Windows.Forms.ToolStripMenuItem();
             this.Login = new System.Windows.Forms.ToolStripMenuItem();
@@ -117,7 +118,7 @@
             this.CadastrosAlunos.Font = new System.Drawing.Font("Calisto MT", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.CadastrosAlunos.Image = global::project_cesa.Properties.Resources.aluno;
             this.CadastrosAlunos.Name = "CadastrosAlunos";
-            this.CadastrosAlunos.Size = new System.Drawing.Size(180, 22);
+            this.CadastrosAlunos.Size = new System.Drawing.Size(143, 22);
             this.CadastrosAlunos.Text = "Alunos";
             this.CadastrosAlunos.Click += new System.EventHandler(this.CadastrosAlunos_Click);
             // 
@@ -126,7 +127,7 @@
             this.CadastrosResponsavel.Font = new System.Drawing.Font("Calisto MT", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.CadastrosResponsavel.Image = global::project_cesa.Properties.Resources.responsavel;
             this.CadastrosResponsavel.Name = "CadastrosResponsavel";
-            this.CadastrosResponsavel.Size = new System.Drawing.Size(180, 22);
+            this.CadastrosResponsavel.Size = new System.Drawing.Size(143, 22);
             this.CadastrosResponsavel.Text = "Responsável";
             this.CadastrosResponsavel.Click += new System.EventHandler(this.CadastrosResponsavel_Click);
             // 
@@ -135,7 +136,7 @@
             this.CadastrosProfessor.Font = new System.Drawing.Font("Calisto MT", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.CadastrosProfessor.Image = global::project_cesa.Properties.Resources.professor;
             this.CadastrosProfessor.Name = "CadastrosProfessor";
-            this.CadastrosProfessor.Size = new System.Drawing.Size(180, 22);
+            this.CadastrosProfessor.Size = new System.Drawing.Size(143, 22);
             this.CadastrosProfessor.Text = "Professor";
             this.CadastrosProfessor.Click += new System.EventHandler(this.CadastrosProfessor_Click);
             // 
@@ -320,6 +321,7 @@
             // 
             this.Ferramentas.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.FerramentasSobre,
+            this.FerramentasFoto,
             this.FerramentasBackup});
             this.Ferramentas.Font = new System.Drawing.Font("Calisto MT", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Ferramentas.Image = global::project_cesa.Properties.Resources.ferramentas_20;
@@ -327,11 +329,19 @@
             this.Ferramentas.Size = new System.Drawing.Size(104, 20);
             this.Ferramentas.Text = "Ferramentas";
             // 
+            // FerramentasFoto
+            // 
+            this.FerramentasFoto.Image = global::project_cesa.Properties.Resources.capturar_32;
+            this.FerramentasFoto.Name = "FerramentasFoto";
+            this.FerramentasFoto.Size = new System.Drawing.Size(180, 22);
+            this.FerramentasFoto.Text = "Capturar Foto";
+            this.FerramentasFoto.Click += new System.EventHandler(this.FerramentasFoto_Click);
+            // 
             // FerramentasSobre
             // 
             this.FerramentasSobre.Image = global::project_cesa.Properties.Resources.arma_20;
             this.FerramentasSobre.Name = "FerramentasSobre";
-            this.FerramentasSobre.Size = new System.Drawing.Size(166, 22);
+            this.FerramentasSobre.Size = new System.Drawing.Size(180, 22);
             this.FerramentasSobre.Text = "Sobre nós";
             this.FerramentasSobre.Click += new System.EventHandler(this.FerramentasSobre_Click);
             // 
@@ -339,7 +349,7 @@
             // 
             this.FerramentasBackup.Image = global::project_cesa.Properties.Resources.bancoDados_20;
             this.FerramentasBackup.Name = "FerramentasBackup";
-            this.FerramentasBackup.Size = new System.Drawing.Size(166, 22);
+            this.FerramentasBackup.Size = new System.Drawing.Size(180, 22);
             this.FerramentasBackup.Text = "Backup de dados";
             this.FerramentasBackup.Click += new System.EventHandler(this.FerramentasBackup_Click);
             // 
@@ -591,6 +601,7 @@
         private System.Windows.Forms.ToolStripMenuItem RelatoriosTurmas;
         private System.Windows.Forms.ToolStripMenuItem Financeiro;
         private System.Windows.Forms.ToolStripMenuItem FinanceiroMensalidades;
+        private System.Windows.Forms.ToolStripMenuItem FerramentasFoto;
     }
 }
 

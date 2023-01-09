@@ -173,6 +173,16 @@ namespace project_cesa.Properties {
         /// <summary>
         ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap capturar_32 {
+            get {
+                object obj = ResourceManager.GetObject("capturar_32", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap carrinho_compras_20 {
             get {
                 object obj = ResourceManager.GetObject("carrinho_compras_20", resourceCulture);
@@ -226,6 +236,16 @@ namespace project_cesa.Properties {
         internal static System.Drawing.Bitmap disciplina {
             get {
                 object obj = ResourceManager.GetObject("disciplina", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap encerrar_gravar_32 {
+            get {
+                object obj = ResourceManager.GetObject("encerrar_gravar_32", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -423,6 +443,16 @@ namespace project_cesa.Properties {
         /// <summary>
         ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap play_gravar_32 {
+            get {
+                object obj = ResourceManager.GetObject("play_gravar_32", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap professor {
             get {
                 object obj = ResourceManager.GetObject("professor", resourceCulture);
@@ -446,6 +476,16 @@ namespace project_cesa.Properties {
         internal static System.Drawing.Bitmap sair2 {
             get {
                 object obj = ResourceManager.GetObject("sair2", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap sem_foto {
+            get {
+                object obj = ResourceManager.GetObject("sem-foto", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

@@ -29,15 +29,14 @@ namespace project_cesa.Relatorios
         private void Relatorio_Turma_Load(object sender, EventArgs e)
         {
             CarregarComboBoxTurma();
-            // TODO: esta linha de código carrega dados na tabela 'project_escolaDataSet.MontTurma'. Você pode movê-la ou removê-la conforme necessário.
             cbTurma.Focus();
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
-            this.montTurmaTableAdapter.Fill(this.project_escolaDataSet.MontTurma, cbTurma.Text);
-
-            this.reportViewer1.RefreshReport();
+            this.montTurmaTableAdapter.Fill(this.project_escolaDataSet.MontTurma, Convert.ToInt32(cbTurma.SelectedValue));
+            // TODO: esta linha de código carrega dados na tabela 'project_escolaDataSet.MontTurma'. Você pode movê-la ou removê-la conforme necessário.
+            this.reportViewer1.RefreshReport();            
         }
     }
 }

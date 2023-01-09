@@ -36,7 +36,7 @@ namespace project_cesa.Ferramentas
 
                 string data = DateTime.Now.ToString("dd-MM-yyyy-HH-mm");
 
-                string file = "backup/backup-" + data + ".sql";
+                string file = @"C:\cesa\dados\backup-" + data + ".sql";
                 using (MySqlConnection conn = new MySqlConnection(constring))
                 {
                     using (MySqlCommand cmd = new MySqlCommand())
