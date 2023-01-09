@@ -1,7 +1,6 @@
 C:\Users\cmdtj\OneDrive\Área de Trabalho\Apps\project_cesa\project_cesa\bin\Debug\project_cesa.exe.config
 C:\Users\cmdtj\OneDrive\Área de Trabalho\Apps\project_cesa\project_cesa\bin\Debug\project_cesa.exe
 C:\Users\cmdtj\OneDrive\Área de Trabalho\Apps\project_cesa\project_cesa\bin\Debug\project_cesa.pdb
-C:\Users\cmdtj\OneDrive\Área de Trabalho\Apps\project_cesa\project_cesa\obj\Debug\project_cesa.csproj.AssemblyReference.cache
 C:\Users\cmdtj\OneDrive\Área de Trabalho\Apps\project_cesa\project_cesa\obj\Debug\project_cesa.Properties.Resources.resources
 C:\Users\cmdtj\OneDrive\Área de Trabalho\Apps\project_cesa\project_cesa\obj\Debug\project_cesa.csproj.GenerateResource.cache
 C:\Users\cmdtj\OneDrive\Área de Trabalho\Apps\project_cesa\project_cesa\obj\Debug\project_cesa.csproj.CoreCompileInputs.cache
@@ -108,3 +107,10 @@ C:\Users\cmdtj\OneDrive\Área de Trabalho\Apps\project_cesa\project_cesa\bin\Deb
 C:\Users\cmdtj\OneDrive\Área de Trabalho\Apps\project_cesa\project_cesa\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
 C:\Users\cmdtj\OneDrive\Área de Trabalho\Apps\project_cesa\project_cesa\obj\Debug\project_cesa.Ferramentas.FrmBackup.resources
 C:\Users\cmdtj\OneDrive\Área de Trabalho\Apps\project_cesa\project_cesa\obj\Debug\project_cesa.Cadastros.FrmProfessor.resources
+C:\Users\cmdtj\OneDrive\Área de Trabalho\Apps\project_cesa\project_cesa\bin\Debug\AForge.dll
+C:\Users\cmdtj\OneDrive\Área de Trabalho\Apps\project_cesa\project_cesa\bin\Debug\AForge.Video.DirectShow.dll
+C:\Users\cmdtj\OneDrive\Área de Trabalho\Apps\project_cesa\project_cesa\bin\Debug\AForge.Video.dll
+C:\Users\cmdtj\OneDrive\Área de Trabalho\Apps\project_cesa\project_cesa\bin\Debug\AForge.xml
+C:\Users\cmdtj\OneDrive\Área de Trabalho\Apps\project_cesa\project_cesa\bin\Debug\AForge.Video.xml
+C:\Users\cmdtj\OneDrive\Área de Trabalho\Apps\project_cesa\project_cesa\bin\Debug\AForge.Video.DirectShow.xml
+C:\Users\cmdtj\OneDrive\Área de Trabalho\Apps\project_cesa\project_cesa\obj\Debug\project_cesa.Ferramentas.FrmCapturarFoto.resources

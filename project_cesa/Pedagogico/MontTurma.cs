@@ -111,7 +111,9 @@ namespace project_cesa.Pedagogico
 
         private void FrmMontTurma_Activated(object sender, EventArgs e)
         {
-            txtAluno.Text = Program.nomeAluno;            
+            txtAluno.Text = Program.nomeAluno;
+            // Passo o id da turma para o relatorio
+            Program.idSerieTurma = CbTurma.SelectedValue.ToString();
         }
 
         private void CbTurma_SelectionChangeCommitted(object sender, EventArgs e)

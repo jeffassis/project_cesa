@@ -1,8 +1,10 @@
-﻿using System;
+﻿using MySql.Data.MySqlClient;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -12,8 +14,12 @@ namespace project_cesa.Cadastros
 {
     public partial class FrmAluno : Form
     {
+        string foto;
+        string alterou;
         string idSelecionado;
         string AlunoAntigo;
+        
+        MySqlCommand cmd;
         DataTable dt = new DataTable();
         public FrmAluno()
         {
@@ -97,10 +103,12 @@ namespace project_cesa.Cadastros
             txtData.Value = DateTime.Today;
             txtTelefone.Text = "";
             cbSangue.SelectedIndex = -1;
+            LimparFoto();
         }        
 
         private void FrmAluno_Load(object sender, EventArgs e)
         {
+            LimparFoto();
             Listar();
         }
 
@@ -111,6 +119,7 @@ namespace project_cesa.Cadastros
 
         private void BtnNovo_Click(object sender, EventArgs e)
         {
+            BtnFoto.Enabled = true;
             BtnSave.Enabled = true;
             BtnUpdate.Enabled = false;
             BtnDelete.Enabled = false;
@@ -129,12 +138,19 @@ namespace project_cesa.Cadastros
                 return;
             }
             // ADICIONA A CONSULTA A STRING
-            string queryAdd = String.Format(@"
-                       INSERT INTO tb_aluno 
-                            (nome, email, endereco, bairro, cep, nascimento, telefone, sangue)
-                                VALUES ('{0}', '{1}', '{2}', '{3}', '{4}', '{5}', '{6}', '{7}')
-                    ", txtNome.Text, txtEmail.Text, txtEndereco.Text, txtBairro.Text, txtCep.Text, txtData.Text, txtTelefone.Text, cbSangue.Text);
-            
+            var vcon = Conexao.ConexaoBanco();
+            string sql = @"INSERT INTO tb_aluno (nome, email, endereco, bairro, cep, nascimento, telefone, sangue, imagem)
+                         VALUES (@nome, @email, @endereco, @bairro, @cep, @nascimento, @telefone, @sangue, @imagem)";
+            cmd = new MySqlCommand(sql, vcon);
+            cmd.Parameters.AddWithValue("@nome", txtNome.Text);
+            cmd.Parameters.AddWithValue("@email", txtEmail.Text);
+            cmd.Parameters.AddWithValue("@endereco", txtEndereco.Text);
+            cmd.Parameters.AddWithValue("@bairro", txtBairro.Text);
+            cmd.Parameters.AddWithValue("@cep", txtCep.Text);
+            cmd.Parameters.AddWithValue("@nascimento", txtData.Text);
+            cmd.Parameters.AddWithValue("@telefone", txtTelefone.Text);
+            cmd.Parameters.AddWithValue("@sangue", cbSangue.Text);
+            cmd.Parameters.AddWithValue("@imagem", Img());            
             // VERIFICA SE O ALUNO JA EXISTE
             string verificar = "SELECT nome FROM tb_aluno WHERE nome='"+txtNome.Text+"'";
             dt = Conexao.dql(verificar);
@@ -144,11 +160,15 @@ namespace project_cesa.Cadastros
                 txtNome.Text = "";
                 txtNome.Focus();
                 return;
-            }            
-            // EXECUTA A STRING    
-            Conexao.dml(queryAdd);
+            }
+            // EXECUTA A STRING
+            cmd.ExecuteNonQuery();
+            vcon.Close();
+            vcon.Dispose();
+            vcon.ClearAllPoolsAsync();
             MessageBox.Show("Dados inseridos com sucesso!", "Dados Adicionados", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            
+
+            BtnFoto.Enabled = false;
             BtnSave.Enabled = false;
             BtnUpdate.Enabled = false;
             BtnDelete.Enabled = false;
@@ -172,13 +192,30 @@ namespace project_cesa.Cadastros
                 DialogResult res = MessageBox.Show("Confirma Atualização de dados?", "Atualizar dados?", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
                 if (res == DialogResult.Yes)
                 {
-                    // ADICIONA A CONSULTA A STRING
-                    string queryUpdate = String.Format(@"
-                        UPDATE tb_aluno SET 
-                            nome='{0}', email='{1}', endereco='{2}', bairro='{3}', cep='{4}', nascimento='{5}', telefone='{6}', sangue='{7}'
-                        WHERE
-                            id_aluno={8}
-                    ", txtNome.Text, txtEmail.Text, txtEndereco.Text, txtBairro.Text, txtCep.Text, txtData.Text, txtTelefone.Text, cbSangue.Text, idSelecionado);
+                    var vcon = Conexao.ConexaoBanco();
+                    if (alterou == "1")
+                    {
+                        string sql = @"UPDATE tb_aluno SET nome=@nome, email=@email, endereco=@endereco, bairro=@bairro, cep=@cep, nascimento=@nascimento,
+                                    telefone=@telefone, sangue=@sangue, imagem=@imagem WHERE id_aluno=@id";
+                        cmd = new MySqlCommand(sql, vcon);
+                        cmd.Parameters.AddWithValue("@imagem", Img());
+                    }
+                    else
+                    {
+                        string sql = @"UPDATE tb_aluno SET nome=@nome, email=@email, endereco=@endereco, bairro=@bairro, cep=@cep, nascimento=@nascimento,
+                                    telefone=@telefone, sangue=@sangue WHERE id_aluno=@id";
+                        cmd = new MySqlCommand(sql, vcon);
+                    }
+                    cmd.Parameters.AddWithValue("@nome", txtNome.Text);
+                    cmd.Parameters.AddWithValue("@email", txtEmail.Text);
+                    cmd.Parameters.AddWithValue("@endereco", txtEndereco.Text);
+                    cmd.Parameters.AddWithValue("@bairro", txtBairro.Text);
+                    cmd.Parameters.AddWithValue("@cep", txtCep.Text);
+                    cmd.Parameters.AddWithValue("@nascimento", txtData.Text);
+                    cmd.Parameters.AddWithValue("@telefone", txtTelefone.Text);
+                    cmd.Parameters.AddWithValue("@sangue", cbSangue.Text);
+                    cmd.Parameters.AddWithValue("@id", idSelecionado);
+
                     // VERIFICA SE O ALUNO JA EXISTE
                     if (txtNome.Text != AlunoAntigo)
                     {
@@ -193,17 +230,21 @@ namespace project_cesa.Cadastros
                         }
                     }
                     // EXECUTA A STRING
-                    Conexao.dml(queryUpdate);
+                    cmd.ExecuteNonQuery();
+                    vcon.Close();
+                    vcon.Dispose();
+                    vcon.ClearAllPoolsAsync();
                     MessageBox.Show("Dados atualizados com sucesso!", "Dados atualizados", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
-
             }
+            BtnFoto.Enabled = false;
             BtnSave.Enabled = false;
             BtnUpdate.Enabled = false;
             BtnDelete.Enabled = false;            
             DesabilitarCampos();
             LimparCampos();
             Listar();
+            alterou = "";
         }
 
         private void BtnDelete_Click(object sender, EventArgs e)
@@ -217,6 +258,7 @@ namespace project_cesa.Cadastros
                 MessageBox.Show("Registro Excluido com Sucesso!", "Registro Excluido", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 Grid.Rows.Remove(Grid.CurrentRow);
             }
+            BtnFoto.Enabled = false;
             BtnSave.Enabled = false;
             BtnUpdate.Enabled = false;
             BtnDelete.Enabled = false;
@@ -235,8 +277,18 @@ namespace project_cesa.Cadastros
             txtData.Text= Grid.CurrentRow.Cells[6].Value.ToString();
             txtTelefone.Text = Grid.CurrentRow.Cells[7].Value.ToString();
             cbSangue.Text = Grid.CurrentRow.Cells[8].Value.ToString();
-            pictureBox1.Text = Grid.CurrentRow.Cells[9].Value.ToString();
-
+            
+            if (Grid.CurrentRow.Cells[9].Value != DBNull.Value)
+            {
+                byte[] imagem = (byte[])Grid.CurrentRow.Cells[9].Value;
+                MemoryStream ms = new MemoryStream(imagem);
+                pictureBox1.Image = System.Drawing.Image.FromStream(ms);
+            }
+            else
+            {
+                pictureBox1.Image = Properties.Resources.sem_foto;
+            }
+            BtnFoto.Enabled = true;
             BtnUpdate.Enabled = true;
             BtnDelete.Enabled = true;
             BtnSave.Enabled = false;
@@ -258,6 +310,38 @@ namespace project_cesa.Cadastros
                 Program.nomeAluno = Grid.CurrentRow.Cells[1].Value.ToString();
                 Close();
             }
+        }
+
+        private byte[] Img()
+        {
+            byte[] imagem_byte = null;
+            if (foto == "")
+            {
+                return null;
+            }
+
+            FileStream fs = new FileStream(foto, FileMode.Open, FileAccess.Read);
+            BinaryReader br = new BinaryReader(fs);
+            imagem_byte = br.ReadBytes((int)fs.Length);
+            return imagem_byte;
+        }
+
+        private void BtnFoto_Click(object sender, EventArgs e)
+        {
+            OpenFileDialog dialog = new OpenFileDialog();
+            dialog.Filter = "Imagens(*.jpg;*.png)|*.jpg;*.png|Todos os Arquivos(*.*)|*.*";
+            if (dialog.ShowDialog() == DialogResult.OK)
+            {
+                foto = dialog.FileName.ToString();
+                pictureBox1.ImageLocation = foto;
+                alterou = "1";
+            }
+        }
+
+        private void LimparFoto()
+        {
+            pictureBox1.Image = Properties.Resources.sem_foto;
+            foto = "img/sem-foto.jpg";
         }
     }
 }

@@ -146,5 +146,11 @@ namespace project_cesa
             Cadastros.FrmProfessor form = new Cadastros.FrmProfessor();
             AbreForm(0, form);
         }
+
+        private void FerramentasFoto_Click(object sender, EventArgs e)
+        {
+            Ferramentas.FrmCapturarFoto form = new Ferramentas.FrmCapturarFoto();
+            AbreForm(0, form);
+        }
     }
 }
