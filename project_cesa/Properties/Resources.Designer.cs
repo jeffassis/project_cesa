@@ -273,6 +273,16 @@ namespace project_cesa.Properties {
         /// <summary>
         ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap hand_peace_20 {
+            get {
+                object obj = ResourceManager.GetObject("hand_peace_20", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap imprimir_24 {
             get {
                 object obj = ResourceManager.GetObject("imprimir_24", resourceCulture);

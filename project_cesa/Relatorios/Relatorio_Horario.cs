@@ -17,12 +17,28 @@ namespace project_cesa.Relatorios
             InitializeComponent();
         }
 
+        private void CarregarComboBoxTurma()
+        {
+            string turma = "SELECT * FROM tb_turma ORDER BY nome";
+            cbCombo.Items.Clear();
+            cbCombo.DataSource = Conexao.dql(turma);
+            cbCombo.DisplayMember = "nome";
+            cbCombo.ValueMember = "id_turma";
+        }
+
         private void FrmRelatorio_Horario_Load(object sender, EventArgs e)
         {
-            
-            this.relatorio_HorarioTableAdapter.Fill(this.project_escolaDataSet.Relatorio_Horario, Convert.ToInt32(Program.idHorario));
+            CarregarComboBoxTurma();
+            cbCombo.Focus();
+
+        }
+
+        private void BtnPqsquisar_Click(object sender, EventArgs e)
+        {
+            this.relatorio_HorarioTableAdapter.Fill(this.project_escolaDataSet.Relatorio_Horario, Convert.ToInt32(cbCombo.SelectedValue));
 
             this.reportViewer1.RefreshReport();
+
         }
     }
 }

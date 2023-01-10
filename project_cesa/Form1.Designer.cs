@@ -52,12 +52,14 @@
             this.FinanceiroMensalidades = new System.Windows.Forms.ToolStripMenuItem();
             this.Relatorios = new System.Windows.Forms.ToolStripMenuItem();
             this.RelatoriosTurmas = new System.Windows.Forms.ToolStripMenuItem();
+            this.RelatorioHora = new System.Windows.Forms.ToolStripMenuItem();
+            this.RelHoraProf = new System.Windows.Forms.ToolStripMenuItem();
             this.Eventos = new System.Windows.Forms.ToolStripMenuItem();
             this.Usuarios = new System.Windows.Forms.ToolStripMenuItem();
             this.UsuariosGestao = new System.Windows.Forms.ToolStripMenuItem();
             this.Ferramentas = new System.Windows.Forms.ToolStripMenuItem();
-            this.FerramentasFoto = new System.Windows.Forms.ToolStripMenuItem();
             this.FerramentasSobre = new System.Windows.Forms.ToolStripMenuItem();
+            this.FerramentasFoto = new System.Windows.Forms.ToolStripMenuItem();
             this.FerramentasBackup = new System.Windows.Forms.ToolStripMenuItem();
             this.Login = new System.Windows.Forms.ToolStripMenuItem();
             this.LoginLogOn = new System.Windows.Forms.ToolStripMenuItem();
@@ -158,7 +160,7 @@
             this.PedagogicoDisciplinas.Font = new System.Drawing.Font("Calisto MT", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.PedagogicoDisciplinas.Image = global::project_cesa.Properties.Resources.disciplina;
             this.PedagogicoDisciplinas.Name = "PedagogicoDisciplinas";
-            this.PedagogicoDisciplinas.Size = new System.Drawing.Size(137, 22);
+            this.PedagogicoDisciplinas.Size = new System.Drawing.Size(180, 22);
             this.PedagogicoDisciplinas.Text = "Disciplinas";
             this.PedagogicoDisciplinas.Click += new System.EventHandler(this.PedagogicoDisciplina_Click);
             // 
@@ -171,7 +173,7 @@
             this.PedagogicoHorario.Font = new System.Drawing.Font("Calisto MT", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.PedagogicoHorario.Image = global::project_cesa.Properties.Resources.clock1;
             this.PedagogicoHorario.Name = "PedagogicoHorario";
-            this.PedagogicoHorario.Size = new System.Drawing.Size(137, 22);
+            this.PedagogicoHorario.Size = new System.Drawing.Size(180, 22);
             this.PedagogicoHorario.Text = "Horários";
             // 
             // PedagogicoHorarioCad
@@ -206,7 +208,7 @@
             this.PedagogicoNotas.Font = new System.Drawing.Font("Calisto MT", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.PedagogicoNotas.Image = global::project_cesa.Properties.Resources.notas;
             this.PedagogicoNotas.Name = "PedagogicoNotas";
-            this.PedagogicoNotas.Size = new System.Drawing.Size(137, 22);
+            this.PedagogicoNotas.Size = new System.Drawing.Size(180, 22);
             this.PedagogicoNotas.Text = "Notas";
             // 
             // PedagogicoNotaLanca
@@ -237,7 +239,7 @@
             this.PedagogicoTurmas.Font = new System.Drawing.Font("Calisto MT", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.PedagogicoTurmas.Image = global::project_cesa.Properties.Resources.turma;
             this.PedagogicoTurmas.Name = "PedagogicoTurmas";
-            this.PedagogicoTurmas.Size = new System.Drawing.Size(137, 22);
+            this.PedagogicoTurmas.Size = new System.Drawing.Size(180, 22);
             this.PedagogicoTurmas.Text = "Turmas";
             // 
             // PedagogicoTurmaCad
@@ -270,13 +272,14 @@
             // 
             this.FinanceiroMensalidades.Image = global::project_cesa.Properties.Resources.mensalidade_20;
             this.FinanceiroMensalidades.Name = "FinanceiroMensalidades";
-            this.FinanceiroMensalidades.Size = new System.Drawing.Size(150, 22);
+            this.FinanceiroMensalidades.Size = new System.Drawing.Size(180, 22);
             this.FinanceiroMensalidades.Text = "Mensalidades";
             // 
             // Relatorios
             // 
             this.Relatorios.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.RelatoriosTurmas});
+            this.RelatoriosTurmas,
+            this.RelatorioHora});
             this.Relatorios.Font = new System.Drawing.Font("Calisto MT", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Relatorios.Image = global::project_cesa.Properties.Resources.menuReports;
             this.Relatorios.Name = "Relatorios";
@@ -287,9 +290,26 @@
             // 
             this.RelatoriosTurmas.Image = global::project_cesa.Properties.Resources.turma;
             this.RelatoriosTurmas.Name = "RelatoriosTurmas";
-            this.RelatoriosTurmas.Size = new System.Drawing.Size(117, 22);
+            this.RelatoriosTurmas.Size = new System.Drawing.Size(180, 22);
             this.RelatoriosTurmas.Text = "Turmas";
             this.RelatoriosTurmas.Click += new System.EventHandler(this.RelatoriosTurmas_Click);
+            // 
+            // RelatorioHora
+            // 
+            this.RelatorioHora.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.RelHoraProf});
+            this.RelatorioHora.Image = global::project_cesa.Properties.Resources.clock1;
+            this.RelatorioHora.Name = "RelatorioHora";
+            this.RelatorioHora.Size = new System.Drawing.Size(180, 22);
+            this.RelatorioHora.Text = "Horários";
+            // 
+            // RelHoraProf
+            // 
+            this.RelHoraProf.Image = global::project_cesa.Properties.Resources.professor;
+            this.RelHoraProf.Name = "RelHoraProf";
+            this.RelHoraProf.Size = new System.Drawing.Size(126, 22);
+            this.RelHoraProf.Text = "Professor";
+            this.RelHoraProf.Click += new System.EventHandler(this.RelHoraProf_Click);
             // 
             // Eventos
             // 
@@ -329,6 +349,14 @@
             this.Ferramentas.Size = new System.Drawing.Size(104, 20);
             this.Ferramentas.Text = "Ferramentas";
             // 
+            // FerramentasSobre
+            // 
+            this.FerramentasSobre.Image = global::project_cesa.Properties.Resources.hand_peace_20;
+            this.FerramentasSobre.Name = "FerramentasSobre";
+            this.FerramentasSobre.Size = new System.Drawing.Size(180, 22);
+            this.FerramentasSobre.Text = "Sobre nós";
+            this.FerramentasSobre.Click += new System.EventHandler(this.FerramentasSobre_Click);
+            // 
             // FerramentasFoto
             // 
             this.FerramentasFoto.Image = global::project_cesa.Properties.Resources.capturar_32;
@@ -336,14 +364,6 @@
             this.FerramentasFoto.Size = new System.Drawing.Size(180, 22);
             this.FerramentasFoto.Text = "Capturar Foto";
             this.FerramentasFoto.Click += new System.EventHandler(this.FerramentasFoto_Click);
-            // 
-            // FerramentasSobre
-            // 
-            this.FerramentasSobre.Image = global::project_cesa.Properties.Resources.arma_20;
-            this.FerramentasSobre.Name = "FerramentasSobre";
-            this.FerramentasSobre.Size = new System.Drawing.Size(180, 22);
-            this.FerramentasSobre.Text = "Sobre nós";
-            this.FerramentasSobre.Click += new System.EventHandler(this.FerramentasSobre_Click);
             // 
             // FerramentasBackup
             // 
@@ -602,6 +622,8 @@
         private System.Windows.Forms.ToolStripMenuItem Financeiro;
         private System.Windows.Forms.ToolStripMenuItem FinanceiroMensalidades;
         private System.Windows.Forms.ToolStripMenuItem FerramentasFoto;
+        private System.Windows.Forms.ToolStripMenuItem RelatorioHora;
+        private System.Windows.Forms.ToolStripMenuItem RelHoraProf;
     }
 }
 

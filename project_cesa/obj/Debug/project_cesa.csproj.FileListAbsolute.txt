@@ -19,8 +19,6 @@ C:\Users\cmdtj\OneDrive\Área de Trabalho\Apps\project_cesa\project_cesa\obj\Deb
 C:\Users\cmdtj\OneDrive\Área de Trabalho\Apps\project_cesa\project_cesa\obj\Debug\project_cesa.Pedagogico.FrmTurma.resources
 C:\Users\cmdtj\OneDrive\Área de Trabalho\Apps\project_cesa\project_cesa\obj\Debug\project_cesa.Pedagogico.FrmMontTurma.resources
 C:\Users\cmdtj\OneDrive\Área de Trabalho\Apps\project_cesa\project_cesa\obj\Debug\project_cesa.Relatorios.Relatorio_Turma.resources
-C:\Users\cmdtj\OneDrive\Área de Trabalho\Apps\project_cesa\project_cesa\obj\Debug\RdlCompile.cache
-C:\Users\cmdtj\OneDrive\Área de Trabalho\Apps\project_cesa\project_cesa\obj\Debug\RdlCompile.compiled
 C:\Users\cmdtj\OneDrive\Área de Trabalho\Apps\project_cesa\project_cesa\bin\Debug\SqlServerTypes\x64\msvcr120.dll
 C:\Users\cmdtj\OneDrive\Área de Trabalho\Apps\project_cesa\project_cesa\bin\Debug\SqlServerTypes\x64\SqlServerSpatial140.dll
 C:\Users\cmdtj\OneDrive\Área de Trabalho\Apps\project_cesa\project_cesa\bin\Debug\SqlServerTypes\x86\msvcr120.dll
@@ -114,3 +112,6 @@ C:\Users\cmdtj\OneDrive\Área de Trabalho\Apps\project_cesa\project_cesa\bin\Deb
 C:\Users\cmdtj\OneDrive\Área de Trabalho\Apps\project_cesa\project_cesa\bin\Debug\AForge.Video.xml
 C:\Users\cmdtj\OneDrive\Área de Trabalho\Apps\project_cesa\project_cesa\bin\Debug\AForge.Video.DirectShow.xml
 C:\Users\cmdtj\OneDrive\Área de Trabalho\Apps\project_cesa\project_cesa\obj\Debug\project_cesa.Ferramentas.FrmCapturarFoto.resources
+C:\Users\cmdtj\OneDrive\Área de Trabalho\Apps\project_cesa\project_cesa\obj\Debug\project_cesa.csproj.AssemblyReference.cache
+C:\Users\cmdtj\OneDrive\Área de Trabalho\Apps\project_cesa\project_cesa\obj\Debug\RdlCompile.cache
+C:\Users\cmdtj\OneDrive\Área de Trabalho\Apps\project_cesa\project_cesa\obj\Debug\RdlCompile.compiled

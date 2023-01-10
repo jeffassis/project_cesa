@@ -152,5 +152,11 @@ namespace project_cesa
             Ferramentas.FrmCapturarFoto form = new Ferramentas.FrmCapturarFoto();
             AbreForm(0, form);
         }
+
+        private void RelHoraProf_Click(object sender, EventArgs e)
+        {
+            Relatorios.FrmRelatorio_Horario form = new Relatorios.FrmRelatorio_Horario();
+            AbreForm(0, form);
+        }
     }
 }

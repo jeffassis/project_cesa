@@ -1,13 +1,11 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio Version 16
-VisualStudioVersion = 16.0.33130.400
+# Visual Studio Version 17
+VisualStudioVersion = 17.4.33205.214
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "project_cesa", "project_cesa\project_cesa.csproj", "{31C4A01F-1C2F-4638-828D-3A35DD3DBB34}"
 EndProject
-Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "Deploy_projeto", "Deploy_projeto\Deploy_projeto.vdproj", "{F07F3AD9-53FB-4EA4-9106-32C5249EAF11}"
-EndProject
-Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "Deploy_CESA", "Deploy_CESA\Deploy_CESA.vdproj", "{F88E9634-4611-4FDD-95BB-2840F8A3E308}"
+Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "Deploy_Cesa", "Deploy_Cesa\Deploy_Cesa.vdproj", "{FEED80FF-0578-4431-A673-4554DF069271}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -19,10 +17,8 @@ Global
 		{31C4A01F-1C2F-4638-828D-3A35DD3DBB34}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{31C4A01F-1C2F-4638-828D-3A35DD3DBB34}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{31C4A01F-1C2F-4638-828D-3A35DD3DBB34}.Release|Any CPU.Build.0 = Release|Any CPU
-		{F07F3AD9-53FB-4EA4-9106-32C5249EAF11}.Debug|Any CPU.ActiveCfg = Debug
-		{F07F3AD9-53FB-4EA4-9106-32C5249EAF11}.Release|Any CPU.ActiveCfg = Release
-		{F88E9634-4611-4FDD-95BB-2840F8A3E308}.Debug|Any CPU.ActiveCfg = Debug
-		{F88E9634-4611-4FDD-95BB-2840F8A3E308}.Release|Any CPU.ActiveCfg = Release
+		{FEED80FF-0578-4431-A673-4554DF069271}.Debug|Any CPU.ActiveCfg = Debug
+		{FEED80FF-0578-4431-A673-4554DF069271}.Release|Any CPU.ActiveCfg = Release
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

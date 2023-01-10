@@ -9,8 +9,8 @@ namespace project_cesa
     internal static class Program
     {
         // Variavel global de Conexao de dados
-        //public static string caminhoBanco = "SERVER=localhost; DATABASE=project_escola; UID=root; PWD=; PORT=;";
-        public static string caminhoBanco = "SERVER=mysql835.umbler.com; DATABASE=project_escola; UID=jeffassis; PWD=jean1420; PORT=41890;";
+        public static string caminhoBanco = "SERVER=localhost; DATABASE=project_escola; UID=root; PWD=; PORT=;";
+        //public static string caminhoBanco = "SERVER=mysql835.umbler.com; DATABASE=project_escola; UID=jeffassis; PWD=jean1420; PORT=41890;";
 
         // Variaveis globais de controle de usuario
         public static string versao = "1.0";

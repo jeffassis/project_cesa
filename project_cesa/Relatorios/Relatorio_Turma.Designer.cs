@@ -35,10 +35,10 @@ namespace project_cesa.Relatorios
             this.montTurmaBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.project_escolaDataSet = new project_cesa.project_escolaDataSet();
             this.reportViewer1 = new Microsoft.Reporting.WinForms.ReportViewer();
-            this.button1 = new System.Windows.Forms.Button();
+            this.BtnPesquisar = new System.Windows.Forms.Button();
             this.montTurmaTableAdapter = new project_cesa.project_escolaDataSetTableAdapters.MontTurmaTableAdapter();
             this.tableAdapterManager = new project_cesa.project_escolaDataSetTableAdapters.TableAdapterManager();
-            this.cbTurma = new System.Windows.Forms.ComboBox();
+            this.cbCombo = new System.Windows.Forms.ComboBox();
             nomeLabel = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.montTurmaBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.project_escolaDataSet)).BeginInit();
@@ -84,16 +84,16 @@ namespace project_cesa.Relatorios
             this.reportViewer1.Size = new System.Drawing.Size(712, 467);
             this.reportViewer1.TabIndex = 0;
             // 
-            // button1
+            // BtnPesquisar
             // 
-            this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button1.Image = global::project_cesa.Properties.Resources.pesquisa_16;
-            this.button1.Location = new System.Drawing.Point(635, 1);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(23, 23);
-            this.button1.TabIndex = 2;
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.BtnPesquisar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.BtnPesquisar.Image = global::project_cesa.Properties.Resources.pesquisa_16;
+            this.BtnPesquisar.Location = new System.Drawing.Point(635, 1);
+            this.BtnPesquisar.Name = "BtnPesquisar";
+            this.BtnPesquisar.Size = new System.Drawing.Size(23, 23);
+            this.BtnPesquisar.TabIndex = 2;
+            this.BtnPesquisar.UseVisualStyleBackColor = true;
+            this.BtnPesquisar.Click += new System.EventHandler(this.BtnPesquisar_Click);
             // 
             // montTurmaTableAdapter
             // 
@@ -106,23 +106,26 @@ namespace project_cesa.Relatorios
             this.tableAdapterManager.tb_aluno_turmaTableAdapter = null;
             this.tableAdapterManager.tb_alunoTableAdapter = null;
             this.tableAdapterManager.tb_anoTableAdapter = null;
+            this.tableAdapterManager.tb_bimestreTableAdapter = null;
             this.tableAdapterManager.tb_diasemanaTableAdapter = null;
             this.tableAdapterManager.tb_disciplinaTableAdapter = null;
             this.tableAdapterManager.tb_horaalunoTableAdapter = null;
             this.tableAdapterManager.tb_horarioTableAdapter = null;
             this.tableAdapterManager.tb_mhoraTableAdapter = null;
+            this.tableAdapterManager.tb_notaTableAdapter = null;
+            this.tableAdapterManager.tb_professorTableAdapter = null;
             this.tableAdapterManager.tb_responsavelTableAdapter = null;
             this.tableAdapterManager.tb_turmaTableAdapter = null;
             this.tableAdapterManager.tb_userTableAdapter = null;
             this.tableAdapterManager.UpdateOrder = project_cesa.project_escolaDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
             // 
-            // cbTurma
+            // cbCombo
             // 
-            this.cbTurma.FormattingEnabled = true;
-            this.cbTurma.Location = new System.Drawing.Point(508, 2);
-            this.cbTurma.Name = "cbTurma";
-            this.cbTurma.Size = new System.Drawing.Size(121, 21);
-            this.cbTurma.TabIndex = 4;
+            this.cbCombo.FormattingEnabled = true;
+            this.cbCombo.Location = new System.Drawing.Point(508, 2);
+            this.cbCombo.Name = "cbCombo";
+            this.cbCombo.Size = new System.Drawing.Size(121, 21);
+            this.cbCombo.TabIndex = 4;
             // 
             // Relatorio_Turma
             // 
@@ -130,8 +133,8 @@ namespace project_cesa.Relatorios
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.InactiveCaption;
             this.ClientSize = new System.Drawing.Size(712, 467);
-            this.Controls.Add(this.cbTurma);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.cbCombo);
+            this.Controls.Add(this.BtnPesquisar);
             this.Controls.Add(nomeLabel);
             this.Controls.Add(this.reportViewer1);
             this.Name = "Relatorio_Turma";
@@ -152,7 +155,7 @@ namespace project_cesa.Relatorios
         private project_escolaDataSetTableAdapters.MontTurmaTableAdapter montTurmaTableAdapter;
         private System.Windows.Forms.BindingSource montTurmaBindingSource;
         private project_escolaDataSetTableAdapters.TableAdapterManager tableAdapterManager;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.ComboBox cbTurma;
+        private System.Windows.Forms.Button BtnPesquisar;
+        private System.Windows.Forms.ComboBox cbCombo;
     }
 }
