@@ -62,11 +62,14 @@ namespace project_cesa.Cadastros
             this.label11 = new System.Windows.Forms.Label();
             this.txtCpf = new System.Windows.Forms.MaskedTextBox();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
+            this.BtnFoto = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.btnFoto = new System.Windows.Forms.Button();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.label12 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.Grid)).BeginInit();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
             // 
             // Grid
@@ -103,14 +106,14 @@ namespace project_cesa.Cadastros
             this.panel1.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.panel1.Location = new System.Drawing.Point(0, 395);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(935, 47);
+            this.panel1.Size = new System.Drawing.Size(965, 47);
             this.panel1.TabIndex = 19;
             // 
             // label10
             // 
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Calisto MT", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.Location = new System.Drawing.Point(320, 3);
+            this.label10.Location = new System.Drawing.Point(372, 3);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(331, 20);
             this.label10.TabIndex = 5;
@@ -120,7 +123,7 @@ namespace project_cesa.Cadastros
             // 
             this.BtnFechar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.BtnFechar.Image = global::project_cesa.Properties.Resources.bt_fechar_24;
-            this.BtnFechar.Location = new System.Drawing.Point(890, 3);
+            this.BtnFechar.Location = new System.Drawing.Point(918, 3);
             this.BtnFechar.Name = "BtnFechar";
             this.BtnFechar.Size = new System.Drawing.Size(36, 36);
             this.BtnFechar.TabIndex = 4;
@@ -193,7 +196,7 @@ namespace project_cesa.Cadastros
             // 
             this.btnPesquisa.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnPesquisa.Image = global::project_cesa.Properties.Resources.source_20;
-            this.btnPesquisa.Location = new System.Drawing.Point(531, 25);
+            this.btnPesquisa.Location = new System.Drawing.Point(525, 25);
             this.btnPesquisa.Name = "btnPesquisa";
             this.btnPesquisa.Size = new System.Drawing.Size(28, 28);
             this.btnPesquisa.TabIndex = 23;
@@ -203,7 +206,7 @@ namespace project_cesa.Cadastros
             // TxtBuscarNome
             // 
             this.TxtBuscarNome.Font = new System.Drawing.Font("Calisto MT", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TxtBuscarNome.Location = new System.Drawing.Point(282, 28);
+            this.TxtBuscarNome.Location = new System.Drawing.Point(273, 28);
             this.TxtBuscarNome.Name = "TxtBuscarNome";
             this.TxtBuscarNome.Size = new System.Drawing.Size(243, 23);
             this.TxtBuscarNome.TabIndex = 1;
@@ -386,35 +389,59 @@ namespace project_cesa.Cadastros
             this.txtCpf.Size = new System.Drawing.Size(127, 23);
             this.txtCpf.TabIndex = 10;
             // 
+            // BtnFoto
+            // 
+            this.BtnFoto.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.BtnFoto.Enabled = false;
+            this.BtnFoto.Image = global::project_cesa.Properties.Resources.photo_24;
+            this.BtnFoto.Location = new System.Drawing.Point(880, 180);
+            this.BtnFoto.Name = "BtnFoto";
+            this.BtnFoto.Size = new System.Drawing.Size(36, 36);
+            this.BtnFoto.TabIndex = 42;
+            this.toolTip1.SetToolTip(this.BtnFoto, "Inserir foto");
+            this.BtnFoto.UseVisualStyleBackColor = true;
+            this.BtnFoto.Click += new System.EventHandler(this.BtnFoto_Click);
+            // 
             // pictureBox1
             // 
             this.pictureBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pictureBox1.Location = new System.Drawing.Point(841, 228);
+            this.pictureBox1.Location = new System.Drawing.Point(840, 61);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(85, 113);
+            this.pictureBox1.Size = new System.Drawing.Size(113, 113);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 43;
             this.pictureBox1.TabStop = false;
             // 
-            // btnFoto
+            // pictureBox2
             // 
-            this.btnFoto.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnFoto.Enabled = false;
-            this.btnFoto.Image = global::project_cesa.Properties.Resources.photo_24;
-            this.btnFoto.Location = new System.Drawing.Point(867, 347);
-            this.btnFoto.Name = "btnFoto";
-            this.btnFoto.Size = new System.Drawing.Size(36, 36);
-            this.btnFoto.TabIndex = 42;
-            this.toolTip1.SetToolTip(this.btnFoto, "Inserir foto");
-            this.btnFoto.UseVisualStyleBackColor = true;
+            this.pictureBox2.Image = global::project_cesa.Properties.Resources.cesa;
+            this.pictureBox2.Location = new System.Drawing.Point(841, 238);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(113, 113);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox2.TabIndex = 44;
+            this.pictureBox2.TabStop = false;
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Font = new System.Drawing.Font("Calisto MT", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label12.Location = new System.Drawing.Point(270, 10);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(86, 15);
+            this.label12.TabIndex = 45;
+            this.label12.Text = "Buscar Aluno:";
             // 
             // FrmProfessor
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.InactiveCaption;
-            this.ClientSize = new System.Drawing.Size(935, 442);
+            this.ClientSize = new System.Drawing.Size(965, 442);
+            this.Controls.Add(this.label12);
+            this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.pictureBox1);
-            this.Controls.Add(this.btnFoto);
+            this.Controls.Add(this.BtnFoto);
             this.Controls.Add(this.txtCpf);
             this.Controls.Add(this.label11);
             this.Controls.Add(this.txtRg);
@@ -450,6 +477,7 @@ namespace project_cesa.Cadastros
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -488,6 +516,8 @@ namespace project_cesa.Cadastros
         private System.Windows.Forms.MaskedTextBox txtCpf;
         private System.Windows.Forms.ToolTip toolTip1;
         private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.Button btnFoto;
+        private System.Windows.Forms.Button BtnFoto;
+        private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.Label label12;
     }
 }

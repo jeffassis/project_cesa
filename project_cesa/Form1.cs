@@ -158,5 +158,11 @@ namespace project_cesa
             Relatorios.FrmRelatorio_Horario form = new Relatorios.FrmRelatorio_Horario();
             AbreForm(0, form);
         }
+
+        private void PedagogicoHorarioAluno_Click(object sender, EventArgs e)
+        {
+            Pedagogico.FrmMontHoraAluno form = new Pedagogico.FrmMontHoraAluno();
+            AbreForm(0, form);
+        }
     }
 }

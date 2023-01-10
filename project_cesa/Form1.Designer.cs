@@ -51,6 +51,10 @@
             this.Financeiro = new System.Windows.Forms.ToolStripMenuItem();
             this.FinanceiroMensalidades = new System.Windows.Forms.ToolStripMenuItem();
             this.Relatorios = new System.Windows.Forms.ToolStripMenuItem();
+            this.RelDocumentos = new System.Windows.Forms.ToolStripMenuItem();
+            this.RelDocumentosCircular = new System.Windows.Forms.ToolStripMenuItem();
+            this.RelDocumentosDeclaracao = new System.Windows.Forms.ToolStripMenuItem();
+            this.RelDocumentosHistorico = new System.Windows.Forms.ToolStripMenuItem();
             this.RelatoriosTurmas = new System.Windows.Forms.ToolStripMenuItem();
             this.RelatorioHora = new System.Windows.Forms.ToolStripMenuItem();
             this.RelHoraProf = new System.Windows.Forms.ToolStripMenuItem();
@@ -198,6 +202,7 @@
             this.PedagogicoHorarioAluno.Name = "PedagogicoHorarioAluno";
             this.PedagogicoHorarioAluno.Size = new System.Drawing.Size(196, 22);
             this.PedagogicoHorarioAluno.Text = "Horário Aluno";
+            this.PedagogicoHorarioAluno.Click += new System.EventHandler(this.PedagogicoHorarioAluno_Click);
             // 
             // PedagogicoNotas
             // 
@@ -272,12 +277,13 @@
             // 
             this.FinanceiroMensalidades.Image = global::project_cesa.Properties.Resources.mensalidade_20;
             this.FinanceiroMensalidades.Name = "FinanceiroMensalidades";
-            this.FinanceiroMensalidades.Size = new System.Drawing.Size(180, 22);
+            this.FinanceiroMensalidades.Size = new System.Drawing.Size(150, 22);
             this.FinanceiroMensalidades.Text = "Mensalidades";
             // 
             // Relatorios
             // 
             this.Relatorios.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.RelDocumentos,
             this.RelatoriosTurmas,
             this.RelatorioHora});
             this.Relatorios.Font = new System.Drawing.Font("Calisto MT", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -286,11 +292,43 @@
             this.Relatorios.Size = new System.Drawing.Size(92, 20);
             this.Relatorios.Text = "Relatórios";
             // 
+            // RelDocumentos
+            // 
+            this.RelDocumentos.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.RelDocumentosCircular,
+            this.RelDocumentosDeclaracao,
+            this.RelDocumentosHistorico});
+            this.RelDocumentos.Image = global::project_cesa.Properties.Resources.documentos_20;
+            this.RelDocumentos.Name = "RelDocumentos";
+            this.RelDocumentos.Size = new System.Drawing.Size(145, 22);
+            this.RelDocumentos.Text = "Documentos";
+            // 
+            // RelDocumentosCircular
+            // 
+            this.RelDocumentosCircular.Image = global::project_cesa.Properties.Resources.circular_20;
+            this.RelDocumentosCircular.Name = "RelDocumentosCircular";
+            this.RelDocumentosCircular.Size = new System.Drawing.Size(142, 22);
+            this.RelDocumentosCircular.Text = "Circular";
+            // 
+            // RelDocumentosDeclaracao
+            // 
+            this.RelDocumentosDeclaracao.Image = global::project_cesa.Properties.Resources.declaracao_20;
+            this.RelDocumentosDeclaracao.Name = "RelDocumentosDeclaracao";
+            this.RelDocumentosDeclaracao.Size = new System.Drawing.Size(142, 22);
+            this.RelDocumentosDeclaracao.Text = "Declarações";
+            // 
+            // RelDocumentosHistorico
+            // 
+            this.RelDocumentosHistorico.Image = global::project_cesa.Properties.Resources.square_poll_20;
+            this.RelDocumentosHistorico.Name = "RelDocumentosHistorico";
+            this.RelDocumentosHistorico.Size = new System.Drawing.Size(142, 22);
+            this.RelDocumentosHistorico.Text = "Históricos";
+            // 
             // RelatoriosTurmas
             // 
             this.RelatoriosTurmas.Image = global::project_cesa.Properties.Resources.turma;
             this.RelatoriosTurmas.Name = "RelatoriosTurmas";
-            this.RelatoriosTurmas.Size = new System.Drawing.Size(180, 22);
+            this.RelatoriosTurmas.Size = new System.Drawing.Size(145, 22);
             this.RelatoriosTurmas.Text = "Turmas";
             this.RelatoriosTurmas.Click += new System.EventHandler(this.RelatoriosTurmas_Click);
             // 
@@ -300,7 +338,7 @@
             this.RelHoraProf});
             this.RelatorioHora.Image = global::project_cesa.Properties.Resources.clock1;
             this.RelatorioHora.Name = "RelatorioHora";
-            this.RelatorioHora.Size = new System.Drawing.Size(180, 22);
+            this.RelatorioHora.Size = new System.Drawing.Size(145, 22);
             this.RelatorioHora.Text = "Horários";
             // 
             // RelHoraProf
@@ -353,7 +391,7 @@
             // 
             this.FerramentasSobre.Image = global::project_cesa.Properties.Resources.hand_peace_20;
             this.FerramentasSobre.Name = "FerramentasSobre";
-            this.FerramentasSobre.Size = new System.Drawing.Size(180, 22);
+            this.FerramentasSobre.Size = new System.Drawing.Size(166, 22);
             this.FerramentasSobre.Text = "Sobre nós";
             this.FerramentasSobre.Click += new System.EventHandler(this.FerramentasSobre_Click);
             // 
@@ -361,7 +399,7 @@
             // 
             this.FerramentasFoto.Image = global::project_cesa.Properties.Resources.capturar_32;
             this.FerramentasFoto.Name = "FerramentasFoto";
-            this.FerramentasFoto.Size = new System.Drawing.Size(180, 22);
+            this.FerramentasFoto.Size = new System.Drawing.Size(166, 22);
             this.FerramentasFoto.Text = "Capturar Foto";
             this.FerramentasFoto.Click += new System.EventHandler(this.FerramentasFoto_Click);
             // 
@@ -369,7 +407,7 @@
             // 
             this.FerramentasBackup.Image = global::project_cesa.Properties.Resources.bancoDados_20;
             this.FerramentasBackup.Name = "FerramentasBackup";
-            this.FerramentasBackup.Size = new System.Drawing.Size(180, 22);
+            this.FerramentasBackup.Size = new System.Drawing.Size(166, 22);
             this.FerramentasBackup.Text = "Backup de dados";
             this.FerramentasBackup.Click += new System.EventHandler(this.FerramentasBackup_Click);
             // 
@@ -624,6 +662,10 @@
         private System.Windows.Forms.ToolStripMenuItem FerramentasFoto;
         private System.Windows.Forms.ToolStripMenuItem RelatorioHora;
         private System.Windows.Forms.ToolStripMenuItem RelHoraProf;
+        private System.Windows.Forms.ToolStripMenuItem RelDocumentos;
+        private System.Windows.Forms.ToolStripMenuItem RelDocumentosCircular;
+        private System.Windows.Forms.ToolStripMenuItem RelDocumentosDeclaracao;
+        private System.Windows.Forms.ToolStripMenuItem RelDocumentosHistorico;
     }
 }
 

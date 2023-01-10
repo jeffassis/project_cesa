@@ -213,6 +213,16 @@ namespace project_cesa.Properties {
         /// <summary>
         ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap circular_20 {
+            get {
+                object obj = ResourceManager.GetObject("circular_20", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap clock {
             get {
                 object obj = ResourceManager.GetObject("clock", resourceCulture);
@@ -233,9 +243,29 @@ namespace project_cesa.Properties {
         /// <summary>
         ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap declaracao_20 {
+            get {
+                object obj = ResourceManager.GetObject("declaracao_20", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap disciplina {
             get {
                 object obj = ResourceManager.GetObject("disciplina", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap documentos_20 {
+            get {
+                object obj = ResourceManager.GetObject("documentos_20", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -506,6 +536,16 @@ namespace project_cesa.Properties {
         internal static System.Drawing.Bitmap source_20 {
             get {
                 object obj = ResourceManager.GetObject("source_20", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap square_poll_20 {
+            get {
+                object obj = ResourceManager.GetObject("square_poll_20", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

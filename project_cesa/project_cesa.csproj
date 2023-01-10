@@ -189,6 +189,12 @@
     <Compile Include="Pedagogico\Horario.Designer.cs">
       <DependentUpon>Horario.cs</DependentUpon>
     </Compile>
+    <Compile Include="Pedagogico\MontHoraAluno.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Pedagogico\MontHoraAluno.Designer.cs">
+      <DependentUpon>MontHoraAluno.cs</DependentUpon>
+    </Compile>
     <Compile Include="Pedagogico\MontHorario.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -265,6 +271,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Pedagogico\Horario.resx">
       <DependentUpon>Horario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pedagogico\MontHoraAluno.resx">
+      <DependentUpon>MontHoraAluno.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Pedagogico\MontHorario.resx">
       <DependentUpon>MontHorario.cs</DependentUpon>
@@ -428,6 +437,11 @@
     <None Include="Resources\play_gravar_32.png" />
     <None Include="Resources\encerrar_gravar_32.png" />
     <None Include="Resources\capturar_32.png" />
+    <None Include="Resources\hand_peace_20.png" />
+    <None Include="Resources\documentos_20.png" />
+    <None Include="Resources\circular_20.png" />
+    <None Include="Resources\square_poll_20.png" />
+    <None Include="Resources\declaracao_20.png" />
     <Content Include="SqlServerTypes\readme.htm" />
     <Content Include="SqlServerTypes\x64\msvcr120.dll">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>

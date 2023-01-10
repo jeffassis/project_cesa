@@ -135,7 +135,7 @@ namespace project_cesa.Pedagogico
 
         private void desabilitarCampos()
         {
-            cbAluno.Enabled = false;
+            //cbAluno.Enabled = false;
             cbDisciplina.Enabled = false;
             cbBimestre.Enabled = false;
             cbTipo.Enabled = false;
