@@ -164,5 +164,11 @@ namespace project_cesa
             Pedagogico.FrmMontHoraAluno form = new Pedagogico.FrmMontHoraAluno();
             AbreForm(0, form);
         }
+
+        private void PedagogicoNotaBoleAluno_Click(object sender, EventArgs e)
+        {
+            Pedagogico.FrmBoletimAluno form = new Pedagogico.FrmBoletimAluno();
+            AbreForm(1, form);
+        }
     }
 }

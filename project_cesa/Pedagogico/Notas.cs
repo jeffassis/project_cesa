@@ -19,7 +19,6 @@ namespace project_cesa.Pedagogico
             InitializeComponent();
         }
 
-
         private void FormatarDG()
         {
             grid.Columns[0].HeaderText = "ID";
@@ -167,9 +166,9 @@ namespace project_cesa.Pedagogico
         {
             habilitarCampos();
             limparCampos();
-            btnSave.Enabled = true;
-            btnUpdate.Enabled = false;
-            btnDelete.Enabled = false;
+            BtnSave.Enabled = true;
+            BtnUpdate.Enabled = false;
+            BtnDelete.Enabled = false;
         }
 
         private void btnSave_Click(object sender, EventArgs e)
@@ -201,8 +200,8 @@ namespace project_cesa.Pedagogico
             Conexao.dml(queryAdd);
             MessageBox.Show("Nota lançada com sucesso!", "Sucesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
-            btnSave.Enabled = false;
-            btnDelete.Enabled = false;
+            BtnSave.Enabled = false;
+            BtnDelete.Enabled = false;
             desabilitarCampos();
             limparCampos();
             Listar();
@@ -225,8 +224,8 @@ namespace project_cesa.Pedagogico
             Conexao.dml(queryAdd);
             MessageBox.Show("Dados atualizados com sucesso!", "Dados Adicionados", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
-            btnSave.Enabled = false;
-            btnDelete.Enabled = false;
+            BtnSave.Enabled = false;
+            BtnDelete.Enabled = false;
             desabilitarCampos();
             limparCampos();
             Listar();
@@ -243,8 +242,8 @@ namespace project_cesa.Pedagogico
                 MessageBox.Show("Registro Excluido com Sucesso!", "Registro Excluido", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 grid.Rows.Remove(grid.CurrentRow);
             }
-            btnSave.Enabled = false;
-            btnDelete.Enabled = false;
+            BtnSave.Enabled = false;
+            BtnDelete.Enabled = false;
             desabilitarCampos();
             limparCampos();
         }
@@ -259,9 +258,9 @@ namespace project_cesa.Pedagogico
             txtNota.Text = grid.CurrentRow.Cells[5].Value.ToString();
             cbTurma.Text = grid.CurrentRow.Cells[6].Value.ToString();
 
-            btnDelete.Enabled = true;
-            btnUpdate.Enabled = true;
-            btnSave.Enabled = false;
+            BtnDelete.Enabled = true;
+            BtnUpdate.Enabled = true;
+            BtnSave.Enabled = false;
             habilitarCampos();
         }        
     } 
