@@ -45,7 +45,7 @@
           <Paragraph>
             <TextRuns>
               <TextRun>
-                <Value>=First(Fields!turma.Value, "DS_MontTurma")</Value>
+                <Value>=First(Fields!nTurma.Value, "DS_MontTurma")</Value>
                 <Style>
                   <Color>Gray</Color>
                 </Style>
@@ -56,7 +56,7 @@
         </Paragraphs>
         <rd:DefaultName>Textbox25</rd:DefaultName>
         <Top>1.44542cm</Top>
-        <Left>2.9819cm</Left>
+        <Left>4.2519cm</Left>
         <Height>0.6cm</Height>
         <Width>2.5cm</Width>
         <ZIndex>1</ZIndex>
@@ -262,14 +262,14 @@
                 </TablixCell>
                 <TablixCell>
                   <CellContents>
-                    <Textbox Name="turma">
+                    <Textbox Name="nTurma">
                       <CanGrow>true</CanGrow>
                       <KeepTogether>true</KeepTogether>
                       <Paragraphs>
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>=Fields!turma.Value</Value>
+                              <Value>=Fields!nTurma.Value</Value>
                               <Style />
                             </TextRun>
                           </TextRuns>
@@ -278,7 +278,7 @@
                           </Style>
                         </Paragraph>
                       </Paragraphs>
-                      <rd:DefaultName>turma</rd:DefaultName>
+                      <rd:DefaultName>nTurma</rd:DefaultName>
                       <Style>
                         <Border>
                           <Color>LightGrey</Color>
@@ -316,7 +316,7 @@
         </TablixRowHierarchy>
         <DataSetName>DS_MontTurma</DataSetName>
         <Top>2.48639cm</Top>
-        <Left>1.21391cm</Left>
+        <Left>2.48391cm</Left>
         <Height>1.25292cm</Height>
         <Width>10.54269cm</Width>
         <ZIndex>2</ZIndex>
@@ -344,7 +344,7 @@
         </Paragraphs>
         <rd:DefaultName>Textbox15</rd:DefaultName>
         <Top>1.44542cm</Top>
-        <Left>1.21391cm</Left>
+        <Left>2.48391cm</Left>
         <Height>0.6cm</Height>
         <Width>1.73271cm</Width>
         <ZIndex>3</ZIndex>
@@ -365,7 +365,7 @@
   <Width>6.5in</Width>
   <Page>
     <PageHeader>
-      <Height>2.8021cm</Height>
+      <Height>3.38418cm</Height>
       <PrintOnFirstPage>true</PrintOnFirstPage>
       <PrintOnLastPage>true</PrintOnLastPage>
       <ReportItems>
@@ -435,11 +435,66 @@
             </Paragraph>
           </Paragraphs>
           <rd:DefaultName>Textbox8</rd:DefaultName>
-          <Top>2.06057cm</Top>
-          <Left>10.07746cm</Left>
+          <Top>2.5196cm</Top>
+          <Left>10.11274cm</Left>
           <Height>0.6cm</Height>
-          <Width>6.09833cm</Width>
+          <Width>6.06305cm</Width>
           <ZIndex>2</ZIndex>
+          <Style>
+            <Border>
+              <Style>None</Style>
+            </Border>
+            <PaddingLeft>2pt</PaddingLeft>
+            <PaddingRight>2pt</PaddingRight>
+            <PaddingTop>2pt</PaddingTop>
+            <PaddingBottom>2pt</PaddingBottom>
+          </Style>
+        </Textbox>
+        <Textbox Name="Textbox16">
+          <CanGrow>true</CanGrow>
+          <KeepTogether>true</KeepTogether>
+          <Paragraphs>
+            <Paragraph>
+              <TextRuns>
+                <TextRun>
+                  <Value>Estrada Santana Nº188
+Cacuia, Nova Iguaçu - RJ</Value>
+                  <Style>
+                    <Color>Gray</Color>
+                  </Style>
+                </TextRun>
+              </TextRuns>
+              <Style />
+            </Paragraph>
+            <Paragraph>
+              <TextRuns>
+                <TextRun>
+                  <Value>Cep: 26082-035</Value>
+                  <Style>
+                    <Color>Gray</Color>
+                  </Style>
+                </TextRun>
+              </TextRuns>
+              <Style />
+            </Paragraph>
+            <Paragraph>
+              <TextRuns>
+                <TextRun>
+                  <Value>CNPJ: 30.200.513/0001-07</Value>
+                  <Style>
+                    <Color>Gray</Color>
+                  </Style>
+                </TextRun>
+              </TextRuns>
+              <Style />
+            </Paragraph>
+          </Paragraphs>
+          <rd:DefaultName>Textbox15</rd:DefaultName>
+          <Top>1.23376cm</Top>
+          <Left>3.38528cm</Left>
+          <Height>1.97403cm</Height>
+          <Width>6.6569cm</Width>
+          <ZIndex>3</ZIndex>
           <Style>
             <Border>
               <Style>None</Style>
@@ -528,10 +583,6 @@
           <DataField>id</DataField>
           <rd:TypeName>System.Int32</rd:TypeName>
         </Field>
-        <Field Name="nome">
-          <DataField>nome</DataField>
-          <rd:TypeName>System.String</rd:TypeName>
-        </Field>
         <Field Name="serie">
           <DataField>serie</DataField>
           <rd:TypeName>System.String</rd:TypeName>
@@ -540,8 +591,12 @@
           <DataField>id_turma</DataField>
           <rd:TypeName>System.Int32</rd:TypeName>
         </Field>
-        <Field Name="turma">
-          <DataField>turma</DataField>
+        <Field Name="nome">
+          <DataField>nome</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="nTurma">
+          <DataField>nTurma</DataField>
           <rd:TypeName>System.String</rd:TypeName>
         </Field>
       </Fields>

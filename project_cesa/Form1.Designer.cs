@@ -229,6 +229,7 @@
             this.PedagogicoNotaBoleAluno.Name = "PedagogicoNotaBoleAluno";
             this.PedagogicoNotaBoleAluno.Size = new System.Drawing.Size(195, 22);
             this.PedagogicoNotaBoleAluno.Text = "Boletim Aluno";
+            this.PedagogicoNotaBoleAluno.Click += new System.EventHandler(this.PedagogicoNotaBoleAluno_Click);
             // 
             // PedagogicoNotaBoleFinal
             // 

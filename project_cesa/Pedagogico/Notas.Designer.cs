@@ -29,15 +29,16 @@ namespace project_cesa.Pedagogico
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmNotas));
             this.grid = new System.Windows.Forms.DataGridView();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.btnFechar = new System.Windows.Forms.Button();
-            this.btnDelete = new System.Windows.Forms.Button();
-            this.btnUpdate = new System.Windows.Forms.Button();
-            this.btnSave = new System.Windows.Forms.Button();
-            this.btnNovo = new System.Windows.Forms.Button();
+            this.BtnFechar = new System.Windows.Forms.Button();
+            this.BtnDelete = new System.Windows.Forms.Button();
+            this.BtnUpdate = new System.Windows.Forms.Button();
+            this.BtnSave = new System.Windows.Forms.Button();
+            this.BtnNovo = new System.Windows.Forms.Button();
             this.label6 = new System.Windows.Forms.Label();
             this.cbAluno = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
@@ -51,6 +52,7 @@ namespace project_cesa.Pedagogico
             this.txtNota = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
+            this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.grid)).BeginInit();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
@@ -81,74 +83,79 @@ namespace project_cesa.Pedagogico
             // 
             // panel1
             // 
-            this.panel1.Controls.Add(this.btnFechar);
-            this.panel1.Controls.Add(this.btnDelete);
-            this.panel1.Controls.Add(this.btnUpdate);
-            this.panel1.Controls.Add(this.btnSave);
-            this.panel1.Controls.Add(this.btnNovo);
+            this.panel1.Controls.Add(this.BtnFechar);
+            this.panel1.Controls.Add(this.BtnDelete);
+            this.panel1.Controls.Add(this.BtnUpdate);
+            this.panel1.Controls.Add(this.BtnSave);
+            this.panel1.Controls.Add(this.BtnNovo);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.panel1.Location = new System.Drawing.Point(0, 352);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(690, 47);
             this.panel1.TabIndex = 21;
             // 
-            // btnFechar
+            // BtnFechar
             // 
-            this.btnFechar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnFechar.Image = global::project_cesa.Properties.Resources.bt_fechar_24;
-            this.btnFechar.Location = new System.Drawing.Point(635, 3);
-            this.btnFechar.Name = "btnFechar";
-            this.btnFechar.Size = new System.Drawing.Size(36, 36);
-            this.btnFechar.TabIndex = 4;
-            this.btnFechar.UseVisualStyleBackColor = true;
-            this.btnFechar.Click += new System.EventHandler(this.btnFechar_Click);
+            this.BtnFechar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.BtnFechar.Image = global::project_cesa.Properties.Resources.bt_fechar_24;
+            this.BtnFechar.Location = new System.Drawing.Point(635, 3);
+            this.BtnFechar.Name = "BtnFechar";
+            this.BtnFechar.Size = new System.Drawing.Size(36, 36);
+            this.BtnFechar.TabIndex = 4;
+            this.toolTip1.SetToolTip(this.BtnFechar, "Fechar");
+            this.BtnFechar.UseVisualStyleBackColor = true;
+            this.BtnFechar.Click += new System.EventHandler(this.btnFechar_Click);
             // 
-            // btnDelete
+            // BtnDelete
             // 
-            this.btnDelete.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnDelete.Enabled = false;
-            this.btnDelete.Image = global::project_cesa.Properties.Resources.bt_delete;
-            this.btnDelete.Location = new System.Drawing.Point(138, 3);
-            this.btnDelete.Name = "btnDelete";
-            this.btnDelete.Size = new System.Drawing.Size(36, 36);
-            this.btnDelete.TabIndex = 3;
-            this.btnDelete.UseVisualStyleBackColor = true;
-            this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
+            this.BtnDelete.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.BtnDelete.Enabled = false;
+            this.BtnDelete.Image = global::project_cesa.Properties.Resources.bt_delete;
+            this.BtnDelete.Location = new System.Drawing.Point(138, 3);
+            this.BtnDelete.Name = "BtnDelete";
+            this.BtnDelete.Size = new System.Drawing.Size(36, 36);
+            this.BtnDelete.TabIndex = 3;
+            this.toolTip1.SetToolTip(this.BtnDelete, "Remover dados");
+            this.BtnDelete.UseVisualStyleBackColor = true;
+            this.BtnDelete.Click += new System.EventHandler(this.btnDelete_Click);
             // 
-            // btnUpdate
+            // BtnUpdate
             // 
-            this.btnUpdate.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnUpdate.Enabled = false;
-            this.btnUpdate.Image = global::project_cesa.Properties.Resources.bt_update_24;
-            this.btnUpdate.Location = new System.Drawing.Point(96, 3);
-            this.btnUpdate.Name = "btnUpdate";
-            this.btnUpdate.Size = new System.Drawing.Size(36, 36);
-            this.btnUpdate.TabIndex = 2;
-            this.btnUpdate.UseVisualStyleBackColor = true;
-            this.btnUpdate.Click += new System.EventHandler(this.btnUpdate_Click);
+            this.BtnUpdate.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.BtnUpdate.Enabled = false;
+            this.BtnUpdate.Image = global::project_cesa.Properties.Resources.bt_update_24;
+            this.BtnUpdate.Location = new System.Drawing.Point(96, 3);
+            this.BtnUpdate.Name = "BtnUpdate";
+            this.BtnUpdate.Size = new System.Drawing.Size(36, 36);
+            this.BtnUpdate.TabIndex = 2;
+            this.toolTip1.SetToolTip(this.BtnUpdate, "Atualizar dados");
+            this.BtnUpdate.UseVisualStyleBackColor = true;
+            this.BtnUpdate.Click += new System.EventHandler(this.btnUpdate_Click);
             // 
-            // btnSave
+            // BtnSave
             // 
-            this.btnSave.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnSave.Enabled = false;
-            this.btnSave.Image = global::project_cesa.Properties.Resources.bt_save_24;
-            this.btnSave.Location = new System.Drawing.Point(54, 3);
-            this.btnSave.Name = "btnSave";
-            this.btnSave.Size = new System.Drawing.Size(36, 36);
-            this.btnSave.TabIndex = 1;
-            this.btnSave.UseVisualStyleBackColor = true;
-            this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
+            this.BtnSave.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.BtnSave.Enabled = false;
+            this.BtnSave.Image = global::project_cesa.Properties.Resources.bt_save_24;
+            this.BtnSave.Location = new System.Drawing.Point(54, 3);
+            this.BtnSave.Name = "BtnSave";
+            this.BtnSave.Size = new System.Drawing.Size(36, 36);
+            this.BtnSave.TabIndex = 1;
+            this.toolTip1.SetToolTip(this.BtnSave, "Salvar dados");
+            this.BtnSave.UseVisualStyleBackColor = true;
+            this.BtnSave.Click += new System.EventHandler(this.btnSave_Click);
             // 
-            // btnNovo
+            // BtnNovo
             // 
-            this.btnNovo.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnNovo.Image = global::project_cesa.Properties.Resources.bt_novo_24;
-            this.btnNovo.Location = new System.Drawing.Point(12, 3);
-            this.btnNovo.Name = "btnNovo";
-            this.btnNovo.Size = new System.Drawing.Size(36, 36);
-            this.btnNovo.TabIndex = 0;
-            this.btnNovo.UseVisualStyleBackColor = true;
-            this.btnNovo.Click += new System.EventHandler(this.btnNovo_Click);
+            this.BtnNovo.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.BtnNovo.Image = global::project_cesa.Properties.Resources.bt_novo_24;
+            this.BtnNovo.Location = new System.Drawing.Point(12, 3);
+            this.BtnNovo.Name = "BtnNovo";
+            this.BtnNovo.Size = new System.Drawing.Size(36, 36);
+            this.BtnNovo.TabIndex = 0;
+            this.toolTip1.SetToolTip(this.BtnNovo, "Novo registro");
+            this.BtnNovo.UseVisualStyleBackColor = true;
+            this.BtnNovo.Click += new System.EventHandler(this.btnNovo_Click);
             // 
             // label6
             // 
@@ -321,11 +328,11 @@ namespace project_cesa.Pedagogico
 
         private System.Windows.Forms.DataGridView grid;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Button btnFechar;
-        private System.Windows.Forms.Button btnDelete;
-        private System.Windows.Forms.Button btnUpdate;
-        private System.Windows.Forms.Button btnSave;
-        private System.Windows.Forms.Button btnNovo;
+        private System.Windows.Forms.Button BtnFechar;
+        private System.Windows.Forms.Button BtnDelete;
+        private System.Windows.Forms.Button BtnUpdate;
+        private System.Windows.Forms.Button BtnSave;
+        private System.Windows.Forms.Button BtnNovo;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.ComboBox cbAluno;
         private System.Windows.Forms.Label label1;
@@ -339,5 +346,6 @@ namespace project_cesa.Pedagogico
         private System.Windows.Forms.TextBox txtNota;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.ToolTip toolTip1;
     }
 }

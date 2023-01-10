@@ -56,6 +56,8 @@ namespace project_cesa {
         
         private tb_professorDataTable tabletb_professor;
         
+        private Relatorio_BoletimAlunoDataTable tableRelatorio_BoletimAluno;
+        
         private global::System.Data.DataRelation relationtb_aluno_turma_ibfk_1;
         
         private global::System.Data.DataRelation relationtb_aluno_turma_ibfk_2;
@@ -163,6 +165,9 @@ namespace project_cesa {
                 }
                 if ((ds.Tables["tb_professor"] != null)) {
                     base.Tables.Add(new tb_professorDataTable(ds.Tables["tb_professor"]));
+                }
+                if ((ds.Tables["Relatorio_BoletimAluno"] != null)) {
+                    base.Tables.Add(new Relatorio_BoletimAlunoDataTable(ds.Tables["Relatorio_BoletimAluno"]));
                 }
                 this.DataSetName = ds.DataSetName;
                 this.Prefix = ds.Prefix;
@@ -344,6 +349,16 @@ namespace project_cesa {
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        [global::System.ComponentModel.Browsable(false)]
+        [global::System.ComponentModel.DesignerSerializationVisibility(global::System.ComponentModel.DesignerSerializationVisibility.Content)]
+        public Relatorio_BoletimAlunoDataTable Relatorio_BoletimAluno {
+            get {
+                return this.tableRelatorio_BoletimAluno;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.BrowsableAttribute(true)]
         [global::System.ComponentModel.DesignerSerializationVisibilityAttribute(global::System.ComponentModel.DesignerSerializationVisibility.Visible)]
         public override global::System.Data.SchemaSerializationMode SchemaSerializationMode {
@@ -456,6 +471,9 @@ namespace project_cesa {
                 }
                 if ((ds.Tables["tb_professor"] != null)) {
                     base.Tables.Add(new tb_professorDataTable(ds.Tables["tb_professor"]));
+                }
+                if ((ds.Tables["Relatorio_BoletimAluno"] != null)) {
+                    base.Tables.Add(new Relatorio_BoletimAlunoDataTable(ds.Tables["Relatorio_BoletimAluno"]));
                 }
                 this.DataSetName = ds.DataSetName;
                 this.Prefix = ds.Prefix;
@@ -586,6 +604,12 @@ namespace project_cesa {
                     this.tabletb_professor.InitVars();
                 }
             }
+            this.tableRelatorio_BoletimAluno = ((Relatorio_BoletimAlunoDataTable)(base.Tables["Relatorio_BoletimAluno"]));
+            if ((initTable == true)) {
+                if ((this.tableRelatorio_BoletimAluno != null)) {
+                    this.tableRelatorio_BoletimAluno.InitVars();
+                }
+            }
             this.relationtb_aluno_turma_ibfk_1 = this.Relations["tb_aluno_turma_ibfk_1"];
             this.relationtb_aluno_turma_ibfk_2 = this.Relations["tb_aluno_turma_ibfk_2"];
             this.relationtb_turma_ibfk_1 = this.Relations["tb_turma_ibfk_1"];
@@ -644,6 +668,8 @@ namespace project_cesa {
             base.Tables.Add(this.tabletb_nota);
             this.tabletb_professor = new tb_professorDataTable();
             base.Tables.Add(this.tabletb_professor);
+            this.tableRelatorio_BoletimAluno = new Relatorio_BoletimAlunoDataTable();
+            base.Tables.Add(this.tableRelatorio_BoletimAluno);
             this.relationtb_aluno_turma_ibfk_1 = new global::System.Data.DataRelation("tb_aluno_turma_ibfk_1", new global::System.Data.DataColumn[] {
                         this.tabletb_aluno.id_alunoColumn}, new global::System.Data.DataColumn[] {
                         this.tabletb_aluno_turma.aluno_idColumn}, false);
@@ -808,6 +834,12 @@ namespace project_cesa {
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        private bool ShouldSerializeRelatorio_BoletimAluno() {
+            return false;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         private void SchemaChanged(object sender, global::System.ComponentModel.CollectionChangeEventArgs e) {
             if ((e.Action == global::System.ComponentModel.CollectionChangeAction.Remove)) {
                 this.InitVars();
@@ -908,6 +940,9 @@ namespace project_cesa {
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         public delegate void tb_professorRowChangeEventHandler(object sender, tb_professorRowChangeEvent e);
+        
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        public delegate void Relatorio_BoletimAlunoRowChangeEventHandler(object sender, Relatorio_BoletimAlunoRowChangeEvent e);
         
         /// <summary>
         ///Represents the strongly named DataTable class.
@@ -3197,13 +3232,13 @@ namespace project_cesa {
             
             private global::System.Data.DataColumn columnid;
             
-            private global::System.Data.DataColumn columnnome;
-            
             private global::System.Data.DataColumn columnserie;
             
             private global::System.Data.DataColumn columnid_turma;
             
-            private global::System.Data.DataColumn columnturma;
+            private global::System.Data.DataColumn columnnome;
+            
+            private global::System.Data.DataColumn columnnTurma;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
@@ -3248,14 +3283,6 @@ namespace project_cesa {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public global::System.Data.DataColumn nomeColumn {
-                get {
-                    return this.columnnome;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public global::System.Data.DataColumn serieColumn {
                 get {
                     return this.columnserie;
@@ -3272,9 +3299,17 @@ namespace project_cesa {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public global::System.Data.DataColumn turmaColumn {
+            public global::System.Data.DataColumn nomeColumn {
                 get {
-                    return this.columnturma;
+                    return this.columnnome;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn nTurmaColumn {
+                get {
+                    return this.columnnTurma;
                 }
             }
             
@@ -3315,14 +3350,14 @@ namespace project_cesa {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public MontTurmaRow AddMontTurmaRow(string nome, string serie, string turma) {
+            public MontTurmaRow AddMontTurmaRow(string serie, string nome, string nTurma) {
                 MontTurmaRow rowMontTurmaRow = ((MontTurmaRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         null,
-                        nome,
                         serie,
                         null,
-                        turma};
+                        nome,
+                        nTurma};
                 rowMontTurmaRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowMontTurmaRow);
                 return rowMontTurmaRow;
@@ -3353,10 +3388,10 @@ namespace project_cesa {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             internal void InitVars() {
                 this.columnid = base.Columns["id"];
-                this.columnnome = base.Columns["nome"];
                 this.columnserie = base.Columns["serie"];
                 this.columnid_turma = base.Columns["id_turma"];
-                this.columnturma = base.Columns["turma"];
+                this.columnnome = base.Columns["nome"];
+                this.columnnTurma = base.Columns["nTurma"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -3364,14 +3399,14 @@ namespace project_cesa {
             private void InitClass() {
                 this.columnid = new global::System.Data.DataColumn("id", typeof(int), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnid);
-                this.columnnome = new global::System.Data.DataColumn("nome", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnnome);
                 this.columnserie = new global::System.Data.DataColumn("serie", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnserie);
                 this.columnid_turma = new global::System.Data.DataColumn("id_turma", typeof(int), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnid_turma);
-                this.columnturma = new global::System.Data.DataColumn("turma", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnturma);
+                this.columnnome = new global::System.Data.DataColumn("nome", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnnome);
+                this.columnnTurma = new global::System.Data.DataColumn("nTurma", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnnTurma);
                 this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
                                 this.columnid}, true));
                 this.columnid.AutoIncrement = true;
@@ -3379,16 +3414,16 @@ namespace project_cesa {
                 this.columnid.AutoIncrementStep = -1;
                 this.columnid.AllowDBNull = false;
                 this.columnid.Unique = true;
-                this.columnnome.AllowDBNull = false;
-                this.columnnome.MaxLength = 50;
                 this.columnserie.AllowDBNull = false;
                 this.columnserie.MaxLength = 20;
                 this.columnid_turma.AutoIncrement = true;
                 this.columnid_turma.AutoIncrementSeed = -1;
                 this.columnid_turma.AutoIncrementStep = -1;
                 this.columnid_turma.AllowDBNull = false;
-                this.columnturma.AllowDBNull = false;
-                this.columnturma.MaxLength = 20;
+                this.columnnome.AllowDBNull = false;
+                this.columnnome.MaxLength = 50;
+                this.columnnTurma.AllowDBNull = false;
+                this.columnnTurma.MaxLength = 20;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -6172,6 +6207,380 @@ namespace project_cesa {
         }
         
         /// <summary>
+        ///Represents the strongly named DataTable class.
+        ///</summary>
+        [global::System.Serializable()]
+        [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")]
+        public partial class Relatorio_BoletimAlunoDataTable : global::System.Data.TypedTableBase<Relatorio_BoletimAlunoRow> {
+            
+            private global::System.Data.DataColumn columndisciplina;
+            
+            private global::System.Data.DataColumn columnbimestre;
+            
+            private global::System.Data.DataColumn columnnota;
+            
+            private global::System.Data.DataColumn columnbimestre_id;
+            
+            private global::System.Data.DataColumn columnaluno_id;
+            
+            private global::System.Data.DataColumn columnaluno;
+            
+            private global::System.Data.DataColumn columnserie;
+            
+            private global::System.Data.DataColumn columnturno;
+            
+            private global::System.Data.DataColumn columnturma;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public Relatorio_BoletimAlunoDataTable() {
+                this.TableName = "Relatorio_BoletimAluno";
+                this.BeginInit();
+                this.InitClass();
+                this.EndInit();
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            internal Relatorio_BoletimAlunoDataTable(global::System.Data.DataTable table) {
+                this.TableName = table.TableName;
+                if ((table.CaseSensitive != table.DataSet.CaseSensitive)) {
+                    this.CaseSensitive = table.CaseSensitive;
+                }
+                if ((table.Locale.ToString() != table.DataSet.Locale.ToString())) {
+                    this.Locale = table.Locale;
+                }
+                if ((table.Namespace != table.DataSet.Namespace)) {
+                    this.Namespace = table.Namespace;
+                }
+                this.Prefix = table.Prefix;
+                this.MinimumCapacity = table.MinimumCapacity;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            protected Relatorio_BoletimAlunoDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
+                    base(info, context) {
+                this.InitVars();
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn disciplinaColumn {
+                get {
+                    return this.columndisciplina;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn bimestreColumn {
+                get {
+                    return this.columnbimestre;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn notaColumn {
+                get {
+                    return this.columnnota;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn bimestre_idColumn {
+                get {
+                    return this.columnbimestre_id;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn aluno_idColumn {
+                get {
+                    return this.columnaluno_id;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn alunoColumn {
+                get {
+                    return this.columnaluno;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn serieColumn {
+                get {
+                    return this.columnserie;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn turnoColumn {
+                get {
+                    return this.columnturno;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn turmaColumn {
+                get {
+                    return this.columnturma;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            [global::System.ComponentModel.Browsable(false)]
+            public int Count {
+                get {
+                    return this.Rows.Count;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public Relatorio_BoletimAlunoRow this[int index] {
+                get {
+                    return ((Relatorio_BoletimAlunoRow)(this.Rows[index]));
+                }
+            }
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public event Relatorio_BoletimAlunoRowChangeEventHandler Relatorio_BoletimAlunoRowChanging;
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public event Relatorio_BoletimAlunoRowChangeEventHandler Relatorio_BoletimAlunoRowChanged;
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public event Relatorio_BoletimAlunoRowChangeEventHandler Relatorio_BoletimAlunoRowDeleting;
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public event Relatorio_BoletimAlunoRowChangeEventHandler Relatorio_BoletimAlunoRowDeleted;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void AddRelatorio_BoletimAlunoRow(Relatorio_BoletimAlunoRow row) {
+                this.Rows.Add(row);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public Relatorio_BoletimAlunoRow AddRelatorio_BoletimAlunoRow(string disciplina, string bimestre, decimal nota, int bimestre_id, int aluno_id, string aluno, string serie, string turno, string turma) {
+                Relatorio_BoletimAlunoRow rowRelatorio_BoletimAlunoRow = ((Relatorio_BoletimAlunoRow)(this.NewRow()));
+                object[] columnValuesArray = new object[] {
+                        disciplina,
+                        bimestre,
+                        nota,
+                        bimestre_id,
+                        aluno_id,
+                        aluno,
+                        serie,
+                        turno,
+                        turma};
+                rowRelatorio_BoletimAlunoRow.ItemArray = columnValuesArray;
+                this.Rows.Add(rowRelatorio_BoletimAlunoRow);
+                return rowRelatorio_BoletimAlunoRow;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public override global::System.Data.DataTable Clone() {
+                Relatorio_BoletimAlunoDataTable cln = ((Relatorio_BoletimAlunoDataTable)(base.Clone()));
+                cln.InitVars();
+                return cln;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            protected override global::System.Data.DataTable CreateInstance() {
+                return new Relatorio_BoletimAlunoDataTable();
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            internal void InitVars() {
+                this.columndisciplina = base.Columns["disciplina"];
+                this.columnbimestre = base.Columns["bimestre"];
+                this.columnnota = base.Columns["nota"];
+                this.columnbimestre_id = base.Columns["bimestre_id"];
+                this.columnaluno_id = base.Columns["aluno_id"];
+                this.columnaluno = base.Columns["aluno"];
+                this.columnserie = base.Columns["serie"];
+                this.columnturno = base.Columns["turno"];
+                this.columnturma = base.Columns["turma"];
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            private void InitClass() {
+                this.columndisciplina = new global::System.Data.DataColumn("disciplina", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columndisciplina);
+                this.columnbimestre = new global::System.Data.DataColumn("bimestre", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnbimestre);
+                this.columnnota = new global::System.Data.DataColumn("nota", typeof(decimal), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnnota);
+                this.columnbimestre_id = new global::System.Data.DataColumn("bimestre_id", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnbimestre_id);
+                this.columnaluno_id = new global::System.Data.DataColumn("aluno_id", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnaluno_id);
+                this.columnaluno = new global::System.Data.DataColumn("aluno", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnaluno);
+                this.columnserie = new global::System.Data.DataColumn("serie", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnserie);
+                this.columnturno = new global::System.Data.DataColumn("turno", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnturno);
+                this.columnturma = new global::System.Data.DataColumn("turma", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnturma);
+                this.columndisciplina.AllowDBNull = false;
+                this.columndisciplina.MaxLength = 20;
+                this.columnbimestre.AllowDBNull = false;
+                this.columnbimestre.MaxLength = 20;
+                this.columnnota.AllowDBNull = false;
+                this.columnbimestre_id.AllowDBNull = false;
+                this.columnaluno_id.AllowDBNull = false;
+                this.columnaluno.AllowDBNull = false;
+                this.columnaluno.MaxLength = 50;
+                this.columnserie.AllowDBNull = false;
+                this.columnserie.MaxLength = 20;
+                this.columnturno.AllowDBNull = false;
+                this.columnturno.MaxLength = 20;
+                this.columnturma.AllowDBNull = false;
+                this.columnturma.MaxLength = 20;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public Relatorio_BoletimAlunoRow NewRelatorio_BoletimAlunoRow() {
+                return ((Relatorio_BoletimAlunoRow)(this.NewRow()));
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            protected override global::System.Data.DataRow NewRowFromBuilder(global::System.Data.DataRowBuilder builder) {
+                return new Relatorio_BoletimAlunoRow(builder);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            protected override global::System.Type GetRowType() {
+                return typeof(Relatorio_BoletimAlunoRow);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            protected override void OnRowChanged(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowChanged(e);
+                if ((this.Relatorio_BoletimAlunoRowChanged != null)) {
+                    this.Relatorio_BoletimAlunoRowChanged(this, new Relatorio_BoletimAlunoRowChangeEvent(((Relatorio_BoletimAlunoRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            protected override void OnRowChanging(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowChanging(e);
+                if ((this.Relatorio_BoletimAlunoRowChanging != null)) {
+                    this.Relatorio_BoletimAlunoRowChanging(this, new Relatorio_BoletimAlunoRowChangeEvent(((Relatorio_BoletimAlunoRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            protected override void OnRowDeleted(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowDeleted(e);
+                if ((this.Relatorio_BoletimAlunoRowDeleted != null)) {
+                    this.Relatorio_BoletimAlunoRowDeleted(this, new Relatorio_BoletimAlunoRowChangeEvent(((Relatorio_BoletimAlunoRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            protected override void OnRowDeleting(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowDeleting(e);
+                if ((this.Relatorio_BoletimAlunoRowDeleting != null)) {
+                    this.Relatorio_BoletimAlunoRowDeleting(this, new Relatorio_BoletimAlunoRowChangeEvent(((Relatorio_BoletimAlunoRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void RemoveRelatorio_BoletimAlunoRow(Relatorio_BoletimAlunoRow row) {
+                this.Rows.Remove(row);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
+                global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
+                global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
+                project_escolaDataSet ds = new project_escolaDataSet();
+                global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
+                any1.Namespace = "http://www.w3.org/2001/XMLSchema";
+                any1.MinOccurs = new decimal(0);
+                any1.MaxOccurs = decimal.MaxValue;
+                any1.ProcessContents = global::System.Xml.Schema.XmlSchemaContentProcessing.Lax;
+                sequence.Items.Add(any1);
+                global::System.Xml.Schema.XmlSchemaAny any2 = new global::System.Xml.Schema.XmlSchemaAny();
+                any2.Namespace = "urn:schemas-microsoft-com:xml-diffgram-v1";
+                any2.MinOccurs = new decimal(1);
+                any2.ProcessContents = global::System.Xml.Schema.XmlSchemaContentProcessing.Lax;
+                sequence.Items.Add(any2);
+                global::System.Xml.Schema.XmlSchemaAttribute attribute1 = new global::System.Xml.Schema.XmlSchemaAttribute();
+                attribute1.Name = "namespace";
+                attribute1.FixedValue = ds.Namespace;
+                type.Attributes.Add(attribute1);
+                global::System.Xml.Schema.XmlSchemaAttribute attribute2 = new global::System.Xml.Schema.XmlSchemaAttribute();
+                attribute2.Name = "tableTypeName";
+                attribute2.FixedValue = "Relatorio_BoletimAlunoDataTable";
+                type.Attributes.Add(attribute2);
+                type.Particle = sequence;
+                global::System.Xml.Schema.XmlSchema dsSchema = ds.GetSchemaSerializable();
+                if (xs.Contains(dsSchema.TargetNamespace)) {
+                    global::System.IO.MemoryStream s1 = new global::System.IO.MemoryStream();
+                    global::System.IO.MemoryStream s2 = new global::System.IO.MemoryStream();
+                    try {
+                        global::System.Xml.Schema.XmlSchema schema = null;
+                        dsSchema.Write(s1);
+                        for (global::System.Collections.IEnumerator schemas = xs.Schemas(dsSchema.TargetNamespace).GetEnumerator(); schemas.MoveNext(); ) {
+                            schema = ((global::System.Xml.Schema.XmlSchema)(schemas.Current));
+                            s2.SetLength(0);
+                            schema.Write(s2);
+                            if ((s1.Length == s2.Length)) {
+                                s1.Position = 0;
+                                s2.Position = 0;
+                                for (; ((s1.Position != s1.Length) 
+                                            && (s1.ReadByte() == s2.ReadByte())); ) {
+                                    ;
+                                }
+                                if ((s1.Position == s1.Length)) {
+                                    return type;
+                                }
+                            }
+                        }
+                    }
+                    finally {
+                        if ((s1 != null)) {
+                            s1.Close();
+                        }
+                        if ((s2 != null)) {
+                            s2.Close();
+                        }
+                    }
+                }
+                xs.Add(dsSchema);
+                return type;
+            }
+        }
+        
+        /// <summary>
         ///Represents strongly named DataRow class.
         ///</summary>
         public partial class tb_alunoRow : global::System.Data.DataRow {
@@ -6842,17 +7251,6 @@ namespace project_cesa {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public string nome {
-                get {
-                    return ((string)(this[this.tableMontTurma.nomeColumn]));
-                }
-                set {
-                    this[this.tableMontTurma.nomeColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public string serie {
                 get {
                     return ((string)(this[this.tableMontTurma.serieColumn]));
@@ -6875,12 +7273,23 @@ namespace project_cesa {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public string turma {
+            public string nome {
                 get {
-                    return ((string)(this[this.tableMontTurma.turmaColumn]));
+                    return ((string)(this[this.tableMontTurma.nomeColumn]));
                 }
                 set {
-                    this[this.tableMontTurma.turmaColumn] = value;
+                    this[this.tableMontTurma.nomeColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public string nTurma {
+                get {
+                    return ((string)(this[this.tableMontTurma.nTurmaColumn]));
+                }
+                set {
+                    this[this.tableMontTurma.nTurmaColumn] = value;
                 }
             }
         }
@@ -7728,6 +8137,120 @@ namespace project_cesa {
         }
         
         /// <summary>
+        ///Represents strongly named DataRow class.
+        ///</summary>
+        public partial class Relatorio_BoletimAlunoRow : global::System.Data.DataRow {
+            
+            private Relatorio_BoletimAlunoDataTable tableRelatorio_BoletimAluno;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            internal Relatorio_BoletimAlunoRow(global::System.Data.DataRowBuilder rb) : 
+                    base(rb) {
+                this.tableRelatorio_BoletimAluno = ((Relatorio_BoletimAlunoDataTable)(this.Table));
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public string disciplina {
+                get {
+                    return ((string)(this[this.tableRelatorio_BoletimAluno.disciplinaColumn]));
+                }
+                set {
+                    this[this.tableRelatorio_BoletimAluno.disciplinaColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public string bimestre {
+                get {
+                    return ((string)(this[this.tableRelatorio_BoletimAluno.bimestreColumn]));
+                }
+                set {
+                    this[this.tableRelatorio_BoletimAluno.bimestreColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public decimal nota {
+                get {
+                    return ((decimal)(this[this.tableRelatorio_BoletimAluno.notaColumn]));
+                }
+                set {
+                    this[this.tableRelatorio_BoletimAluno.notaColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public int bimestre_id {
+                get {
+                    return ((int)(this[this.tableRelatorio_BoletimAluno.bimestre_idColumn]));
+                }
+                set {
+                    this[this.tableRelatorio_BoletimAluno.bimestre_idColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public int aluno_id {
+                get {
+                    return ((int)(this[this.tableRelatorio_BoletimAluno.aluno_idColumn]));
+                }
+                set {
+                    this[this.tableRelatorio_BoletimAluno.aluno_idColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public string aluno {
+                get {
+                    return ((string)(this[this.tableRelatorio_BoletimAluno.alunoColumn]));
+                }
+                set {
+                    this[this.tableRelatorio_BoletimAluno.alunoColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public string serie {
+                get {
+                    return ((string)(this[this.tableRelatorio_BoletimAluno.serieColumn]));
+                }
+                set {
+                    this[this.tableRelatorio_BoletimAluno.serieColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public string turno {
+                get {
+                    return ((string)(this[this.tableRelatorio_BoletimAluno.turnoColumn]));
+                }
+                set {
+                    this[this.tableRelatorio_BoletimAluno.turnoColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public string turma {
+                get {
+                    return ((string)(this[this.tableRelatorio_BoletimAluno.turmaColumn]));
+                }
+                set {
+                    this[this.tableRelatorio_BoletimAluno.turmaColumn] = value;
+                }
+            }
+        }
+        
+        /// <summary>
         ///Row event argument class
         ///</summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
@@ -8257,6 +8780,40 @@ namespace project_cesa {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public tb_professorRow Row {
+                get {
+                    return this.eventRow;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataRowAction Action {
+                get {
+                    return this.eventAction;
+                }
+            }
+        }
+        
+        /// <summary>
+        ///Row event argument class
+        ///</summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        public class Relatorio_BoletimAlunoRowChangeEvent : global::System.EventArgs {
+            
+            private Relatorio_BoletimAlunoRow eventRow;
+            
+            private global::System.Data.DataRowAction eventAction;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public Relatorio_BoletimAlunoRowChangeEvent(Relatorio_BoletimAlunoRow row, global::System.Data.DataRowAction action) {
+                this.eventRow = row;
+                this.eventAction = action;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public Relatorio_BoletimAlunoRow Row {
                 get {
                     return this.eventRow;
                 }
@@ -11949,10 +12506,10 @@ namespace project_cesa.project_escolaDataSetTableAdapters {
             tableMapping.SourceTable = "Table";
             tableMapping.DataSetTable = "MontTurma";
             tableMapping.ColumnMappings.Add("id", "id");
-            tableMapping.ColumnMappings.Add("nome", "nome");
             tableMapping.ColumnMappings.Add("serie", "serie");
             tableMapping.ColumnMappings.Add("id_turma", "id_turma");
-            tableMapping.ColumnMappings.Add("turma", "turma");
+            tableMapping.ColumnMappings.Add("nome", "nome");
+            tableMapping.ColumnMappings.Add("nTurma", "nTurma");
             this._adapter.TableMappings.Add(tableMapping);
         }
         
@@ -11969,11 +12526,11 @@ namespace project_cesa.project_escolaDataSetTableAdapters {
             this._commandCollection = new global::MySql.Data.MySqlClient.MySqlCommand[1];
             this._commandCollection[0] = new global::MySql.Data.MySqlClient.MySqlCommand();
             this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = @"SELECT        tbd.id, tba.nome, tbt.serie, tbt.nome AS turma, tbt.id_turma
+            this._commandCollection[0].CommandText = @"SELECT        tbd.id, tba.nome, tbt.serie, tbt.nome AS nTurma, tbt.id_turma
 FROM            tb_aluno_turma tbd INNER JOIN
                          tb_aluno tba ON tba.id_aluno = tbd.aluno_id INNER JOIN
                          tb_turma tbt ON tbt.id_turma = tbd.turma_id
-WHERE        (tbt.id_turma=@id)
+WHERE        (tbt.id_turma = @id)
 ORDER BY tba.nome";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
             global::MySql.Data.MySqlClient.MySqlParameter param = new global::MySql.Data.MySqlClient.MySqlParameter();
@@ -15125,6 +15682,208 @@ ORDER BY tbh.descricao";
     }
     
     /// <summary>
+    ///Represents the connection and commands used to retrieve and save data.
+    ///</summary>
+    [global::System.ComponentModel.DesignerCategoryAttribute("code")]
+    [global::System.ComponentModel.ToolboxItem(true)]
+    [global::System.ComponentModel.DataObjectAttribute(true)]
+    [global::System.ComponentModel.DesignerAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterDesigner, Microsoft.VSDesigner" +
+        ", Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")]
+    [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+    public partial class Relatorio_BoletimAlunoTableAdapter : global::System.ComponentModel.Component {
+        
+        private global::MySql.Data.MySqlClient.MySqlDataAdapter _adapter;
+        
+        private global::MySql.Data.MySqlClient.MySqlConnection _connection;
+        
+        private global::MySql.Data.MySqlClient.MySqlTransaction _transaction;
+        
+        private global::MySql.Data.MySqlClient.MySqlCommand[] _commandCollection;
+        
+        private bool _clearBeforeFill;
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        public Relatorio_BoletimAlunoTableAdapter() {
+            this.ClearBeforeFill = true;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        protected internal global::MySql.Data.MySqlClient.MySqlDataAdapter Adapter {
+            get {
+                if ((this._adapter == null)) {
+                    this.InitAdapter();
+                }
+                return this._adapter;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        internal global::MySql.Data.MySqlClient.MySqlConnection Connection {
+            get {
+                if ((this._connection == null)) {
+                    this.InitConnection();
+                }
+                return this._connection;
+            }
+            set {
+                this._connection = value;
+                if ((this.Adapter.InsertCommand != null)) {
+                    this.Adapter.InsertCommand.Connection = value;
+                }
+                if ((this.Adapter.DeleteCommand != null)) {
+                    this.Adapter.DeleteCommand.Connection = value;
+                }
+                if ((this.Adapter.UpdateCommand != null)) {
+                    this.Adapter.UpdateCommand.Connection = value;
+                }
+                for (int i = 0; (i < this.CommandCollection.Length); i = (i + 1)) {
+                    if ((this.CommandCollection[i] != null)) {
+                        ((global::MySql.Data.MySqlClient.MySqlCommand)(this.CommandCollection[i])).Connection = value;
+                    }
+                }
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        internal global::MySql.Data.MySqlClient.MySqlTransaction Transaction {
+            get {
+                return this._transaction;
+            }
+            set {
+                this._transaction = value;
+                for (int i = 0; (i < this.CommandCollection.Length); i = (i + 1)) {
+                    this.CommandCollection[i].Transaction = this._transaction;
+                }
+                if (((this.Adapter != null) 
+                            && (this.Adapter.DeleteCommand != null))) {
+                    this.Adapter.DeleteCommand.Transaction = this._transaction;
+                }
+                if (((this.Adapter != null) 
+                            && (this.Adapter.InsertCommand != null))) {
+                    this.Adapter.InsertCommand.Transaction = this._transaction;
+                }
+                if (((this.Adapter != null) 
+                            && (this.Adapter.UpdateCommand != null))) {
+                    this.Adapter.UpdateCommand.Transaction = this._transaction;
+                }
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        protected global::MySql.Data.MySqlClient.MySqlCommand[] CommandCollection {
+            get {
+                if ((this._commandCollection == null)) {
+                    this.InitCommandCollection();
+                }
+                return this._commandCollection;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        public bool ClearBeforeFill {
+            get {
+                return this._clearBeforeFill;
+            }
+            set {
+                this._clearBeforeFill = value;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        private void InitAdapter() {
+            this._adapter = new global::MySql.Data.MySqlClient.MySqlDataAdapter();
+            global::System.Data.Common.DataTableMapping tableMapping = new global::System.Data.Common.DataTableMapping();
+            tableMapping.SourceTable = "Table";
+            tableMapping.DataSetTable = "Relatorio_BoletimAluno";
+            tableMapping.ColumnMappings.Add("disciplina", "disciplina");
+            tableMapping.ColumnMappings.Add("bimestre", "bimestre");
+            tableMapping.ColumnMappings.Add("nota", "nota");
+            tableMapping.ColumnMappings.Add("bimestre_id", "bimestre_id");
+            tableMapping.ColumnMappings.Add("aluno_id", "aluno_id");
+            tableMapping.ColumnMappings.Add("aluno", "aluno");
+            tableMapping.ColumnMappings.Add("serie", "serie");
+            tableMapping.ColumnMappings.Add("turno", "turno");
+            tableMapping.ColumnMappings.Add("turma", "turma");
+            this._adapter.TableMappings.Add(tableMapping);
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        private void InitConnection() {
+            this._connection = new global::MySql.Data.MySqlClient.MySqlConnection();
+            this._connection.ConnectionString = global::project_cesa.Properties.Settings.Default.project_escolaConnectionString;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        private void InitCommandCollection() {
+            this._commandCollection = new global::MySql.Data.MySqlClient.MySqlCommand[1];
+            this._commandCollection[0] = new global::MySql.Data.MySqlClient.MySqlCommand();
+            this._commandCollection[0].Connection = this.Connection;
+            this._commandCollection[0].CommandText = @"SELECT        tb_disciplina.nome AS disciplina, tb_bimestre.bimestre, tb_nota.nota, tb_nota.bimestre_id, tb_nota.aluno_id, tb_aluno.nome AS aluno, tb_turma.serie, tb_turma.turno, tb_turma.nome AS turma
+FROM            tb_nota INNER JOIN
+                         tb_bimestre ON tb_nota.bimestre_id = tb_bimestre.id_bimestre INNER JOIN
+                         tb_turma ON tb_nota.turma_id = tb_turma.id_turma INNER JOIN
+                         tb_disciplina ON tb_nota.disciplina_id = tb_disciplina.id_disciplina INNER JOIN
+                         tb_aluno ON tb_nota.aluno_id = tb_aluno.id_aluno
+WHERE        (tb_nota.aluno_id = @aluno) AND (tb_nota.bimestre_id = @bimestre)
+GROUP BY tb_disciplina.nome, tb_bimestre.bimestre, tb_nota.nota, tb_nota.bimestre_id, tb_nota.aluno_id, tb_aluno.nome, tb_turma.serie, tb_turma.turno, tb_turma.nome";
+            this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
+            global::MySql.Data.MySqlClient.MySqlParameter param = new global::MySql.Data.MySqlClient.MySqlParameter();
+            param.ParameterName = "@aluno";
+            param.DbType = global::System.Data.DbType.Int32;
+            param.MySqlDbType = global::MySql.Data.MySqlClient.MySqlDbType.Int32;
+            param.IsNullable = true;
+            param.SourceColumn = "aluno_id";
+            param.SourceVersion = global::System.Data.DataRowVersion.Current;
+            this._commandCollection[0].Parameters.Add(param);
+            param = new global::MySql.Data.MySqlClient.MySqlParameter();
+            param.ParameterName = "@bimestre";
+            param.DbType = global::System.Data.DbType.Int32;
+            param.MySqlDbType = global::MySql.Data.MySqlClient.MySqlDbType.Int32;
+            param.IsNullable = true;
+            param.SourceColumn = "bimestre_id";
+            param.SourceVersion = global::System.Data.DataRowVersion.Current;
+            this._commandCollection[0].Parameters.Add(param);
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
+        public virtual int Fill(project_escolaDataSet.Relatorio_BoletimAlunoDataTable dataTable, int aluno, int bimestre) {
+            this.Adapter.SelectCommand = this.CommandCollection[0];
+            this.Adapter.SelectCommand.Parameters[0].Value = ((int)(aluno));
+            this.Adapter.SelectCommand.Parameters[1].Value = ((int)(bimestre));
+            if ((this.ClearBeforeFill == true)) {
+                dataTable.Clear();
+            }
+            int returnValue = this.Adapter.Fill(dataTable);
+            return returnValue;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
+        public virtual project_escolaDataSet.Relatorio_BoletimAlunoDataTable GetData(int aluno, int bimestre) {
+            this.Adapter.SelectCommand = this.CommandCollection[0];
+            this.Adapter.SelectCommand.Parameters[0].Value = ((int)(aluno));
+            this.Adapter.SelectCommand.Parameters[1].Value = ((int)(bimestre));
+            project_escolaDataSet.Relatorio_BoletimAlunoDataTable dataTable = new project_escolaDataSet.Relatorio_BoletimAlunoDataTable();
+            this.Adapter.Fill(dataTable);
+            return dataTable;
+        }
+    }
+    
+    /// <summary>
     ///TableAdapterManager is used to coordinate TableAdapters in the dataset to enable Hierarchical Update scenarios
     ///</summary>
     [global::System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -15543,21 +16302,21 @@ ORDER BY tbh.descricao";
                     allChangedRows.AddRange(updatedRows);
                 }
             }
+            if ((this._tb_bimestreTableAdapter != null)) {
+                global::System.Data.DataRow[] updatedRows = dataSet.tb_bimestre.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
+                updatedRows = this.GetRealUpdatedRows(updatedRows, allAddedRows);
+                if (((updatedRows != null) 
+                            && (0 < updatedRows.Length))) {
+                    result = (result + this._tb_bimestreTableAdapter.Update(updatedRows));
+                    allChangedRows.AddRange(updatedRows);
+                }
+            }
             if ((this._tb_turmaTableAdapter != null)) {
                 global::System.Data.DataRow[] updatedRows = dataSet.tb_turma.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
                 updatedRows = this.GetRealUpdatedRows(updatedRows, allAddedRows);
                 if (((updatedRows != null) 
                             && (0 < updatedRows.Length))) {
                     result = (result + this._tb_turmaTableAdapter.Update(updatedRows));
-                    allChangedRows.AddRange(updatedRows);
-                }
-            }
-            if ((this._tb_diasemanaTableAdapter != null)) {
-                global::System.Data.DataRow[] updatedRows = dataSet.tb_diasemana.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
-                updatedRows = this.GetRealUpdatedRows(updatedRows, allAddedRows);
-                if (((updatedRows != null) 
-                            && (0 < updatedRows.Length))) {
-                    result = (result + this._tb_diasemanaTableAdapter.Update(updatedRows));
                     allChangedRows.AddRange(updatedRows);
                 }
             }
@@ -15570,48 +16329,21 @@ ORDER BY tbh.descricao";
                     allChangedRows.AddRange(updatedRows);
                 }
             }
-            if ((this._tb_bimestreTableAdapter != null)) {
-                global::System.Data.DataRow[] updatedRows = dataSet.tb_bimestre.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
+            if ((this._tb_diasemanaTableAdapter != null)) {
+                global::System.Data.DataRow[] updatedRows = dataSet.tb_diasemana.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
                 updatedRows = this.GetRealUpdatedRows(updatedRows, allAddedRows);
                 if (((updatedRows != null) 
                             && (0 < updatedRows.Length))) {
-                    result = (result + this._tb_bimestreTableAdapter.Update(updatedRows));
+                    result = (result + this._tb_diasemanaTableAdapter.Update(updatedRows));
                     allChangedRows.AddRange(updatedRows);
                 }
             }
-            if ((this._tb_aluno_turmaTableAdapter != null)) {
-                global::System.Data.DataRow[] updatedRows = dataSet.tb_aluno_turma.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
+            if ((this._tb_notaTableAdapter != null)) {
+                global::System.Data.DataRow[] updatedRows = dataSet.tb_nota.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
                 updatedRows = this.GetRealUpdatedRows(updatedRows, allAddedRows);
                 if (((updatedRows != null) 
                             && (0 < updatedRows.Length))) {
-                    result = (result + this._tb_aluno_turmaTableAdapter.Update(updatedRows));
-                    allChangedRows.AddRange(updatedRows);
-                }
-            }
-            if ((this._tb_responsavelTableAdapter != null)) {
-                global::System.Data.DataRow[] updatedRows = dataSet.tb_responsavel.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
-                updatedRows = this.GetRealUpdatedRows(updatedRows, allAddedRows);
-                if (((updatedRows != null) 
-                            && (0 < updatedRows.Length))) {
-                    result = (result + this._tb_responsavelTableAdapter.Update(updatedRows));
-                    allChangedRows.AddRange(updatedRows);
-                }
-            }
-            if ((this._tb_userTableAdapter != null)) {
-                global::System.Data.DataRow[] updatedRows = dataSet.tb_user.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
-                updatedRows = this.GetRealUpdatedRows(updatedRows, allAddedRows);
-                if (((updatedRows != null) 
-                            && (0 < updatedRows.Length))) {
-                    result = (result + this._tb_userTableAdapter.Update(updatedRows));
-                    allChangedRows.AddRange(updatedRows);
-                }
-            }
-            if ((this._tb_horaalunoTableAdapter != null)) {
-                global::System.Data.DataRow[] updatedRows = dataSet.tb_horaaluno.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
-                updatedRows = this.GetRealUpdatedRows(updatedRows, allAddedRows);
-                if (((updatedRows != null) 
-                            && (0 < updatedRows.Length))) {
-                    result = (result + this._tb_horaalunoTableAdapter.Update(updatedRows));
+                    result = (result + this._tb_notaTableAdapter.Update(updatedRows));
                     allChangedRows.AddRange(updatedRows);
                 }
             }
@@ -15624,12 +16356,39 @@ ORDER BY tbh.descricao";
                     allChangedRows.AddRange(updatedRows);
                 }
             }
-            if ((this._tb_notaTableAdapter != null)) {
-                global::System.Data.DataRow[] updatedRows = dataSet.tb_nota.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
+            if ((this._tb_horaalunoTableAdapter != null)) {
+                global::System.Data.DataRow[] updatedRows = dataSet.tb_horaaluno.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
                 updatedRows = this.GetRealUpdatedRows(updatedRows, allAddedRows);
                 if (((updatedRows != null) 
                             && (0 < updatedRows.Length))) {
-                    result = (result + this._tb_notaTableAdapter.Update(updatedRows));
+                    result = (result + this._tb_horaalunoTableAdapter.Update(updatedRows));
+                    allChangedRows.AddRange(updatedRows);
+                }
+            }
+            if ((this._tb_userTableAdapter != null)) {
+                global::System.Data.DataRow[] updatedRows = dataSet.tb_user.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
+                updatedRows = this.GetRealUpdatedRows(updatedRows, allAddedRows);
+                if (((updatedRows != null) 
+                            && (0 < updatedRows.Length))) {
+                    result = (result + this._tb_userTableAdapter.Update(updatedRows));
+                    allChangedRows.AddRange(updatedRows);
+                }
+            }
+            if ((this._tb_responsavelTableAdapter != null)) {
+                global::System.Data.DataRow[] updatedRows = dataSet.tb_responsavel.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
+                updatedRows = this.GetRealUpdatedRows(updatedRows, allAddedRows);
+                if (((updatedRows != null) 
+                            && (0 < updatedRows.Length))) {
+                    result = (result + this._tb_responsavelTableAdapter.Update(updatedRows));
+                    allChangedRows.AddRange(updatedRows);
+                }
+            }
+            if ((this._tb_aluno_turmaTableAdapter != null)) {
+                global::System.Data.DataRow[] updatedRows = dataSet.tb_aluno_turma.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
+                updatedRows = this.GetRealUpdatedRows(updatedRows, allAddedRows);
+                if (((updatedRows != null) 
+                            && (0 < updatedRows.Length))) {
+                    result = (result + this._tb_aluno_turmaTableAdapter.Update(updatedRows));
                     allChangedRows.AddRange(updatedRows);
                 }
             }
@@ -15676,19 +16435,19 @@ ORDER BY tbh.descricao";
                     allAddedRows.AddRange(addedRows);
                 }
             }
+            if ((this._tb_bimestreTableAdapter != null)) {
+                global::System.Data.DataRow[] addedRows = dataSet.tb_bimestre.Select(null, null, global::System.Data.DataViewRowState.Added);
+                if (((addedRows != null) 
+                            && (0 < addedRows.Length))) {
+                    result = (result + this._tb_bimestreTableAdapter.Update(addedRows));
+                    allAddedRows.AddRange(addedRows);
+                }
+            }
             if ((this._tb_turmaTableAdapter != null)) {
                 global::System.Data.DataRow[] addedRows = dataSet.tb_turma.Select(null, null, global::System.Data.DataViewRowState.Added);
                 if (((addedRows != null) 
                             && (0 < addedRows.Length))) {
                     result = (result + this._tb_turmaTableAdapter.Update(addedRows));
-                    allAddedRows.AddRange(addedRows);
-                }
-            }
-            if ((this._tb_diasemanaTableAdapter != null)) {
-                global::System.Data.DataRow[] addedRows = dataSet.tb_diasemana.Select(null, null, global::System.Data.DataViewRowState.Added);
-                if (((addedRows != null) 
-                            && (0 < addedRows.Length))) {
-                    result = (result + this._tb_diasemanaTableAdapter.Update(addedRows));
                     allAddedRows.AddRange(addedRows);
                 }
             }
@@ -15700,43 +16459,19 @@ ORDER BY tbh.descricao";
                     allAddedRows.AddRange(addedRows);
                 }
             }
-            if ((this._tb_bimestreTableAdapter != null)) {
-                global::System.Data.DataRow[] addedRows = dataSet.tb_bimestre.Select(null, null, global::System.Data.DataViewRowState.Added);
+            if ((this._tb_diasemanaTableAdapter != null)) {
+                global::System.Data.DataRow[] addedRows = dataSet.tb_diasemana.Select(null, null, global::System.Data.DataViewRowState.Added);
                 if (((addedRows != null) 
                             && (0 < addedRows.Length))) {
-                    result = (result + this._tb_bimestreTableAdapter.Update(addedRows));
+                    result = (result + this._tb_diasemanaTableAdapter.Update(addedRows));
                     allAddedRows.AddRange(addedRows);
                 }
             }
-            if ((this._tb_aluno_turmaTableAdapter != null)) {
-                global::System.Data.DataRow[] addedRows = dataSet.tb_aluno_turma.Select(null, null, global::System.Data.DataViewRowState.Added);
+            if ((this._tb_notaTableAdapter != null)) {
+                global::System.Data.DataRow[] addedRows = dataSet.tb_nota.Select(null, null, global::System.Data.DataViewRowState.Added);
                 if (((addedRows != null) 
                             && (0 < addedRows.Length))) {
-                    result = (result + this._tb_aluno_turmaTableAdapter.Update(addedRows));
-                    allAddedRows.AddRange(addedRows);
-                }
-            }
-            if ((this._tb_responsavelTableAdapter != null)) {
-                global::System.Data.DataRow[] addedRows = dataSet.tb_responsavel.Select(null, null, global::System.Data.DataViewRowState.Added);
-                if (((addedRows != null) 
-                            && (0 < addedRows.Length))) {
-                    result = (result + this._tb_responsavelTableAdapter.Update(addedRows));
-                    allAddedRows.AddRange(addedRows);
-                }
-            }
-            if ((this._tb_userTableAdapter != null)) {
-                global::System.Data.DataRow[] addedRows = dataSet.tb_user.Select(null, null, global::System.Data.DataViewRowState.Added);
-                if (((addedRows != null) 
-                            && (0 < addedRows.Length))) {
-                    result = (result + this._tb_userTableAdapter.Update(addedRows));
-                    allAddedRows.AddRange(addedRows);
-                }
-            }
-            if ((this._tb_horaalunoTableAdapter != null)) {
-                global::System.Data.DataRow[] addedRows = dataSet.tb_horaaluno.Select(null, null, global::System.Data.DataViewRowState.Added);
-                if (((addedRows != null) 
-                            && (0 < addedRows.Length))) {
-                    result = (result + this._tb_horaalunoTableAdapter.Update(addedRows));
+                    result = (result + this._tb_notaTableAdapter.Update(addedRows));
                     allAddedRows.AddRange(addedRows);
                 }
             }
@@ -15748,11 +16483,35 @@ ORDER BY tbh.descricao";
                     allAddedRows.AddRange(addedRows);
                 }
             }
-            if ((this._tb_notaTableAdapter != null)) {
-                global::System.Data.DataRow[] addedRows = dataSet.tb_nota.Select(null, null, global::System.Data.DataViewRowState.Added);
+            if ((this._tb_horaalunoTableAdapter != null)) {
+                global::System.Data.DataRow[] addedRows = dataSet.tb_horaaluno.Select(null, null, global::System.Data.DataViewRowState.Added);
                 if (((addedRows != null) 
                             && (0 < addedRows.Length))) {
-                    result = (result + this._tb_notaTableAdapter.Update(addedRows));
+                    result = (result + this._tb_horaalunoTableAdapter.Update(addedRows));
+                    allAddedRows.AddRange(addedRows);
+                }
+            }
+            if ((this._tb_userTableAdapter != null)) {
+                global::System.Data.DataRow[] addedRows = dataSet.tb_user.Select(null, null, global::System.Data.DataViewRowState.Added);
+                if (((addedRows != null) 
+                            && (0 < addedRows.Length))) {
+                    result = (result + this._tb_userTableAdapter.Update(addedRows));
+                    allAddedRows.AddRange(addedRows);
+                }
+            }
+            if ((this._tb_responsavelTableAdapter != null)) {
+                global::System.Data.DataRow[] addedRows = dataSet.tb_responsavel.Select(null, null, global::System.Data.DataViewRowState.Added);
+                if (((addedRows != null) 
+                            && (0 < addedRows.Length))) {
+                    result = (result + this._tb_responsavelTableAdapter.Update(addedRows));
+                    allAddedRows.AddRange(addedRows);
+                }
+            }
+            if ((this._tb_aluno_turmaTableAdapter != null)) {
+                global::System.Data.DataRow[] addedRows = dataSet.tb_aluno_turma.Select(null, null, global::System.Data.DataViewRowState.Added);
+                if (((addedRows != null) 
+                            && (0 < addedRows.Length))) {
+                    result = (result + this._tb_aluno_turmaTableAdapter.Update(addedRows));
                     allAddedRows.AddRange(addedRows);
                 }
             }
@@ -15782,35 +16541,11 @@ ORDER BY tbh.descricao";
                     allChangedRows.AddRange(deletedRows);
                 }
             }
-            if ((this._tb_notaTableAdapter != null)) {
-                global::System.Data.DataRow[] deletedRows = dataSet.tb_nota.Select(null, null, global::System.Data.DataViewRowState.Deleted);
+            if ((this._tb_aluno_turmaTableAdapter != null)) {
+                global::System.Data.DataRow[] deletedRows = dataSet.tb_aluno_turma.Select(null, null, global::System.Data.DataViewRowState.Deleted);
                 if (((deletedRows != null) 
                             && (0 < deletedRows.Length))) {
-                    result = (result + this._tb_notaTableAdapter.Update(deletedRows));
-                    allChangedRows.AddRange(deletedRows);
-                }
-            }
-            if ((this._tb_mhoraTableAdapter != null)) {
-                global::System.Data.DataRow[] deletedRows = dataSet.tb_mhora.Select(null, null, global::System.Data.DataViewRowState.Deleted);
-                if (((deletedRows != null) 
-                            && (0 < deletedRows.Length))) {
-                    result = (result + this._tb_mhoraTableAdapter.Update(deletedRows));
-                    allChangedRows.AddRange(deletedRows);
-                }
-            }
-            if ((this._tb_horaalunoTableAdapter != null)) {
-                global::System.Data.DataRow[] deletedRows = dataSet.tb_horaaluno.Select(null, null, global::System.Data.DataViewRowState.Deleted);
-                if (((deletedRows != null) 
-                            && (0 < deletedRows.Length))) {
-                    result = (result + this._tb_horaalunoTableAdapter.Update(deletedRows));
-                    allChangedRows.AddRange(deletedRows);
-                }
-            }
-            if ((this._tb_userTableAdapter != null)) {
-                global::System.Data.DataRow[] deletedRows = dataSet.tb_user.Select(null, null, global::System.Data.DataViewRowState.Deleted);
-                if (((deletedRows != null) 
-                            && (0 < deletedRows.Length))) {
-                    result = (result + this._tb_userTableAdapter.Update(deletedRows));
+                    result = (result + this._tb_aluno_turmaTableAdapter.Update(deletedRows));
                     allChangedRows.AddRange(deletedRows);
                 }
             }
@@ -15822,27 +16557,35 @@ ORDER BY tbh.descricao";
                     allChangedRows.AddRange(deletedRows);
                 }
             }
-            if ((this._tb_aluno_turmaTableAdapter != null)) {
-                global::System.Data.DataRow[] deletedRows = dataSet.tb_aluno_turma.Select(null, null, global::System.Data.DataViewRowState.Deleted);
+            if ((this._tb_userTableAdapter != null)) {
+                global::System.Data.DataRow[] deletedRows = dataSet.tb_user.Select(null, null, global::System.Data.DataViewRowState.Deleted);
                 if (((deletedRows != null) 
                             && (0 < deletedRows.Length))) {
-                    result = (result + this._tb_aluno_turmaTableAdapter.Update(deletedRows));
+                    result = (result + this._tb_userTableAdapter.Update(deletedRows));
                     allChangedRows.AddRange(deletedRows);
                 }
             }
-            if ((this._tb_bimestreTableAdapter != null)) {
-                global::System.Data.DataRow[] deletedRows = dataSet.tb_bimestre.Select(null, null, global::System.Data.DataViewRowState.Deleted);
+            if ((this._tb_horaalunoTableAdapter != null)) {
+                global::System.Data.DataRow[] deletedRows = dataSet.tb_horaaluno.Select(null, null, global::System.Data.DataViewRowState.Deleted);
                 if (((deletedRows != null) 
                             && (0 < deletedRows.Length))) {
-                    result = (result + this._tb_bimestreTableAdapter.Update(deletedRows));
+                    result = (result + this._tb_horaalunoTableAdapter.Update(deletedRows));
                     allChangedRows.AddRange(deletedRows);
                 }
             }
-            if ((this._tb_disciplinaTableAdapter != null)) {
-                global::System.Data.DataRow[] deletedRows = dataSet.tb_disciplina.Select(null, null, global::System.Data.DataViewRowState.Deleted);
+            if ((this._tb_mhoraTableAdapter != null)) {
+                global::System.Data.DataRow[] deletedRows = dataSet.tb_mhora.Select(null, null, global::System.Data.DataViewRowState.Deleted);
                 if (((deletedRows != null) 
                             && (0 < deletedRows.Length))) {
-                    result = (result + this._tb_disciplinaTableAdapter.Update(deletedRows));
+                    result = (result + this._tb_mhoraTableAdapter.Update(deletedRows));
+                    allChangedRows.AddRange(deletedRows);
+                }
+            }
+            if ((this._tb_notaTableAdapter != null)) {
+                global::System.Data.DataRow[] deletedRows = dataSet.tb_nota.Select(null, null, global::System.Data.DataViewRowState.Deleted);
+                if (((deletedRows != null) 
+                            && (0 < deletedRows.Length))) {
+                    result = (result + this._tb_notaTableAdapter.Update(deletedRows));
                     allChangedRows.AddRange(deletedRows);
                 }
             }
@@ -15854,11 +16597,27 @@ ORDER BY tbh.descricao";
                     allChangedRows.AddRange(deletedRows);
                 }
             }
+            if ((this._tb_disciplinaTableAdapter != null)) {
+                global::System.Data.DataRow[] deletedRows = dataSet.tb_disciplina.Select(null, null, global::System.Data.DataViewRowState.Deleted);
+                if (((deletedRows != null) 
+                            && (0 < deletedRows.Length))) {
+                    result = (result + this._tb_disciplinaTableAdapter.Update(deletedRows));
+                    allChangedRows.AddRange(deletedRows);
+                }
+            }
             if ((this._tb_turmaTableAdapter != null)) {
                 global::System.Data.DataRow[] deletedRows = dataSet.tb_turma.Select(null, null, global::System.Data.DataViewRowState.Deleted);
                 if (((deletedRows != null) 
                             && (0 < deletedRows.Length))) {
                     result = (result + this._tb_turmaTableAdapter.Update(deletedRows));
+                    allChangedRows.AddRange(deletedRows);
+                }
+            }
+            if ((this._tb_bimestreTableAdapter != null)) {
+                global::System.Data.DataRow[] deletedRows = dataSet.tb_bimestre.Select(null, null, global::System.Data.DataViewRowState.Deleted);
+                if (((deletedRows != null) 
+                            && (0 < deletedRows.Length))) {
+                    result = (result + this._tb_bimestreTableAdapter.Update(deletedRows));
                     allChangedRows.AddRange(deletedRows);
                 }
             }

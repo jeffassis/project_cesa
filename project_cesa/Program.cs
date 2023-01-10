@@ -23,6 +23,7 @@ namespace project_cesa
         public static string idAluno;
 
         public static string idSerieTurma;
+        public static string idBimestre;
 
         // Variaveis para chamar tela horario
         public static string chamadaHorario;
