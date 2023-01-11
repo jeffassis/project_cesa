@@ -134,6 +134,12 @@
     <Compile Include="Cadastros\Aluno.Designer.cs">
       <DependentUpon>Aluno.cs</DependentUpon>
     </Compile>
+    <Compile Include="Cadastros\Fornecedor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Cadastros\Fornecedor.Designer.cs">
+      <DependentUpon>Fornecedor.cs</DependentUpon>
+    </Compile>
     <Compile Include="Cadastros\Professor.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -171,6 +177,12 @@
     <Compile Include="Ferramentas\CapturarFoto.Designer.cs">
       <DependentUpon>CapturarFoto.cs</DependentUpon>
     </Compile>
+    <Compile Include="Financeiro\Movimentacao.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Financeiro\Movimentacao.Designer.cs">
+      <DependentUpon>Movimentacao.cs</DependentUpon>
+    </Compile>
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -195,16 +207,16 @@
     <Compile Include="Pedagogico\BoletimFinal.Designer.cs">
       <DependentUpon>BoletimFinal.cs</DependentUpon>
     </Compile>
-    <Compile Include="Pedagogico\Disciplina.cs">
+    <Compile Include="Cadastros\Disciplina.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Pedagogico\Disciplina.Designer.cs">
+    <Compile Include="Cadastros\Disciplina.Designer.cs">
       <DependentUpon>Disciplina.cs</DependentUpon>
     </Compile>
-    <Compile Include="Pedagogico\Horario.cs">
+    <Compile Include="Cadastros\Horario.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Pedagogico\Horario.Designer.cs">
+    <Compile Include="Cadastros\Horario.Designer.cs">
       <DependentUpon>Horario.cs</DependentUpon>
     </Compile>
     <Compile Include="Pedagogico\MontHoraAluno.cs">
@@ -231,10 +243,10 @@
     <Compile Include="Pedagogico\Notas.Designer.cs">
       <DependentUpon>Notas.cs</DependentUpon>
     </Compile>
-    <Compile Include="Pedagogico\Turma.cs">
+    <Compile Include="Cadastros\Turma.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Pedagogico\Turma.Designer.cs">
+    <Compile Include="Cadastros\Turma.Designer.cs">
       <DependentUpon>Turma.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
@@ -275,6 +287,9 @@
     <EmbeddedResource Include="Cadastros\Aluno.resx">
       <DependentUpon>Aluno.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Cadastros\Fornecedor.resx">
+      <DependentUpon>Fornecedor.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Cadastros\Professor.resx">
       <DependentUpon>Professor.cs</DependentUpon>
     </EmbeddedResource>
@@ -293,6 +308,9 @@
     <EmbeddedResource Include="Ferramentas\CapturarFoto.resx">
       <DependentUpon>CapturarFoto.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Financeiro\Movimentacao.resx">
+      <DependentUpon>Movimentacao.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
@@ -305,10 +323,10 @@
     <EmbeddedResource Include="Pedagogico\BoletimFinal.resx">
       <DependentUpon>BoletimFinal.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Pedagogico\Disciplina.resx">
+    <EmbeddedResource Include="Cadastros\Disciplina.resx">
       <DependentUpon>Disciplina.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Pedagogico\Horario.resx">
+    <EmbeddedResource Include="Cadastros\Horario.resx">
       <DependentUpon>Horario.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Pedagogico\MontHoraAluno.resx">
@@ -323,7 +341,7 @@
     <EmbeddedResource Include="Pedagogico\Notas.resx">
       <DependentUpon>Notas.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Pedagogico\Turma.resx">
+    <EmbeddedResource Include="Cadastros\Turma.resx">
       <DependentUpon>Turma.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
@@ -494,6 +512,8 @@
     <None Include="Resources\carteirinha_20.png" />
     <None Include="Resources\servico_20.png" />
     <None Include="Resources\produto_20.png" />
+    <None Include="Resources\movimentacao.png" />
+    <None Include="Resources\forncedor_20.png" />
     <Content Include="SqlServerTypes\readme.htm" />
     <Content Include="SqlServerTypes\x64\msvcr120.dll">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>

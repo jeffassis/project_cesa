@@ -29,6 +29,7 @@ namespace project_cesa.Cadastros
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmServico));
             this.panel1 = new System.Windows.Forms.Panel();
@@ -43,6 +44,7 @@ namespace project_cesa.Cadastros
             this.txtValor = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
+            this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Grid)).BeginInit();
             this.SuspendLayout();
@@ -68,6 +70,7 @@ namespace project_cesa.Cadastros
             this.BtnFechar.Name = "BtnFechar";
             this.BtnFechar.Size = new System.Drawing.Size(36, 36);
             this.BtnFechar.TabIndex = 4;
+            this.toolTip1.SetToolTip(this.BtnFechar, "Fechar");
             this.BtnFechar.UseVisualStyleBackColor = true;
             this.BtnFechar.Click += new System.EventHandler(this.BtnFechar_Click);
             // 
@@ -80,6 +83,7 @@ namespace project_cesa.Cadastros
             this.BtnDelete.Name = "BtnDelete";
             this.BtnDelete.Size = new System.Drawing.Size(36, 36);
             this.BtnDelete.TabIndex = 3;
+            this.toolTip1.SetToolTip(this.BtnDelete, "Remover dados");
             this.BtnDelete.UseVisualStyleBackColor = true;
             this.BtnDelete.Click += new System.EventHandler(this.BtnDelete_Click);
             // 
@@ -92,6 +96,7 @@ namespace project_cesa.Cadastros
             this.BtnUpdate.Name = "BtnUpdate";
             this.BtnUpdate.Size = new System.Drawing.Size(36, 36);
             this.BtnUpdate.TabIndex = 2;
+            this.toolTip1.SetToolTip(this.BtnUpdate, "Atualizar dados");
             this.BtnUpdate.UseVisualStyleBackColor = true;
             this.BtnUpdate.Click += new System.EventHandler(this.BtnUpdate_Click);
             // 
@@ -104,6 +109,7 @@ namespace project_cesa.Cadastros
             this.BtnSave.Name = "BtnSave";
             this.BtnSave.Size = new System.Drawing.Size(36, 36);
             this.BtnSave.TabIndex = 1;
+            this.toolTip1.SetToolTip(this.BtnSave, "Salvar dados");
             this.BtnSave.UseVisualStyleBackColor = true;
             this.BtnSave.Click += new System.EventHandler(this.BtnSave_Click);
             // 
@@ -115,6 +121,7 @@ namespace project_cesa.Cadastros
             this.BtnNovo.Name = "BtnNovo";
             this.BtnNovo.Size = new System.Drawing.Size(36, 36);
             this.BtnNovo.TabIndex = 0;
+            this.toolTip1.SetToolTip(this.BtnNovo, "Novo registro");
             this.BtnNovo.UseVisualStyleBackColor = true;
             this.BtnNovo.Click += new System.EventHandler(this.BtnNovo_Click);
             // 
@@ -232,5 +239,6 @@ namespace project_cesa.Cadastros
         private System.Windows.Forms.TextBox txtValor;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.ToolTip toolTip1;
     }
 }
