@@ -79,27 +79,9 @@ namespace project_cesa
             AbreForm(1, form);
         }
 
-        private void PedagogicoTurmaCad_Click(object sender, EventArgs e)
-        {
-            Pedagogico.FrmTurma form = new Pedagogico.FrmTurma();
-            AbreForm(1, form);
-        }
-
-        private void PedagogicoHorarioCad_Click(object sender, EventArgs e)
-        {
-            Pedagogico.FrmHorario form = new Pedagogico.FrmHorario();
-            AbreForm(2, form);
-        }
-
         private void PedagogicoTurmaMont_Click(object sender, EventArgs e)
         {
             Pedagogico.FrmMontTurma form = new Pedagogico.FrmMontTurma();
-            AbreForm(1, form);
-        }
-
-        private void PedagogicoDisciplina_Click(object sender, EventArgs e)
-        {
-            Pedagogico.FrmDisciplina form = new Pedagogico.FrmDisciplina();
             AbreForm(1, form);
         }
 
@@ -177,10 +159,45 @@ namespace project_cesa
             AbreForm(1, form);
         }
 
-        private void CadastroServico_Click(object sender, EventArgs e)
+        private void CadastrosServico_Click(object sender, EventArgs e)
         {
             Cadastros.FrmServico form = new Cadastros.FrmServico();
             AbreForm(2, form);
+        }
+
+        private void CadastrosHorario_Click(object sender, EventArgs e)
+        {
+            Cadastros.FrmHorario form = new Cadastros.FrmHorario();
+            AbreForm(2, form);
+        }
+
+        private void CadastrosTurmas_Click(object sender, EventArgs e)
+        {
+            Cadastros.FrmTurma form = new Cadastros.FrmTurma();
+            AbreForm(2, form);
+        }
+
+        private void CadastrosDisciplinas_Click(object sender, EventArgs e)
+        {
+            Cadastros.FrmDisciplina form = new Cadastros.FrmDisciplina();
+            AbreForm(2, form);
+        }
+
+        private void FinanceiroMovimentacao_Click(object sender, EventArgs e)
+        {
+            Financeiro.FrmMovimentacao form = new Financeiro.FrmMovimentacao();
+            AbreForm(2, form);
+        }
+
+        private void CadastrosFornecedor_Click(object sender, EventArgs e)
+        {
+            Cadastros.FrmFornecedor form = new Cadastros.FrmFornecedor();
+            AbreForm(2, form);
+        }
+
+        private void CadastrosProduto_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

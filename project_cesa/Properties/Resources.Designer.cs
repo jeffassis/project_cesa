@@ -313,6 +313,16 @@ namespace project_cesa.Properties {
         /// <summary>
         ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap forncedor_20 {
+            get {
+                object obj = ResourceManager.GetObject("forncedor_20", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap hand_peace_20 {
             get {
                 object obj = ResourceManager.GetObject("hand_peace_20", resourceCulture);
@@ -456,6 +466,16 @@ namespace project_cesa.Properties {
         internal static System.Drawing.Bitmap montar_20 {
             get {
                 object obj = ResourceManager.GetObject("montar_20", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap movimentacao {
+            get {
+                object obj = ResourceManager.GetObject("movimentacao", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
