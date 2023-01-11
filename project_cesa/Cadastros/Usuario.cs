@@ -22,31 +22,31 @@ namespace project_cesa.Cadastros
 
         private void FormatarDG()
         {
-            grid.Columns[0].HeaderText = "ID";
-            grid.Columns[1].HeaderText = "NOME";
-            grid.Columns[2].HeaderText = "USERNAME";
-            grid.Columns[3].HeaderText = "SENHA";
-            grid.Columns[4].HeaderText = "STATUS";
-            grid.Columns[5].HeaderText = "NIVEL";
+            Grid.Columns[0].HeaderText = "ID";
+            Grid.Columns[1].HeaderText = "NOME";
+            Grid.Columns[2].HeaderText = "USERNAME";
+            Grid.Columns[3].HeaderText = "SENHA";
+            Grid.Columns[4].HeaderText = "STATUS";
+            Grid.Columns[5].HeaderText = "NIVEL";
             
 
-            grid.Columns[0].Visible = false;
-            grid.Columns[3].Visible = false;
+            Grid.Columns[0].Visible = false;
+            Grid.Columns[3].Visible = false;
             
-            grid.Columns[1].Width = 150;
-            grid.Columns[4].Width = 75;
-            grid.Columns[5].Width = 75;
+            Grid.Columns[1].Width = 150;
+            Grid.Columns[4].Width = 75;
+            Grid.Columns[5].Width = 75;
         }
 
         private void Listar()
         {
             string queryListar = "SELECT * FROM tb_user ORDER BY nome asc";
-            grid.DataSource = Conexao.dql(queryListar);
+            Grid.DataSource = Conexao.dql(queryListar);
 
             FormatarDG();
         }
 
-        private void habilitarCampos()
+        private void HabilitarCampos()
         {
             txtNome.Enabled = true;
             txtUsername.Enabled = true;
@@ -56,7 +56,7 @@ namespace project_cesa.Cadastros
             txtNome.Focus();
         }
 
-        private void desabilitarCampos()
+        private void DesabilitarCampos()
         {
             txtNome.Enabled = false;
             txtUsername.Enabled = false;
@@ -65,7 +65,7 @@ namespace project_cesa.Cadastros
             cbStatus.Enabled = false;
         }
 
-        private void limparCampos()
+        private void LimparCampos()
         {
             txtNome.Text = "";
             txtUsername.Text = "";
@@ -78,21 +78,21 @@ namespace project_cesa.Cadastros
             Listar();
         }
 
-        private void btnFechar_Click(object sender, EventArgs e)
+        private void BtnFechar_Click(object sender, EventArgs e)
         {
             Close();
         }
 
-        private void btnNovo_Click(object sender, EventArgs e)
+        private void BtnNovo_Click(object sender, EventArgs e)
         {
-            btnSave.Enabled = true;
-            btnUpdate.Enabled = false;
-            btnDelete.Enabled = false;
-            habilitarCampos();
-            limparCampos();
+            BtnSave.Enabled = true;
+            BtnUpdate.Enabled = false;
+            BtnDelete.Enabled = false;
+            HabilitarCampos();
+            LimparCampos();
         }
 
-        private void btnSave_Click(object sender, EventArgs e)
+        private void BtnSave_Click(object sender, EventArgs e)
         {
             // VERIFICA SE O CAMPO ESTA VAZIO
             if (txtNome.Text.ToString().Trim() == "" || txtUsername.ToString().Trim() == "" || cbStatus.Text == "")
@@ -103,8 +103,7 @@ namespace project_cesa.Cadastros
                 return;
             }
             // ADICIONA A CONSULTA A STRING
-            string queryAdd = "";
-            queryAdd = String.Format(@"
+            string queryAdd = String.Format(@"
                        INSERT INTO tb_user 
                             (nome, username, senha, status, nivel)
                                 VALUES ('{0}', '{1}', '{2}', '{3}', {4})
@@ -124,15 +123,15 @@ namespace project_cesa.Cadastros
             Conexao.dml(queryAdd);
             MessageBox.Show("Dados inseridos com sucesso!", "Dados Adicionados", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
-            btnSave.Enabled = false;
-            btnUpdate.Enabled = false;
-            btnDelete.Enabled = false;
-            desabilitarCampos();
-            limparCampos();
+            BtnSave.Enabled = false;
+            BtnUpdate.Enabled = false;
+            BtnDelete.Enabled = false;
+            DesabilitarCampos();
+            LimparCampos();
             Listar();
         }
 
-        private void btnUpdate_Click(object sender, EventArgs e)
+        private void BtnUpdate_Click(object sender, EventArgs e)
         {
             // VERIFICA SE O CAMPO ESTA VAZIO
             if (txtNome.Text.ToString().Trim() == "" || txtUsername.ToString().Trim() == "" || cbStatus.Text == "")
@@ -148,8 +147,7 @@ namespace project_cesa.Cadastros
                 if (res == DialogResult.Yes)
                 {
                     // ADICIONA A CONSULTA A STRING
-                    string queryUpdate = "";
-                    queryUpdate = String.Format(@"
+                    string queryUpdate = String.Format(@"
                         UPDATE tb_user SET 
                             nome='{0}', username='{1}', senha='{2}', status='{3}', nivel={4}
                         WHERE
@@ -173,15 +171,15 @@ namespace project_cesa.Cadastros
                     MessageBox.Show("Dados atualizados com sucesso!", "Dados atualizados", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
             }
-            btnSave.Enabled = false;
-            btnUpdate.Enabled = false;
-            btnDelete.Enabled = false;
-            desabilitarCampos();
-            limparCampos();
+            BtnSave.Enabled = false;
+            BtnUpdate.Enabled = false;
+            BtnDelete.Enabled = false;
+            DesabilitarCampos();
+            LimparCampos();
             Listar();
         }
 
-        private void btnDelete_Click(object sender, EventArgs e)
+        private void BtnDelete_Click(object sender, EventArgs e)
         {
             // Cria um Dialogo para confirmar a exclusao de dados
             DialogResult res = MessageBox.Show("Confirma exclusão?", "Excluir?", MessageBoxButtons.YesNo);
@@ -190,30 +188,30 @@ namespace project_cesa.Cadastros
                 string queryDelete = "DELETE FROM tb_user WHERE id_user=" + idSelecionado;
                 Conexao.dml(queryDelete);
                 MessageBox.Show("Registro Excluido com Sucesso!", "Registro Excluido", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                grid.Rows.Remove(grid.CurrentRow);
+                Grid.Rows.Remove(Grid.CurrentRow);
             }
-            btnSave.Enabled = false;
-            btnUpdate.Enabled = false;
-            btnDelete.Enabled = false;
-            desabilitarCampos();
-            limparCampos();
+            BtnSave.Enabled = false;
+            BtnUpdate.Enabled = false;
+            BtnDelete.Enabled = false;
+            DesabilitarCampos();
+            LimparCampos();
         }
 
-        private void grid_CellClick(object sender, DataGridViewCellEventArgs e)
+        private void Grid_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            idSelecionado = grid.CurrentRow.Cells[0].Value.ToString();
-            txtNome.Text = grid.CurrentRow.Cells[1].Value.ToString();
-            txtUsername.Text = grid.CurrentRow.Cells[2].Value.ToString();
-            txtSenha.Text = grid.CurrentRow.Cells[3].Value.ToString();
-            cbStatus.Text = grid.CurrentRow.Cells[4].Value.ToString();
-            txtNivel.Value = Convert.ToInt32(grid.CurrentRow.Cells[5].Value.ToString());
+            idSelecionado = Grid.CurrentRow.Cells[0].Value.ToString();
+            txtNome.Text = Grid.CurrentRow.Cells[1].Value.ToString();
+            txtUsername.Text = Grid.CurrentRow.Cells[2].Value.ToString();
+            txtSenha.Text = Grid.CurrentRow.Cells[3].Value.ToString();
+            cbStatus.Text = Grid.CurrentRow.Cells[4].Value.ToString();
+            txtNivel.Value = Convert.ToInt32(Grid.CurrentRow.Cells[5].Value.ToString());
 
-            btnUpdate.Enabled = true;
-            btnDelete.Enabled = true;
-            btnSave.Enabled = false;
-            habilitarCampos();
+            BtnUpdate.Enabled = true;
+            BtnDelete.Enabled = true;
+            BtnSave.Enabled = false;
+            HabilitarCampos();
 
-            UsuarioAntigo = grid.CurrentRow.Cells[2].Value.ToString();
+            UsuarioAntigo = Grid.CurrentRow.Cells[2].Value.ToString();
         }
     }
 }

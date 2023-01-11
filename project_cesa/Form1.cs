@@ -88,7 +88,7 @@ namespace project_cesa
         private void PedagogicoHorarioCad_Click(object sender, EventArgs e)
         {
             Pedagogico.FrmHorario form = new Pedagogico.FrmHorario();
-            AbreForm(1, form);
+            AbreForm(2, form);
         }
 
         private void PedagogicoTurmaMont_Click(object sender, EventArgs e)
@@ -175,6 +175,12 @@ namespace project_cesa
         {
             Pedagogico.FrmBoletimFinal form = new Pedagogico.FrmBoletimFinal();
             AbreForm(1, form);
+        }
+
+        private void CadastroServico_Click(object sender, EventArgs e)
+        {
+            Cadastros.FrmServico form = new Cadastros.FrmServico();
+            AbreForm(2, form);
         }
     }
 }

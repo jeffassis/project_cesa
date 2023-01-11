@@ -181,16 +181,13 @@ namespace project_cesa.Pedagogico
                 return;
             }
             // ADICIONA A CONSULTA A STRING
-            string queryAdd = "";
-            queryAdd = String.Format(@"INSERT INTO tb_nota 
+            string queryAdd = String.Format(@"INSERT INTO tb_nota 
                             (aluno_id, bimestre_id, disciplina_id, tipo, nota, turma_id)
                                 VALUES ({0}, {1}, {2}, '{3}', {4}, {5})
             ", cbAluno.SelectedValue, cbBimestre.SelectedValue, cbDisciplina.SelectedValue, cbTipo.Text, txtNota.Text.Replace(",", "."), cbTurma.SelectedValue);
             // VERIFICA SE DADO JA EXISTE
-            string verificar = @"SELECT aluno_id 
-                FROM tb_nota WHERE
-                aluno_id='" + cbAluno.SelectedValue + "'" +
-                " and disciplina_id="+cbDisciplina.SelectedValue+" and bimestre_id="+cbBimestre.SelectedValue+"";
+            string verificar = @"SELECT aluno_id FROM tb_nota WHERE aluno_id='" + cbAluno.SelectedValue + "'" +
+                        " and disciplina_id="+cbDisciplina.SelectedValue+" and bimestre_id="+cbBimestre.SelectedValue+"";
             dt = Conexao.dql(verificar);
             if (dt.Rows.Count > 0)
             {
