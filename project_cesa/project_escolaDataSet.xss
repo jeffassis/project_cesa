@@ -9,12 +9,12 @@
     <Shape ID="DesignTable:tb_aluno" ZOrder="7" X="273" Y="101" Height="267" Width="195" AdapterExpanded="true" DataTableExpanded="true" OldAdapterHeight="0" OldDataTableHeight="0" SplitterPosition="216" />
     <Shape ID="DesignTable:tb_aluno_turma" ZOrder="8" X="-5" Y="117" Height="134" Width="235" AdapterExpanded="true" DataTableExpanded="true" OldAdapterHeight="0" OldDataTableHeight="0" SplitterPosition="83" />
     <Shape ID="DesignTable:tb_ano" ZOrder="33" X="642" Y="407" Height="115" Width="184" AdapterExpanded="true" DataTableExpanded="true" OldAdapterHeight="0" OldDataTableHeight="0" SplitterPosition="64" />
-    <Shape ID="DesignTable:tb_horario" ZOrder="6" X="483" Y="93" Height="134" Width="204" AdapterExpanded="true" DataTableExpanded="true" OldAdapterHeight="0" OldDataTableHeight="0" SplitterPosition="83" />
+    <Shape ID="DesignTable:tb_horario" ZOrder="6" X="421" Y="-30" Height="134" Width="204" AdapterExpanded="true" DataTableExpanded="true" OldAdapterHeight="0" OldDataTableHeight="0" SplitterPosition="83" />
     <Shape ID="DesignTable:tb_responsavel" ZOrder="32" X="859" Y="91" Height="191" Width="231" AdapterExpanded="true" DataTableExpanded="true" OldAdapterHeight="0" OldDataTableHeight="0" SplitterPosition="140" />
     <Shape ID="DesignTable:tb_turma" ZOrder="5" X="337" Y="445" Height="172" Width="197" AdapterExpanded="true" DataTableExpanded="true" OldAdapterHeight="0" OldDataTableHeight="0" SplitterPosition="121" />
     <Shape ID="DesignTable:tb_user" ZOrder="31" X="896" Y="330" Height="191" Width="186" AdapterExpanded="true" DataTableExpanded="true" OldAdapterHeight="0" OldDataTableHeight="0" SplitterPosition="140" />
     <Shape ID="DesignTable:MontTurma" ZOrder="27" X="11" Y="471" Height="172" Width="214" AdapterExpanded="true" DataTableExpanded="true" OldAdapterHeight="0" OldDataTableHeight="0" SplitterPosition="121" />
-    <Shape ID="DesignTable:Relatorio_Horario" ZOrder="2" X="1153" Y="331" Height="248" Width="247" AdapterExpanded="true" DataTableExpanded="true" OldAdapterHeight="0" OldDataTableHeight="0" SplitterPosition="197" />
+    <Shape ID="DesignTable:Relatorio_Horario" ZOrder="2" X="1245" Y="225" Height="248" Width="247" AdapterExpanded="true" DataTableExpanded="true" OldAdapterHeight="0" OldDataTableHeight="0" SplitterPosition="197" />
     <Shape ID="DesignTable:tb_diasemana" ZOrder="26" X="1335" Y="-8" Height="90" Width="158" AdapterExpanded="true" DataTableExpanded="true" OldAdapterHeight="0" OldDataTableHeight="0" SplitterPosition="0" />
     <Shape ID="DesignTable:tb_disciplina" ZOrder="25" X="1171" Y="113" Height="90" Width="158" AdapterExpanded="true" DataTableExpanded="true" OldAdapterHeight="0" OldDataTableHeight="0" SplitterPosition="0" />
     <Shape ID="DesignTable:tb_horaaluno" ZOrder="14" X="1095" Y="-30" Height="90" Width="158" AdapterExpanded="true" DataTableExpanded="true" OldAdapterHeight="0" OldDataTableHeight="0" SplitterPosition="0" />
@@ -22,7 +22,7 @@
     <Shape ID="DesignTable:tb_bimestre" ZOrder="3" X="9" Y="-13" Height="90" Width="158" AdapterExpanded="true" DataTableExpanded="true" OldAdapterHeight="0" OldDataTableHeight="0" SplitterPosition="0" />
     <Shape ID="DesignTable:tb_nota" ZOrder="4" X="1" Y="295" Height="90" Width="158" AdapterExpanded="true" DataTableExpanded="true" OldAdapterHeight="0" OldDataTableHeight="0" SplitterPosition="0" />
     <Shape ID="DesignTable:tb_professor" ZOrder="13" X="724" Y="-41" Height="90" Width="158" AdapterExpanded="true" DataTableExpanded="true" OldAdapterHeight="0" OldDataTableHeight="0" SplitterPosition="0" />
-    <Shape ID="DesignTable:Relatorio_BoletimAluno" ZOrder="1" X="456" Y="-32" Height="248" Width="283" AdapterExpanded="true" DataTableExpanded="true" OldAdapterHeight="0" OldDataTableHeight="0" SplitterPosition="197" />
+    <Shape ID="DesignTable:Relatorio_BoletimAluno" ZOrder="1" X="1214" Y="499" Height="248" Width="283" AdapterExpanded="true" DataTableExpanded="true" OldAdapterHeight="0" OldDataTableHeight="0" SplitterPosition="197" />
   </Shapes>
   <Connectors>
     <Connector ID="DesignRelation:tb_aluno_turma_ibfk_1" ZOrder="30" LineWidth="11">
@@ -108,16 +108,12 @@
     <Connector ID="DesignRelation:tb_horaaluno_ibfk_4" ZOrder="20" LineWidth="11">
       <RoutePoints>
         <Point>
-          <X>670</X>
-          <Y>93</Y>
-        </Point>
-        <Point>
-          <X>670</X>
-          <Y>35</Y>
+          <X>625</X>
+          <Y>12</Y>
         </Point>
         <Point>
           <X>1095</X>
-          <Y>35</Y>
+          <Y>12</Y>
         </Point>
       </RoutePoints>
     </Connector>
@@ -140,16 +136,12 @@
     <Connector ID="DesignRelation:tb_mhora_ibfk_1" ZOrder="18" LineWidth="11">
       <RoutePoints>
         <Point>
-          <X>483</X>
-          <Y>124</Y>
+          <X>421</X>
+          <Y>-5</Y>
         </Point>
         <Point>
-          <X>332</X>
-          <Y>124</Y>
-        </Point>
-        <Point>
-          <X>332</X>
-          <Y>66</Y>
+          <X>349</X>
+          <Y>-5</Y>
         </Point>
       </RoutePoints>
     </Connector>

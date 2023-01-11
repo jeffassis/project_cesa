@@ -116,7 +116,7 @@ namespace project_cesa.Pedagogico
 
         private void CarregarComboBoxBimestre()
         {
-            string bimestre = "SELECT * FROM tb_bimestre ORDER BY bimestre";
+            string bimestre = "SELECT * FROM tb_bimestre ORDER BY id_bimestre";
             cbBimestre.Items.Clear();
             cbBimestre.DataSource = Conexao.dql(bimestre);
             cbBimestre.DisplayMember = "bimestre";

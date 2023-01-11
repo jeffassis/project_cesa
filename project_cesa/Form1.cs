@@ -170,5 +170,11 @@ namespace project_cesa
             Pedagogico.FrmBoletimAluno form = new Pedagogico.FrmBoletimAluno();
             AbreForm(1, form);
         }
+
+        private void PedagogicoNotaBoleFinal_Click(object sender, EventArgs e)
+        {
+            Pedagogico.FrmBoletimFinal form = new Pedagogico.FrmBoletimFinal();
+            AbreForm(1, form);
+        }
     }
 }
