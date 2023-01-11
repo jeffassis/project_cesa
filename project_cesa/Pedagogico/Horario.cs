@@ -22,12 +22,12 @@ namespace project_cesa.Pedagogico
 
         private void FormatarDG()
         {
-            grid.Columns[0].HeaderText = "ID_HORARIO";
-            grid.Columns[1].HeaderText = "DESCRIÇÂO";
-            grid.Columns[2].HeaderText = "DIA";            
-            grid.Columns[3].HeaderText = "ID_DIA";
+            Grid.Columns[0].HeaderText = "ID_HORARIO";
+            Grid.Columns[1].HeaderText = "DESCRIÇÂO";
+            Grid.Columns[2].HeaderText = "DIA";            
+            Grid.Columns[3].HeaderText = "ID_DIA";
 
-            grid.Columns[0].Visible = false;
+            Grid.Columns[0].Visible = false;
         }
 
         private void Listar()
@@ -36,7 +36,7 @@ namespace project_cesa.Pedagogico
                             FROM tb_horario AS tbh
                             INNER JOIN tb_diasemana AS tbd ON tbd.id_dia = tbh.dia_id
                             ORDER BY id_horario";
-            grid.DataSource = Conexao.dql(queryListar);
+            Grid.DataSource = Conexao.dql(queryListar);
 
             FormatarDG();
         }
@@ -50,20 +50,23 @@ namespace project_cesa.Pedagogico
             cbDia.ValueMember = "id_dia";
         }
 
-        private void habilitarCampos()
+        private void HabilitarCampos()
         {
             txtDescricao.Enabled = true;            
             cbDia.Enabled = true;
             txtDescricao.Focus();
         }
 
-        private void desabilitarCampos()
+        private void DesabilitarCampos()
         {
+            BtnSave.Enabled = false;
+            BtnUpdate.Enabled = false;
+            BtnDelete.Enabled = false;
             txtDescricao.Enabled = false;
             cbDia.Enabled = false;
         }
 
-        private void limparCampos()
+        private void LimparCampos()
         {
             txtDescricao.Text = "";
             cbDia.SelectedIndex = -1;
@@ -75,21 +78,21 @@ namespace project_cesa.Pedagogico
             Listar();
         }
 
-        private void btnFechar_Click(object sender, EventArgs e)
+        private void BtnFechar_Click(object sender, EventArgs e)
         {
             Close();
         }
 
-        private void btnNovo_Click(object sender, EventArgs e)
+        private void BtnNovo_Click(object sender, EventArgs e)
         {
-            btnSave.Enabled = true;
-            btnUpdate.Enabled = false;
-            btnDelete.Enabled = false;
-            habilitarCampos();
-            limparCampos();
+            BtnSave.Enabled = true;
+            BtnUpdate.Enabled = false;
+            BtnDelete.Enabled = false;
+            HabilitarCampos();
+            LimparCampos();
         }
 
-        private void btnSave_Click(object sender, EventArgs e)
+        private void BtnSave_Click(object sender, EventArgs e)
         {
             // VERIFICA SE OS CAMPOS ESTAO VAZIOS
             if (txtDescricao.Text.ToString().Trim() == "" || cbDia.Text == "")
@@ -100,8 +103,7 @@ namespace project_cesa.Pedagogico
                 return;
             }
             // ADICIONA A CONSULTA A STRING
-            string queryAdd = "";
-            queryAdd = String.Format(@"
+            string queryAdd = String.Format(@"
                        INSERT INTO tb_horario 
                             (descricao, dia_id)
                                 VALUES ('{0}', {1})
@@ -119,17 +121,13 @@ namespace project_cesa.Pedagogico
             }
             // EXECUTA A STRING    
             Conexao.dml(queryAdd);
-            MessageBox.Show("Dados inseridos com sucesso!", "Dados Adicionados", MessageBoxButtons.OK, MessageBoxIcon.Information);
-
-            btnSave.Enabled = false;
-            btnUpdate.Enabled = false;
-            btnDelete.Enabled = false;
-            desabilitarCampos();
-            limparCampos();
+            MessageBox.Show("Dados inseridos com sucesso!", "Dados Adicionados", MessageBoxButtons.OK, MessageBoxIcon.Information);            
+            DesabilitarCampos();
+            LimparCampos();
             Listar();
         }
 
-        private void btnUpdate_Click(object sender, EventArgs e)
+        private void BtnUpdate_Click(object sender, EventArgs e)
         {
             // VERIFICA SE OS CAMPOS ESTAO VAZIOS
             if (txtDescricao.Text.ToString().Trim() == "" || cbDia.Text == "")
@@ -145,8 +143,7 @@ namespace project_cesa.Pedagogico
                 if (res == DialogResult.Yes)
                 {
                     // ADICIONA A CONSULTA A STRING
-                    string queryUpdate = "";
-                    queryUpdate = String.Format(@"
+                    string queryUpdate = String.Format(@"
                         UPDATE tb_horario SET 
                             descricao='{0}', dia_id={1}
                         WHERE
@@ -171,15 +168,12 @@ namespace project_cesa.Pedagogico
                 }
 
             }
-            btnSave.Enabled = false;
-            btnUpdate.Enabled = false;
-            btnDelete.Enabled = false;
-            desabilitarCampos();
-            limparCampos();
+            DesabilitarCampos();
+            LimparCampos();
             Listar();
         }
 
-        private void btnDelete_Click(object sender, EventArgs e)
+        private void BtnDelete_Click(object sender, EventArgs e)
         {
             // Cria um Dialogo para confirmar a exclusao de dados
             DialogResult res = MessageBox.Show("Confirma exclusão?", "Excluir?", MessageBoxButtons.YesNo);
@@ -188,36 +182,33 @@ namespace project_cesa.Pedagogico
                 string queryDelete = "DELETE FROM tb_horario WHERE id_horario=" + idSelecionado;
                 Conexao.dml(queryDelete);
                 MessageBox.Show("Registro Excluido com Sucesso!", "Registro Excluido", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                grid.Rows.Remove(grid.CurrentRow);
+                Grid.Rows.Remove(Grid.CurrentRow);
             }
-            btnSave.Enabled = false;
-            btnUpdate.Enabled = false;
-            btnDelete.Enabled = false;
-            desabilitarCampos();
-            limparCampos();
+            DesabilitarCampos();
+            LimparCampos();
         }
 
-        private void grid_CellClick(object sender, DataGridViewCellEventArgs e)
+        private void Grid_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            idSelecionado = grid.CurrentRow.Cells[0].Value.ToString();
-            txtDescricao.Text = grid.CurrentRow.Cells[1].Value.ToString();
-            cbDia.Text = grid.CurrentRow.Cells[2].Value.ToString();            
+            idSelecionado = Grid.CurrentRow.Cells[0].Value.ToString();
+            txtDescricao.Text = Grid.CurrentRow.Cells[1].Value.ToString();
+            cbDia.Text = Grid.CurrentRow.Cells[2].Value.ToString();            
 
-            btnUpdate.Enabled = true;
-            btnDelete.Enabled = true;
-            btnSave.Enabled = false;
-            habilitarCampos();
+            BtnUpdate.Enabled = true;
+            BtnDelete.Enabled = true;
+            BtnSave.Enabled = false;
+            HabilitarCampos();
 
-            HorarioAntigo = grid.CurrentRow.Cells[1].Value.ToString();
+            HorarioAntigo = Grid.CurrentRow.Cells[1].Value.ToString();
         }
 
-        private void grid_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        private void Grid_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
             if (Program.chamadaHorario == "hora")
             {
-                Program.idHorario = grid.CurrentRow.Cells[0].Value.ToString();
-                Program.nomeHorario = grid.CurrentRow.Cells[1].Value.ToString();
-                Program.diaHorario = grid.CurrentRow.Cells[2].Value.ToString();
+                Program.idHorario = Grid.CurrentRow.Cells[0].Value.ToString();
+                Program.nomeHorario = Grid.CurrentRow.Cells[1].Value.ToString();
+                Program.diaHorario = Grid.CurrentRow.Cells[2].Value.ToString();
                 Close();
             }
         }

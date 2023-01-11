@@ -170,6 +170,7 @@
             this.CadastroServico.Name = "CadastroServico";
             this.CadastroServico.Size = new System.Drawing.Size(180, 22);
             this.CadastroServico.Text = "Serviços";
+            this.CadastroServico.Click += new System.EventHandler(this.CadastroServico_Click);
             // 
             // Pedagogico
             // 
