@@ -183,6 +183,12 @@
     <Compile Include="Pedagogico\BoletimAluno.Designer.cs">
       <DependentUpon>BoletimAluno.cs</DependentUpon>
     </Compile>
+    <Compile Include="Pedagogico\BoletimFinal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Pedagogico\BoletimFinal.Designer.cs">
+      <DependentUpon>BoletimFinal.cs</DependentUpon>
+    </Compile>
     <Compile Include="Pedagogico\Disciplina.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -241,6 +247,12 @@
     <Compile Include="Relatorios\Relatorio_BoletimAluno.Designer.cs">
       <DependentUpon>Relatorio_BoletimAluno.cs</DependentUpon>
     </Compile>
+    <Compile Include="Relatorios\Relatorio_BoletimFinal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Relatorios\Relatorio_BoletimFinal.Designer.cs">
+      <DependentUpon>Relatorio_BoletimFinal.cs</DependentUpon>
+    </Compile>
     <Compile Include="Relatorios\Relatorio_Horario.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -281,6 +293,9 @@
     <EmbeddedResource Include="Pedagogico\BoletimAluno.resx">
       <DependentUpon>BoletimAluno.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Pedagogico\BoletimFinal.resx">
+      <DependentUpon>BoletimFinal.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Pedagogico\Disciplina.resx">
       <DependentUpon>Disciplina.cs</DependentUpon>
     </EmbeddedResource>
@@ -315,6 +330,9 @@
     <EmbeddedResource Include="Relatorios\Relatorio_BoletimAluno.resx">
       <DependentUpon>Relatorio_BoletimAluno.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Relatorios\Relatorio_BoletimFinal.resx">
+      <DependentUpon>Relatorio_BoletimFinal.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Relatorios\Relatorio_Horario.resx">
       <DependentUpon>Relatorio_Horario.cs</DependentUpon>
     </EmbeddedResource>
@@ -322,6 +340,7 @@
       <DependentUpon>Relatorio_Turma.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Relatorios\RelBoletimAluno.rdlc" />
+    <EmbeddedResource Include="Relatorios\RelBoletimFinal.rdlc" />
     <EmbeddedResource Include="Relatorios\RelHorario.rdlc" />
     <EmbeddedResource Include="Relatorios\RelTurma1.rdlc" />
     <None Include="packages.config" />
@@ -463,6 +482,9 @@
     <None Include="Resources\declaracao_20.png" />
     <None Include="Resources\imprimir_48.png" />
     <None Include="Resources\pesquisar_48.png" />
+    <None Include="Resources\carteirinha_20.png" />
+    <None Include="Resources\servico_20.png" />
+    <None Include="Resources\produto_20.png" />
     <Content Include="SqlServerTypes\readme.htm" />
     <Content Include="SqlServerTypes\x64\msvcr120.dll">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>

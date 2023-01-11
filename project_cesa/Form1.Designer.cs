@@ -35,6 +35,9 @@
             this.CadastrosAlunos = new System.Windows.Forms.ToolStripMenuItem();
             this.CadastrosResponsavel = new System.Windows.Forms.ToolStripMenuItem();
             this.CadastrosProfessor = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
+            this.CadastroProduto = new System.Windows.Forms.ToolStripMenuItem();
+            this.CadastroServico = new System.Windows.Forms.ToolStripMenuItem();
             this.Pedagogico = new System.Windows.Forms.ToolStripMenuItem();
             this.PedagogicoDisciplinas = new System.Windows.Forms.ToolStripMenuItem();
             this.PedagogicoHorario = new System.Windows.Forms.ToolStripMenuItem();
@@ -112,7 +115,10 @@
             this.Cadastros.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.CadastrosAlunos,
             this.CadastrosResponsavel,
-            this.CadastrosProfessor});
+            this.CadastrosProfessor,
+            this.toolStripSeparator1,
+            this.CadastroProduto,
+            this.CadastroServico});
             this.Cadastros.Font = new System.Drawing.Font("Calisto MT", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Cadastros.Image = global::project_cesa.Properties.Resources.menuCadastro;
             this.Cadastros.Name = "Cadastros";
@@ -124,7 +130,7 @@
             this.CadastrosAlunos.Font = new System.Drawing.Font("Calisto MT", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.CadastrosAlunos.Image = global::project_cesa.Properties.Resources.aluno;
             this.CadastrosAlunos.Name = "CadastrosAlunos";
-            this.CadastrosAlunos.Size = new System.Drawing.Size(143, 22);
+            this.CadastrosAlunos.Size = new System.Drawing.Size(180, 22);
             this.CadastrosAlunos.Text = "Alunos";
             this.CadastrosAlunos.Click += new System.EventHandler(this.CadastrosAlunos_Click);
             // 
@@ -133,7 +139,7 @@
             this.CadastrosResponsavel.Font = new System.Drawing.Font("Calisto MT", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.CadastrosResponsavel.Image = global::project_cesa.Properties.Resources.responsavel;
             this.CadastrosResponsavel.Name = "CadastrosResponsavel";
-            this.CadastrosResponsavel.Size = new System.Drawing.Size(143, 22);
+            this.CadastrosResponsavel.Size = new System.Drawing.Size(180, 22);
             this.CadastrosResponsavel.Text = "Responsável";
             this.CadastrosResponsavel.Click += new System.EventHandler(this.CadastrosResponsavel_Click);
             // 
@@ -142,9 +148,28 @@
             this.CadastrosProfessor.Font = new System.Drawing.Font("Calisto MT", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.CadastrosProfessor.Image = global::project_cesa.Properties.Resources.professor;
             this.CadastrosProfessor.Name = "CadastrosProfessor";
-            this.CadastrosProfessor.Size = new System.Drawing.Size(143, 22);
+            this.CadastrosProfessor.Size = new System.Drawing.Size(180, 22);
             this.CadastrosProfessor.Text = "Professor";
             this.CadastrosProfessor.Click += new System.EventHandler(this.CadastrosProfessor_Click);
+            // 
+            // toolStripSeparator1
+            // 
+            this.toolStripSeparator1.Name = "toolStripSeparator1";
+            this.toolStripSeparator1.Size = new System.Drawing.Size(177, 6);
+            // 
+            // CadastroProduto
+            // 
+            this.CadastroProduto.Image = global::project_cesa.Properties.Resources.produto_20;
+            this.CadastroProduto.Name = "CadastroProduto";
+            this.CadastroProduto.Size = new System.Drawing.Size(180, 22);
+            this.CadastroProduto.Text = "Produtos";
+            // 
+            // CadastroServico
+            // 
+            this.CadastroServico.Image = global::project_cesa.Properties.Resources.servico_20;
+            this.CadastroServico.Name = "CadastroServico";
+            this.CadastroServico.Size = new System.Drawing.Size(180, 22);
+            this.CadastroServico.Text = "Serviços";
             // 
             // Pedagogico
             // 
@@ -164,7 +189,7 @@
             this.PedagogicoDisciplinas.Font = new System.Drawing.Font("Calisto MT", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.PedagogicoDisciplinas.Image = global::project_cesa.Properties.Resources.disciplina;
             this.PedagogicoDisciplinas.Name = "PedagogicoDisciplinas";
-            this.PedagogicoDisciplinas.Size = new System.Drawing.Size(180, 22);
+            this.PedagogicoDisciplinas.Size = new System.Drawing.Size(137, 22);
             this.PedagogicoDisciplinas.Text = "Disciplinas";
             this.PedagogicoDisciplinas.Click += new System.EventHandler(this.PedagogicoDisciplina_Click);
             // 
@@ -177,7 +202,7 @@
             this.PedagogicoHorario.Font = new System.Drawing.Font("Calisto MT", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.PedagogicoHorario.Image = global::project_cesa.Properties.Resources.clock1;
             this.PedagogicoHorario.Name = "PedagogicoHorario";
-            this.PedagogicoHorario.Size = new System.Drawing.Size(180, 22);
+            this.PedagogicoHorario.Size = new System.Drawing.Size(137, 22);
             this.PedagogicoHorario.Text = "Horários";
             // 
             // PedagogicoHorarioCad
@@ -213,7 +238,7 @@
             this.PedagogicoNotas.Font = new System.Drawing.Font("Calisto MT", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.PedagogicoNotas.Image = global::project_cesa.Properties.Resources.notas;
             this.PedagogicoNotas.Name = "PedagogicoNotas";
-            this.PedagogicoNotas.Size = new System.Drawing.Size(180, 22);
+            this.PedagogicoNotas.Size = new System.Drawing.Size(137, 22);
             this.PedagogicoNotas.Text = "Notas";
             // 
             // PedagogicoNotaLanca
@@ -234,9 +259,11 @@
             // 
             // PedagogicoNotaBoleFinal
             // 
+            this.PedagogicoNotaBoleFinal.Image = global::project_cesa.Properties.Resources.carteirinha_20;
             this.PedagogicoNotaBoleFinal.Name = "PedagogicoNotaBoleFinal";
             this.PedagogicoNotaBoleFinal.Size = new System.Drawing.Size(195, 22);
             this.PedagogicoNotaBoleFinal.Text = "Boletim Final";
+            this.PedagogicoNotaBoleFinal.Click += new System.EventHandler(this.PedagogicoNotaBoleFinal_Click);
             // 
             // PedagogicoTurmas
             // 
@@ -246,7 +273,7 @@
             this.PedagogicoTurmas.Font = new System.Drawing.Font("Calisto MT", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.PedagogicoTurmas.Image = global::project_cesa.Properties.Resources.turma;
             this.PedagogicoTurmas.Name = "PedagogicoTurmas";
-            this.PedagogicoTurmas.Size = new System.Drawing.Size(180, 22);
+            this.PedagogicoTurmas.Size = new System.Drawing.Size(137, 22);
             this.PedagogicoTurmas.Text = "Turmas";
             // 
             // PedagogicoTurmaCad
@@ -668,6 +695,9 @@
         private System.Windows.Forms.ToolStripMenuItem RelDocumentosCircular;
         private System.Windows.Forms.ToolStripMenuItem RelDocumentosDeclaracao;
         private System.Windows.Forms.ToolStripMenuItem RelDocumentosHistorico;
+        private System.Windows.Forms.ToolStripSeparator toolStripSeparator1;
+        private System.Windows.Forms.ToolStripMenuItem CadastroProduto;
+        private System.Windows.Forms.ToolStripMenuItem CadastroServico;
     }
 }
 

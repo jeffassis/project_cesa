@@ -193,6 +193,16 @@ namespace project_cesa.Properties {
         /// <summary>
         ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap carteirinha_20 {
+            get {
+                object obj = ResourceManager.GetObject("carteirinha_20", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap caveira_20 {
             get {
                 object obj = ResourceManager.GetObject("caveira_20", resourceCulture);
@@ -513,6 +523,16 @@ namespace project_cesa.Properties {
         /// <summary>
         ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap produto_20 {
+            get {
+                object obj = ResourceManager.GetObject("produto_20", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap professor {
             get {
                 object obj = ResourceManager.GetObject("professor", resourceCulture);
@@ -546,6 +566,16 @@ namespace project_cesa.Properties {
         internal static System.Drawing.Bitmap sem_foto {
             get {
                 object obj = ResourceManager.GetObject("sem-foto", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap servico_20 {
+            get {
+                object obj = ResourceManager.GetObject("servico_20", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
