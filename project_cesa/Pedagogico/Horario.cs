@@ -213,7 +213,7 @@ namespace project_cesa.Pedagogico
 
         private void grid_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
-            if (Program.chamadaHorario == "mHora")
+            if (Program.chamadaHorario == "hora")
             {
                 Program.idHorario = grid.CurrentRow.Cells[0].Value.ToString();
                 Program.nomeHorario = grid.CurrentRow.Cells[1].Value.ToString();

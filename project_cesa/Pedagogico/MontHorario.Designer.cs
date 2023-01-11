@@ -51,8 +51,8 @@ namespace project_cesa.Pedagogico
             this.CbSerie = new System.Windows.Forms.ComboBox();
             this.label6 = new System.Windows.Forms.Label();
             this.cbAno = new System.Windows.Forms.ComboBox();
-            this.txtHora = new System.Windows.Forms.MaskedTextBox();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
+            this.cbHora = new System.Windows.Forms.ComboBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Grid)).BeginInit();
             this.SuspendLayout();
@@ -281,15 +281,15 @@ namespace project_cesa.Pedagogico
             this.cbAno.Size = new System.Drawing.Size(110, 23);
             this.cbAno.TabIndex = 44;
             // 
-            // txtHora
+            // cbHora
             // 
-            this.txtHora.Enabled = false;
-            this.txtHora.Font = new System.Drawing.Font("Calisto MT", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtHora.Location = new System.Drawing.Point(22, 104);
-            this.txtHora.Mask = "00:00 - 00:00";
-            this.txtHora.Name = "txtHora";
-            this.txtHora.Size = new System.Drawing.Size(110, 23);
-            this.txtHora.TabIndex = 46;
+            this.cbHora.Enabled = false;
+            this.cbHora.Font = new System.Drawing.Font("Calisto MT", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbHora.FormattingEnabled = true;
+            this.cbHora.Location = new System.Drawing.Point(22, 106);
+            this.cbHora.Name = "cbHora";
+            this.cbHora.Size = new System.Drawing.Size(110, 23);
+            this.cbHora.TabIndex = 47;
             // 
             // FrmMontHorario
             // 
@@ -297,7 +297,7 @@ namespace project_cesa.Pedagogico
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.InactiveCaption;
             this.ClientSize = new System.Drawing.Size(708, 311);
-            this.Controls.Add(this.txtHora);
+            this.Controls.Add(this.cbHora);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.cbAno);
             this.Controls.Add(this.label5);
@@ -347,8 +347,8 @@ namespace project_cesa.Pedagogico
         private System.Windows.Forms.ComboBox CbSerie;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.ComboBox cbAno;
-        private System.Windows.Forms.MaskedTextBox txtHora;
         private System.Windows.Forms.Button BtnUpdate;
         private System.Windows.Forms.ToolTip toolTip1;
+        private System.Windows.Forms.ComboBox cbHora;
     }
 }

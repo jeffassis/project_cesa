@@ -112,9 +112,9 @@ C:\Users\cmdtj\OneDrive\Área de Trabalho\Apps\project_cesa\project_cesa\bin\Deb
 C:\Users\cmdtj\OneDrive\Área de Trabalho\Apps\project_cesa\project_cesa\bin\Debug\AForge.Video.xml
 C:\Users\cmdtj\OneDrive\Área de Trabalho\Apps\project_cesa\project_cesa\bin\Debug\AForge.Video.DirectShow.xml
 C:\Users\cmdtj\OneDrive\Área de Trabalho\Apps\project_cesa\project_cesa\obj\Debug\project_cesa.Ferramentas.FrmCapturarFoto.resources
-C:\Users\cmdtj\OneDrive\Área de Trabalho\Apps\project_cesa\project_cesa\obj\Debug\project_cesa.csproj.AssemblyReference.cache
 C:\Users\cmdtj\OneDrive\Área de Trabalho\Apps\project_cesa\project_cesa\obj\Debug\RdlCompile.cache
 C:\Users\cmdtj\OneDrive\Área de Trabalho\Apps\project_cesa\project_cesa\obj\Debug\RdlCompile.compiled
 C:\Users\cmdtj\OneDrive\Área de Trabalho\Apps\project_cesa\project_cesa\obj\Debug\project_cesa.Pedagogico.FrmMontHoraAluno.resources
 C:\Users\cmdtj\OneDrive\Área de Trabalho\Apps\project_cesa\project_cesa\obj\Debug\project_cesa.Pedagogico.FrmBoletimAluno.resources
 C:\Users\cmdtj\OneDrive\Área de Trabalho\Apps\project_cesa\project_cesa\obj\Debug\project_cesa.Relatorios.FrmRelatorio_BoletimAluno.resources
+C:\Users\cmdtj\OneDrive\Área de Trabalho\Apps\project_cesa\project_cesa\obj\Debug\project_cesa.csproj.AssemblyReference.cache

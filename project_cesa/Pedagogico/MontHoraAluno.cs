@@ -144,7 +144,7 @@ namespace project_cesa.Pedagogico
 
         private void BtnAluno_Click(object sender, EventArgs e)
         {
-            Program.chamadaHorario = "mHora";
+            Program.chamadaHorario = "hora";
             Pedagogico.FrmHorario form = new Pedagogico.FrmHorario();
             form.Show();
         }

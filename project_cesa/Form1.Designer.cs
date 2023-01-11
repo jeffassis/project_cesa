@@ -226,6 +226,7 @@
             // 
             // PedagogicoNotaBoleAluno
             // 
+            this.PedagogicoNotaBoleAluno.Image = global::project_cesa.Properties.Resources.aluno;
             this.PedagogicoNotaBoleAluno.Name = "PedagogicoNotaBoleAluno";
             this.PedagogicoNotaBoleAluno.Size = new System.Drawing.Size(195, 22);
             this.PedagogicoNotaBoleAluno.Text = "Boletim Aluno";

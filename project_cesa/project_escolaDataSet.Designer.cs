@@ -3559,8 +3559,6 @@ namespace project_cesa {
             
             private global::System.Data.DataColumn columndescricao;
             
-            private global::System.Data.DataColumn columnnome;
-            
             private global::System.Data.DataColumn columnserie;
             
             private global::System.Data.DataColumn columnano;
@@ -3569,9 +3567,13 @@ namespace project_cesa {
             
             private global::System.Data.DataColumn columnid_turma;
             
-            private global::System.Data.DataColumn columndia_id;
-            
             private global::System.Data.DataColumn columndia;
+            
+            private global::System.Data.DataColumn columndisc;
+            
+            private global::System.Data.DataColumn columnturma;
+            
+            private global::System.Data.DataColumn columndia_id;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
@@ -3616,14 +3618,6 @@ namespace project_cesa {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public global::System.Data.DataColumn nomeColumn {
-                get {
-                    return this.columnnome;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public global::System.Data.DataColumn serieColumn {
                 get {
                     return this.columnserie;
@@ -3656,17 +3650,33 @@ namespace project_cesa {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public global::System.Data.DataColumn dia_idColumn {
+            public global::System.Data.DataColumn diaColumn {
                 get {
-                    return this.columndia_id;
+                    return this.columndia;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public global::System.Data.DataColumn diaColumn {
+            public global::System.Data.DataColumn discColumn {
                 get {
-                    return this.columndia;
+                    return this.columndisc;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn turmaColumn {
+                get {
+                    return this.columnturma;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn dia_idColumn {
+                get {
+                    return this.columndia_id;
                 }
             }
             
@@ -3707,17 +3717,18 @@ namespace project_cesa {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public Relatorio_HorarioRow AddRelatorio_HorarioRow(string descricao, string nome, string serie, string ano, int dia_id, string dia) {
+            public Relatorio_HorarioRow AddRelatorio_HorarioRow(string descricao, string serie, string ano, string dia, string disc, string turma, int dia_id) {
                 Relatorio_HorarioRow rowRelatorio_HorarioRow = ((Relatorio_HorarioRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         descricao,
-                        nome,
                         serie,
                         ano,
                         null,
                         null,
-                        dia_id,
-                        dia};
+                        dia,
+                        disc,
+                        turma,
+                        dia_id};
                 rowRelatorio_HorarioRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowRelatorio_HorarioRow);
                 return rowRelatorio_HorarioRow;
@@ -3748,13 +3759,14 @@ namespace project_cesa {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             internal void InitVars() {
                 this.columndescricao = base.Columns["descricao"];
-                this.columnnome = base.Columns["nome"];
                 this.columnserie = base.Columns["serie"];
                 this.columnano = base.Columns["ano"];
                 this.columnid_mhora = base.Columns["id_mhora"];
                 this.columnid_turma = base.Columns["id_turma"];
-                this.columndia_id = base.Columns["dia_id"];
                 this.columndia = base.Columns["dia"];
+                this.columndisc = base.Columns["disc"];
+                this.columnturma = base.Columns["turma"];
+                this.columndia_id = base.Columns["dia_id"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -3762,8 +3774,6 @@ namespace project_cesa {
             private void InitClass() {
                 this.columndescricao = new global::System.Data.DataColumn("descricao", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columndescricao);
-                this.columnnome = new global::System.Data.DataColumn("nome", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnnome);
                 this.columnserie = new global::System.Data.DataColumn("serie", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnserie);
                 this.columnano = new global::System.Data.DataColumn("ano", typeof(string), null, global::System.Data.MappingType.Element);
@@ -3772,16 +3782,18 @@ namespace project_cesa {
                 base.Columns.Add(this.columnid_mhora);
                 this.columnid_turma = new global::System.Data.DataColumn("id_turma", typeof(int), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnid_turma);
-                this.columndia_id = new global::System.Data.DataColumn("dia_id", typeof(int), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columndia_id);
                 this.columndia = new global::System.Data.DataColumn("dia", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columndia);
+                this.columndisc = new global::System.Data.DataColumn("disc", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columndisc);
+                this.columnturma = new global::System.Data.DataColumn("turma", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnturma);
+                this.columndia_id = new global::System.Data.DataColumn("dia_id", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columndia_id);
                 this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
                                 this.columnid_mhora}, true));
                 this.columndescricao.AllowDBNull = false;
                 this.columndescricao.MaxLength = 20;
-                this.columnnome.AllowDBNull = false;
-                this.columnnome.MaxLength = 20;
                 this.columnserie.AllowDBNull = false;
                 this.columnserie.MaxLength = 20;
                 this.columnano.AllowDBNull = false;
@@ -3795,9 +3807,13 @@ namespace project_cesa {
                 this.columnid_turma.AutoIncrementSeed = -1;
                 this.columnid_turma.AutoIncrementStep = -1;
                 this.columnid_turma.AllowDBNull = false;
-                this.columndia_id.AllowDBNull = false;
                 this.columndia.AllowDBNull = false;
                 this.columndia.MaxLength = 20;
+                this.columndisc.AllowDBNull = false;
+                this.columndisc.MaxLength = 20;
+                this.columnturma.AllowDBNull = false;
+                this.columnturma.MaxLength = 20;
+                this.columndia_id.AllowDBNull = false;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -7321,17 +7337,6 @@ namespace project_cesa {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public string nome {
-                get {
-                    return ((string)(this[this.tableRelatorio_Horario.nomeColumn]));
-                }
-                set {
-                    this[this.tableRelatorio_Horario.nomeColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public string serie {
                 get {
                     return ((string)(this[this.tableRelatorio_Horario.serieColumn]));
@@ -7376,23 +7381,45 @@ namespace project_cesa {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public int dia_id {
-                get {
-                    return ((int)(this[this.tableRelatorio_Horario.dia_idColumn]));
-                }
-                set {
-                    this[this.tableRelatorio_Horario.dia_idColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public string dia {
                 get {
                     return ((string)(this[this.tableRelatorio_Horario.diaColumn]));
                 }
                 set {
                     this[this.tableRelatorio_Horario.diaColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public string disc {
+                get {
+                    return ((string)(this[this.tableRelatorio_Horario.discColumn]));
+                }
+                set {
+                    this[this.tableRelatorio_Horario.discColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public string turma {
+                get {
+                    return ((string)(this[this.tableRelatorio_Horario.turmaColumn]));
+                }
+                set {
+                    this[this.tableRelatorio_Horario.turmaColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public int dia_id {
+                get {
+                    return ((int)(this[this.tableRelatorio_Horario.dia_idColumn]));
+                }
+                set {
+                    this[this.tableRelatorio_Horario.dia_idColumn] = value;
                 }
             }
         }
@@ -12692,13 +12719,14 @@ ORDER BY tba.nome";
             tableMapping.SourceTable = "Table";
             tableMapping.DataSetTable = "Relatorio_Horario";
             tableMapping.ColumnMappings.Add("descricao", "descricao");
-            tableMapping.ColumnMappings.Add("nome", "nome");
             tableMapping.ColumnMappings.Add("serie", "serie");
             tableMapping.ColumnMappings.Add("ano", "ano");
             tableMapping.ColumnMappings.Add("id_mhora", "id_mhora");
             tableMapping.ColumnMappings.Add("id_turma", "id_turma");
-            tableMapping.ColumnMappings.Add("dia_id", "dia_id");
             tableMapping.ColumnMappings.Add("dia", "dia");
+            tableMapping.ColumnMappings.Add("disc", "disc");
+            tableMapping.ColumnMappings.Add("turma", "turma");
+            tableMapping.ColumnMappings.Add("dia_id", "dia_id");
             this._adapter.TableMappings.Add(tableMapping);
         }
         
@@ -12715,7 +12743,7 @@ ORDER BY tba.nome";
             this._commandCollection = new global::MySql.Data.MySqlClient.MySqlCommand[1];
             this._commandCollection[0] = new global::MySql.Data.MySqlClient.MySqlCommand();
             this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = @"SELECT        tbm.id_mhora, tbh.descricao, tbh.dia_id, tbd.nome, tbt.serie, tba.ano, tbt.id_turma, tbs.dia
+            this._commandCollection[0].CommandText = @"SELECT        tbm.id_mhora, tbh.descricao, tbd.nome AS disc, tbt.serie, tba.ano, tbt.id_turma, tbs.dia, tbt.nome AS turma, tbh.dia_id
 FROM            tb_mhora tbm INNER JOIN
                          tb_horario tbh ON tbh.id_horario = tbm.horario_id INNER JOIN
                          tb_disciplina tbd ON tbd.id_disciplina = tbm.disciplina_id INNER JOIN
@@ -12723,7 +12751,7 @@ FROM            tb_mhora tbm INNER JOIN
                          tb_ano tba ON tba.id_ano = tbm.ano_id INNER JOIN
                          tb_diasemana tbs ON tbs.id_dia = tbh.dia_id
 WHERE        (tbt.id_turma = @id)
-ORDER BY tbh.descricao";
+ORDER BY tbs.id_dia, tbh.descricao";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
             global::MySql.Data.MySqlClient.MySqlParameter param = new global::MySql.Data.MySqlClient.MySqlParameter();
             param.ParameterName = "@id";

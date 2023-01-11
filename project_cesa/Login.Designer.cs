@@ -47,7 +47,6 @@ namespace project_cesa
             this.txtUser.Name = "txtUser";
             this.txtUser.Size = new System.Drawing.Size(151, 23);
             this.txtUser.TabIndex = 1;
-            this.txtUser.Text = "admin";
             // 
             // txtSenha
             // 
@@ -57,7 +56,6 @@ namespace project_cesa
             this.txtSenha.PasswordChar = '*';
             this.txtSenha.Size = new System.Drawing.Size(151, 23);
             this.txtSenha.TabIndex = 2;
-            this.txtSenha.Text = "123";
             // 
             // label1
             // 
