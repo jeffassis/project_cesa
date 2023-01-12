@@ -140,6 +140,12 @@
     <Compile Include="Cadastros\Fornecedor.Designer.cs">
       <DependentUpon>Fornecedor.cs</DependentUpon>
     </Compile>
+    <Compile Include="Cadastros\Produtos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Cadastros\Produtos.Designer.cs">
+      <DependentUpon>Produtos.cs</DependentUpon>
+    </Compile>
     <Compile Include="Cadastros\Professor.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -289,6 +295,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Cadastros\Fornecedor.resx">
       <DependentUpon>Fornecedor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Cadastros\Produtos.resx">
+      <DependentUpon>Produtos.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Cadastros\Professor.resx">
       <DependentUpon>Professor.cs</DependentUpon>

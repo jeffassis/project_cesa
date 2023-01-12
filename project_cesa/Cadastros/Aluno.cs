@@ -82,6 +82,12 @@ namespace project_cesa.Cadastros
 
         private void DesabilitarCampos()
         {
+            // Desabilitar botoes
+            BtnFoto.Enabled = false;
+            BtnSave.Enabled = false;
+            BtnUpdate.Enabled = false;
+            BtnDelete.Enabled = false;
+            // Desabilitar campos
             txtNome.Enabled = false;
             txtEmail.Enabled = false;
             txtEndereco.Enabled = false;
@@ -168,10 +174,6 @@ namespace project_cesa.Cadastros
             vcon.ClearAllPoolsAsync();
             MessageBox.Show("Dados inseridos com sucesso!", "Dados Adicionados", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
-            BtnFoto.Enabled = false;
-            BtnSave.Enabled = false;
-            BtnUpdate.Enabled = false;
-            BtnDelete.Enabled = false;
             DesabilitarCampos();
             LimparCampos();
             Listar();
@@ -236,11 +238,7 @@ namespace project_cesa.Cadastros
                     vcon.ClearAllPoolsAsync();
                     MessageBox.Show("Dados atualizados com sucesso!", "Dados atualizados", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
-            }
-            BtnFoto.Enabled = false;
-            BtnSave.Enabled = false;
-            BtnUpdate.Enabled = false;
-            BtnDelete.Enabled = false;            
+            }            
             DesabilitarCampos();
             LimparCampos();
             Listar();
@@ -258,10 +256,6 @@ namespace project_cesa.Cadastros
                 MessageBox.Show("Registro Excluido com Sucesso!", "Registro Excluido", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 Grid.Rows.Remove(Grid.CurrentRow);
             }
-            BtnFoto.Enabled = false;
-            BtnSave.Enabled = false;
-            BtnUpdate.Enabled = false;
-            BtnDelete.Enabled = false;
             DesabilitarCampos();
             LimparCampos();
         }

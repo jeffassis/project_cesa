@@ -123,3 +123,4 @@ C:\Users\cmdtj\OneDrive\Área de Trabalho\Apps\project_cesa\project_cesa\obj\Deb
 C:\Users\cmdtj\OneDrive\Área de Trabalho\Apps\project_cesa\project_cesa\obj\Debug\project_cesa.Cadastros.FrmDisciplina.resources
 C:\Users\cmdtj\OneDrive\Área de Trabalho\Apps\project_cesa\project_cesa\obj\Debug\project_cesa.Cadastros.FrmHorario.resources
 C:\Users\cmdtj\OneDrive\Área de Trabalho\Apps\project_cesa\project_cesa\obj\Debug\project_cesa.Cadastros.FrmTurma.resources
+C:\Users\cmdtj\OneDrive\Área de Trabalho\Apps\project_cesa\project_cesa\obj\Debug\project_cesa.Cadastros.FrmProdutos.resources
