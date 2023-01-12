@@ -56,6 +56,7 @@
             this.FinanceiroMensalidades = new System.Windows.Forms.ToolStripMenuItem();
             this.saídasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.FinanceiroMovimentacao = new System.Windows.Forms.ToolStripMenuItem();
+            this.FinanceiroEstoque = new System.Windows.Forms.ToolStripMenuItem();
             this.Relatorios = new System.Windows.Forms.ToolStripMenuItem();
             this.RelDocumentos = new System.Windows.Forms.ToolStripMenuItem();
             this.RelDocumentosCircular = new System.Windows.Forms.ToolStripMenuItem();
@@ -232,14 +233,14 @@
             this.PedagogicoHorario.Font = new System.Drawing.Font("Calisto MT", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.PedagogicoHorario.Image = global::project_cesa.Properties.Resources.clock1;
             this.PedagogicoHorario.Name = "PedagogicoHorario";
-            this.PedagogicoHorario.Size = new System.Drawing.Size(123, 22);
+            this.PedagogicoHorario.Size = new System.Drawing.Size(180, 22);
             this.PedagogicoHorario.Text = "Horários";
             // 
             // PedagogicoHorarioProfessor
             // 
             this.PedagogicoHorarioProfessor.Image = global::project_cesa.Properties.Resources.professor;
             this.PedagogicoHorarioProfessor.Name = "PedagogicoHorarioProfessor";
-            this.PedagogicoHorarioProfessor.Size = new System.Drawing.Size(173, 22);
+            this.PedagogicoHorarioProfessor.Size = new System.Drawing.Size(180, 22);
             this.PedagogicoHorarioProfessor.Text = "Horário Professor";
             this.PedagogicoHorarioProfessor.Click += new System.EventHandler(this.PedagogicoHorarioProfessor_Click);
             // 
@@ -247,7 +248,7 @@
             // 
             this.PedagogicoHorarioAluno.Image = global::project_cesa.Properties.Resources.aluno;
             this.PedagogicoHorarioAluno.Name = "PedagogicoHorarioAluno";
-            this.PedagogicoHorarioAluno.Size = new System.Drawing.Size(173, 22);
+            this.PedagogicoHorarioAluno.Size = new System.Drawing.Size(180, 22);
             this.PedagogicoHorarioAluno.Text = "Horário Aluno";
             this.PedagogicoHorarioAluno.Click += new System.EventHandler(this.PedagogicoHorarioAluno_Click);
             // 
@@ -260,7 +261,7 @@
             this.PedagogicoNotas.Font = new System.Drawing.Font("Calisto MT", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.PedagogicoNotas.Image = global::project_cesa.Properties.Resources.notas;
             this.PedagogicoNotas.Name = "PedagogicoNotas";
-            this.PedagogicoNotas.Size = new System.Drawing.Size(123, 22);
+            this.PedagogicoNotas.Size = new System.Drawing.Size(180, 22);
             this.PedagogicoNotas.Text = "Notas";
             // 
             // PedagogicoNotaLanca
@@ -294,7 +295,7 @@
             this.PedagogicoTurmas.Font = new System.Drawing.Font("Calisto MT", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.PedagogicoTurmas.Image = global::project_cesa.Properties.Resources.turma;
             this.PedagogicoTurmas.Name = "PedagogicoTurmas";
-            this.PedagogicoTurmas.Size = new System.Drawing.Size(123, 22);
+            this.PedagogicoTurmas.Size = new System.Drawing.Size(180, 22);
             this.PedagogicoTurmas.Text = "Turmas";
             // 
             // PedagogicoTurmaMont
@@ -308,6 +309,7 @@
             // Financeiro
             // 
             this.Financeiro.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.FinanceiroEstoque,
             this.FinanceiroMensalidades,
             this.saídasToolStripMenuItem,
             this.FinanceiroMovimentacao});
@@ -321,22 +323,30 @@
             // 
             this.FinanceiroMensalidades.Image = global::project_cesa.Properties.Resources.mensalidade_20;
             this.FinanceiroMensalidades.Name = "FinanceiroMensalidades";
-            this.FinanceiroMensalidades.Size = new System.Drawing.Size(158, 22);
+            this.FinanceiroMensalidades.Size = new System.Drawing.Size(180, 22);
             this.FinanceiroMensalidades.Text = "Mensalidades";
             // 
             // saídasToolStripMenuItem
             // 
             this.saídasToolStripMenuItem.Name = "saídasToolStripMenuItem";
-            this.saídasToolStripMenuItem.Size = new System.Drawing.Size(158, 22);
+            this.saídasToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.saídasToolStripMenuItem.Text = "Saídas";
             // 
             // FinanceiroMovimentacao
             // 
             this.FinanceiroMovimentacao.Image = global::project_cesa.Properties.Resources.movimentacao;
             this.FinanceiroMovimentacao.Name = "FinanceiroMovimentacao";
-            this.FinanceiroMovimentacao.Size = new System.Drawing.Size(158, 22);
+            this.FinanceiroMovimentacao.Size = new System.Drawing.Size(180, 22);
             this.FinanceiroMovimentacao.Text = "Movimentação";
             this.FinanceiroMovimentacao.Click += new System.EventHandler(this.FinanceiroMovimentacao_Click);
+            // 
+            // FinanceiroEstoque
+            // 
+            this.FinanceiroEstoque.Image = global::project_cesa.Properties.Resources.estoque_20;
+            this.FinanceiroEstoque.Name = "FinanceiroEstoque";
+            this.FinanceiroEstoque.Size = new System.Drawing.Size(180, 22);
+            this.FinanceiroEstoque.Text = "Estoque";
+            this.FinanceiroEstoque.Click += new System.EventHandler(this.FinanceiroEstoque_Click);
             // 
             // Relatorios
             // 
@@ -730,6 +740,7 @@
         private System.Windows.Forms.ToolStripMenuItem CadastrosTurmas;
         private System.Windows.Forms.ToolStripMenuItem CadastrosDisciplinas;
         private System.Windows.Forms.ToolStripMenuItem CadastrosFornecedor;
+        private System.Windows.Forms.ToolStripMenuItem FinanceiroEstoque;
     }
 }
 

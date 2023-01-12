@@ -167,6 +167,7 @@ namespace project_cesa
 
         private void CadastrosHorario_Click(object sender, EventArgs e)
         {
+            Program.chamadaHorario = "NovoHorario";
             Cadastros.FrmHorario form = new Cadastros.FrmHorario();
             AbreForm(2, form);
         }
@@ -197,7 +198,14 @@ namespace project_cesa
 
         private void CadastrosProduto_Click(object sender, EventArgs e)
         {
+            Program.chamadaProduto = "NovoProduto";
             Cadastros.FrmProdutos form = new Cadastros.FrmProdutos();
+            AbreForm(2, form);
+        }
+
+        private void FinanceiroEstoque_Click(object sender, EventArgs e)
+        {
+            Financeiro.FrmEstoque form = new Financeiro.FrmEstoque();
             AbreForm(2, form);
         }
     }

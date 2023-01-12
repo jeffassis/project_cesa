@@ -183,6 +183,12 @@
     <Compile Include="Ferramentas\CapturarFoto.Designer.cs">
       <DependentUpon>CapturarFoto.cs</DependentUpon>
     </Compile>
+    <Compile Include="Financeiro\Estoque.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Financeiro\Estoque.Designer.cs">
+      <DependentUpon>Estoque.cs</DependentUpon>
+    </Compile>
     <Compile Include="Financeiro\Movimentacao.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -316,6 +322,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Ferramentas\CapturarFoto.resx">
       <DependentUpon>CapturarFoto.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Financeiro\Estoque.resx">
+      <DependentUpon>Estoque.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Financeiro\Movimentacao.resx">
       <DependentUpon>Movimentacao.cs</DependentUpon>
@@ -523,6 +532,7 @@
     <None Include="Resources\produto_20.png" />
     <None Include="Resources\movimentacao.png" />
     <None Include="Resources\forncedor_20.png" />
+    <None Include="Resources\bt_save_48.png" />
     <Content Include="SqlServerTypes\readme.htm" />
     <Content Include="SqlServerTypes\x64\msvcr120.dll">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>

@@ -139,6 +139,9 @@
   <data name="produto_20" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\produto_20.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="bt_save_48" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\bt_save_48.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="pedagogico" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\pedagogico.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -150,6 +153,9 @@
   </data>
   <data name="bancoDados_48" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\bancoDados_48.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="financeiro_20" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\financeiro_20.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="montar_20" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\montar_20.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -202,8 +208,8 @@
   <data name="movimentacao" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\movimentacao.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="btn_plus_20" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\btn_plus_20.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="forncedor_20" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\forncedor_20.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="professor" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\professor.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -256,8 +262,8 @@
   <data name="circular_20" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\circular_20.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="financeiro_20" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\financeiro_20.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="btn_plus_20" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\btn_plus_20.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="manutencao_20" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\manutencao_20.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -289,7 +295,7 @@
   <data name="notas" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\notas.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="forncedor_20" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\forncedor_20.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="estoque_20" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\estoque_20.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

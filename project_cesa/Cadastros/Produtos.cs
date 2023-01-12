@@ -42,11 +42,11 @@ namespace project_cesa.Cadastros
             // Visibilidade das colunas no Grid
             Grid.Columns[0].Visible = false;
             Grid.Columns[5].Visible = false;
-            Grid.Columns[7].Visible = false;
             Grid.Columns[9].Visible = false;
 
             //FORMATAR COLUNA PARA MOEDA
             Grid.Columns[6].DefaultCellStyle.Format = "C2";
+            Grid.Columns[7].DefaultCellStyle.Format = "C2";
 
             // O Header so fica centralizado se desabilitar a propriedade de ordenacao
             Grid.Columns[2].HeaderCell.Style.Alignment = DataGridViewContentAlignment.MiddleCenter;
@@ -57,6 +57,8 @@ namespace project_cesa.Cadastros
             Grid.Columns[4].SortMode = DataGridViewColumnSortMode.NotSortable;
             Grid.Columns[6].HeaderCell.Style.Alignment = DataGridViewContentAlignment.MiddleCenter;
             Grid.Columns[6].SortMode = DataGridViewColumnSortMode.NotSortable;
+            Grid.Columns[7].HeaderCell.Style.Alignment = DataGridViewContentAlignment.MiddleCenter;
+            Grid.Columns[7].SortMode = DataGridViewColumnSortMode.NotSortable;
             Grid.Columns[8].HeaderCell.Style.Alignment = DataGridViewContentAlignment.MiddleCenter;
             Grid.Columns[8].SortMode = DataGridViewColumnSortMode.NotSortable;
 
@@ -65,14 +67,16 @@ namespace project_cesa.Cadastros
             Grid.Columns[3].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
             Grid.Columns[4].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
             Grid.Columns[6].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
+            Grid.Columns[7].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
             Grid.Columns[8].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
 
             // Define o tamanho das celulas
-            Grid.Columns[1].Width = 140;
-            Grid.Columns[2].Width = 150;
-            Grid.Columns[3].Width = 150;
-            Grid.Columns[4].Width = 80;
-            Grid.Columns[6].Width = 90;
+            Grid.Columns[1].Width = 120;
+            Grid.Columns[2].Width = 120;
+            Grid.Columns[3].Width = 120;
+            Grid.Columns[4].Width = 75;
+            Grid.Columns[6].Width = 85;
+            Grid.Columns[7].Width = 80;
         }
 
         private void Listar()
@@ -300,6 +304,17 @@ namespace project_cesa.Cadastros
             LimparCampos();
         }
 
+        private void Grid_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (Program.chamadaProduto == "estoque")
+            {
+                Program.idProduto = Grid.CurrentRow.Cells[0].Value.ToString();
+                Program.nomeProduto = Grid.CurrentRow.Cells[1].Value.ToString();
+                Program.estoqueProduto = Grid.CurrentRow.Cells[4].Value.ToString();
+                Close();
+            }
+        }
+
         private void Grid_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             idSelecionado = Grid.CurrentRow.Cells[0].Value.ToString();
@@ -358,6 +373,6 @@ namespace project_cesa.Cadastros
                 pictureBox1.ImageLocation = foto;
                 alterou = "1";
             }
-        }
+        }        
     }
 }
