@@ -31,6 +31,12 @@ namespace project_cesa
         public static string nomeHorario;
         public static string diaHorario;
 
+        // Variaveis globais Produtos
+        public static string chamadaProduto;
+        public static string idProduto;
+        public static string nomeProduto;
+        public static string estoqueProduto;
+
         /// <summary>
         /// Ponto de entrada principal para o aplicativo.
         /// </summary>
