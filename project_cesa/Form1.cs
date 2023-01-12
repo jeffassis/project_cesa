@@ -197,7 +197,8 @@ namespace project_cesa
 
         private void CadastrosProduto_Click(object sender, EventArgs e)
         {
-
+            Cadastros.FrmProdutos form = new Cadastros.FrmProdutos();
+            AbreForm(2, form);
         }
     }
 }
