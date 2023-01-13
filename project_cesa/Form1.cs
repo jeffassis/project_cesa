@@ -208,5 +208,11 @@ namespace project_cesa
             Financeiro.FrmEstoque form = new Financeiro.FrmEstoque();
             AbreForm(2, form);
         }
+
+        private void FinanceiroVenda_Click(object sender, EventArgs e)
+        {
+            Financeiro.FrmVendas form = new Financeiro.FrmVendas();
+            AbreForm(2, form);
+        }
     }
 }

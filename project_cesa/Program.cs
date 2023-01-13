@@ -14,6 +14,7 @@ namespace project_cesa
 
         // Variaveis globais de controle de usuario
         public static string versao = "1.0";
+        public static string nomeUsuario;
         public static Boolean logado = false;
         public static int nivel = 0; // 0= Basico, 1= Gerente. 2= Master
 
@@ -36,6 +37,7 @@ namespace project_cesa
         public static string idProduto;
         public static string nomeProduto;
         public static string estoqueProduto;
+        public static string valorProduto;
 
         /// <summary>
         /// Ponto de entrada principal para o aplicativo.

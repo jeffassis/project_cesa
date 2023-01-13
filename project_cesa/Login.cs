@@ -53,6 +53,7 @@ namespace project_cesa
                 form1.pictureBox1.Image = Properties.Resources.led_green;
 
                 Program.nivel = int.Parse(dt.Rows[0].Field<Int64>("nivel").ToString());
+                Program.nomeUsuario = dt.Rows[0].Field<string>("username");
                 Program.logado = true;
                 this.Close();
             }

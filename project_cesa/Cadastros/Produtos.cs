@@ -311,6 +311,7 @@ namespace project_cesa.Cadastros
                 Program.idProduto = Grid.CurrentRow.Cells[0].Value.ToString();
                 Program.nomeProduto = Grid.CurrentRow.Cells[1].Value.ToString();
                 Program.estoqueProduto = Grid.CurrentRow.Cells[4].Value.ToString();
+                Program.valorProduto = Grid.CurrentRow.Cells[6].Value.ToString();
                 Close();
             }
         }
