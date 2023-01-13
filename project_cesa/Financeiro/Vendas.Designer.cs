@@ -57,6 +57,7 @@ namespace project_cesa.Financeiro
             this.GridDetalhes = new System.Windows.Forms.DataGridView();
             this.BtnFecharGrid = new System.Windows.Forms.Button();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.BtnImprimir = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Grid)).BeginInit();
             this.panel1.SuspendLayout();
@@ -356,12 +357,23 @@ namespace project_cesa.Financeiro
             // pictureBox2
             // 
             this.pictureBox2.Image = global::project_cesa.Properties.Resources.cesa;
-            this.pictureBox2.Location = new System.Drawing.Point(387, 12);
+            this.pictureBox2.Location = new System.Drawing.Point(457, 12);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(111, 105);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox2.TabIndex = 57;
             this.pictureBox2.TabStop = false;
+            // 
+            // BtnImprimir
+            // 
+            this.BtnImprimir.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.BtnImprimir.Image = global::project_cesa.Properties.Resources.imprimir_48;
+            this.BtnImprimir.Location = new System.Drawing.Point(335, 38);
+            this.BtnImprimir.Name = "BtnImprimir";
+            this.BtnImprimir.Size = new System.Drawing.Size(60, 60);
+            this.BtnImprimir.TabIndex = 58;
+            this.BtnImprimir.UseVisualStyleBackColor = true;
+            this.BtnImprimir.Click += new System.EventHandler(this.BtnImprimir_Click);
             // 
             // FrmVendas
             // 
@@ -369,6 +381,7 @@ namespace project_cesa.Financeiro
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.InactiveCaption;
             this.ClientSize = new System.Drawing.Size(594, 436);
+            this.Controls.Add(this.BtnImprimir);
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.BtnFecharGrid);
             this.Controls.Add(this.GridDetalhes);
@@ -431,5 +444,6 @@ namespace project_cesa.Financeiro
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Button BtnFecharGrid;
         private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.Button BtnImprimir;
     }
 }

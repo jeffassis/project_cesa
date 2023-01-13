@@ -301,6 +301,18 @@
     <Compile Include="Relatorios\Relatorio_Turma.Designer.cs">
       <DependentUpon>Relatorio_Turma.cs</DependentUpon>
     </Compile>
+    <Compile Include="Relatorios\Relatorio_Venda.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Relatorios\Relatorio_Venda.Designer.cs">
+      <DependentUpon>Relatorio_Venda.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Relatorios\Relatorio_VendaPeriodo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Relatorios\Relatorio_VendaPeriodo.Designer.cs">
+      <DependentUpon>Relatorio_VendaPeriodo.cs</DependentUpon>
+    </Compile>
     <Compile Include="SqlServerTypes\Loader.cs" />
     <EmbeddedResource Include="Cadastros\Aluno.resx">
       <DependentUpon>Aluno.cs</DependentUpon>
@@ -393,10 +405,18 @@
     <EmbeddedResource Include="Relatorios\Relatorio_Turma.resx">
       <DependentUpon>Relatorio_Turma.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Relatorios\Relatorio_Venda.resx">
+      <DependentUpon>Relatorio_Venda.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Relatorios\Relatorio_VendaPeriodo.resx">
+      <DependentUpon>Relatorio_VendaPeriodo.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Relatorios\RelBoletimAluno.rdlc" />
     <EmbeddedResource Include="Relatorios\RelBoletimFinal.rdlc" />
     <EmbeddedResource Include="Relatorios\RelHorario.rdlc" />
     <EmbeddedResource Include="Relatorios\RelTurma1.rdlc" />
+    <EmbeddedResource Include="Relatorios\RelVenda.rdlc" />
+    <EmbeddedResource Include="Relatorios\RelVendaPeriodo.rdlc" />
     <None Include="packages.config" />
     <None Include="project_escolaDataSet.xsc">
       <DependentUpon>project_escolaDataSet.xsd</DependentUpon>
@@ -544,6 +564,7 @@
     <None Include="Resources\bt_save_48.png" />
     <None Include="Resources\estoque_20.png" />
     <None Include="Resources\venda_20.png" />
+    <None Include="Resources\cantina_20.png" />
     <Content Include="SqlServerTypes\readme.htm" />
     <Content Include="SqlServerTypes\x64\msvcr120.dll">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>

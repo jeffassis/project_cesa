@@ -400,11 +400,13 @@ namespace project_cesa.Financeiro
 
         private void Grid_CellClick(object sender, DataGridViewCellEventArgs e)
         {
+            // Passa o id_venda para o relatorio
+            Program.idVenda = Grid.CurrentRow.Cells[0].Value.ToString();
+
             statusVenda = Grid.CurrentRow.Cells[3].Value.ToString();            
             if (statusVenda == "Efetuada")
             {
                 idVenda = Grid.CurrentRow.Cells[0].Value.ToString();
-                // Program.idVenda = Grid.CurrentRow.Cells[0].Value.ToString();
                 totalVenda = Grid.CurrentRow.Cells[1].Value.ToString();
                 lblTotal.Text = string.Format("{0:c2}", totalVenda);
                 BuscarDetalhesVenda();
@@ -413,7 +415,7 @@ namespace project_cesa.Financeiro
                 BtnRemove.Enabled = true;
                 BtnDelete.Enabled = true;
                 exclusaoVenda = "1";
-                //BtnRel.Enabled = true;
+                BtnImprimir.Enabled = true;
             }
             else
             {
@@ -426,6 +428,7 @@ namespace project_cesa.Financeiro
             string sql = "SELECT * FROM tb_detalhe_venda WHERE venda_id="+ idVenda;
             dt = Conexao.dql(sql);
             GridDetalhes.DataSource = dt;
+            
 
             FormatarDGDetalhes();
             GridDetalhes.Visible = true;
@@ -476,6 +479,13 @@ namespace project_cesa.Financeiro
         private void DtBuscar_ValueChanged(object sender, EventArgs e)
         {
             BuscarData();
+        }
+
+        private void BtnImprimir_Click(object sender, EventArgs e)
+        {
+
+            Relatorios.FrmRelatorio_Venda form = new Relatorios.FrmRelatorio_Venda();
+            form.Show();
         }
     }
 }

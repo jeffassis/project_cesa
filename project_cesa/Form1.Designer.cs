@@ -53,18 +53,20 @@
             this.PedagogicoTurmas = new System.Windows.Forms.ToolStripMenuItem();
             this.PedagogicoTurmaMont = new System.Windows.Forms.ToolStripMenuItem();
             this.Financeiro = new System.Windows.Forms.ToolStripMenuItem();
-            this.FinanceiroEstoque = new System.Windows.Forms.ToolStripMenuItem();
+            this.FinanceiroCantina = new System.Windows.Forms.ToolStripMenuItem();
+            this.FinanceiroCantinaEstoque = new System.Windows.Forms.ToolStripMenuItem();
+            this.FinanceiroCantinaVenda = new System.Windows.Forms.ToolStripMenuItem();
             this.FinanceiroMensalidades = new System.Windows.Forms.ToolStripMenuItem();
-            this.FinanceiroVenda = new System.Windows.Forms.ToolStripMenuItem();
             this.FinanceiroMovimentacao = new System.Windows.Forms.ToolStripMenuItem();
             this.Relatorios = new System.Windows.Forms.ToolStripMenuItem();
             this.RelDocumentos = new System.Windows.Forms.ToolStripMenuItem();
             this.RelDocumentosCircular = new System.Windows.Forms.ToolStripMenuItem();
             this.RelDocumentosDeclaracao = new System.Windows.Forms.ToolStripMenuItem();
             this.RelDocumentosHistorico = new System.Windows.Forms.ToolStripMenuItem();
-            this.RelatoriosTurmas = new System.Windows.Forms.ToolStripMenuItem();
             this.RelatorioHora = new System.Windows.Forms.ToolStripMenuItem();
             this.RelHoraProf = new System.Windows.Forms.ToolStripMenuItem();
+            this.RelatoriosTurmas = new System.Windows.Forms.ToolStripMenuItem();
+            this.RelatorioVendaPeriodo = new System.Windows.Forms.ToolStripMenuItem();
             this.Eventos = new System.Windows.Forms.ToolStripMenuItem();
             this.Usuarios = new System.Windows.Forms.ToolStripMenuItem();
             this.UsuariosGestao = new System.Windows.Forms.ToolStripMenuItem();
@@ -309,23 +311,40 @@
             // Financeiro
             // 
             this.Financeiro.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.FinanceiroEstoque,
+            this.FinanceiroCantina,
             this.FinanceiroMensalidades,
-            this.FinanceiroMovimentacao,
-            this.FinanceiroVenda});
+            this.FinanceiroMovimentacao});
             this.Financeiro.Font = new System.Drawing.Font("Calisto MT", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Financeiro.Image = global::project_cesa.Properties.Resources.financeiro_20;
             this.Financeiro.Name = "Financeiro";
             this.Financeiro.Size = new System.Drawing.Size(95, 20);
             this.Financeiro.Text = "Financeiro";
             // 
-            // FinanceiroEstoque
+            // FinanceiroCantina
             // 
-            this.FinanceiroEstoque.Image = global::project_cesa.Properties.Resources.estoque_20;
-            this.FinanceiroEstoque.Name = "FinanceiroEstoque";
-            this.FinanceiroEstoque.Size = new System.Drawing.Size(180, 22);
-            this.FinanceiroEstoque.Text = "Estoque";
-            this.FinanceiroEstoque.Click += new System.EventHandler(this.FinanceiroEstoque_Click);
+            this.FinanceiroCantina.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.FinanceiroCantinaEstoque,
+            this.FinanceiroCantinaVenda});
+            this.FinanceiroCantina.Image = global::project_cesa.Properties.Resources.cantina_20;
+            this.FinanceiroCantina.Name = "FinanceiroCantina";
+            this.FinanceiroCantina.Size = new System.Drawing.Size(180, 22);
+            this.FinanceiroCantina.Text = "Cantina";
+            // 
+            // FinanceiroCantinaEstoque
+            // 
+            this.FinanceiroCantinaEstoque.Image = global::project_cesa.Properties.Resources.estoque_20;
+            this.FinanceiroCantinaEstoque.Name = "FinanceiroCantinaEstoque";
+            this.FinanceiroCantinaEstoque.Size = new System.Drawing.Size(119, 22);
+            this.FinanceiroCantinaEstoque.Text = "Estoque";
+            this.FinanceiroCantinaEstoque.Click += new System.EventHandler(this.FinanceiroCantinaEstoque_Click);
+            // 
+            // FinanceiroCantinaVenda
+            // 
+            this.FinanceiroCantinaVenda.Image = global::project_cesa.Properties.Resources.venda_20;
+            this.FinanceiroCantinaVenda.Name = "FinanceiroCantinaVenda";
+            this.FinanceiroCantinaVenda.Size = new System.Drawing.Size(119, 22);
+            this.FinanceiroCantinaVenda.Text = "Vendas";
+            this.FinanceiroCantinaVenda.Click += new System.EventHandler(this.FinanceiroCantinaVenda_Click);
             // 
             // FinanceiroMensalidades
             // 
@@ -333,14 +352,6 @@
             this.FinanceiroMensalidades.Name = "FinanceiroMensalidades";
             this.FinanceiroMensalidades.Size = new System.Drawing.Size(180, 22);
             this.FinanceiroMensalidades.Text = "Mensalidades";
-            // 
-            // FinanceiroVenda
-            // 
-            this.FinanceiroVenda.Image = global::project_cesa.Properties.Resources.venda_20;
-            this.FinanceiroVenda.Name = "FinanceiroVenda";
-            this.FinanceiroVenda.Size = new System.Drawing.Size(180, 22);
-            this.FinanceiroVenda.Text = "Vendas";
-            this.FinanceiroVenda.Click += new System.EventHandler(this.FinanceiroVenda_Click);
             // 
             // FinanceiroMovimentacao
             // 
@@ -354,8 +365,9 @@
             // 
             this.Relatorios.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.RelDocumentos,
+            this.RelatorioHora,
             this.RelatoriosTurmas,
-            this.RelatorioHora});
+            this.RelatorioVendaPeriodo});
             this.Relatorios.Font = new System.Drawing.Font("Calisto MT", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Relatorios.Image = global::project_cesa.Properties.Resources.menuReports;
             this.Relatorios.Name = "Relatorios";
@@ -370,7 +382,7 @@
             this.RelDocumentosHistorico});
             this.RelDocumentos.Image = global::project_cesa.Properties.Resources.documentos_20;
             this.RelDocumentos.Name = "RelDocumentos";
-            this.RelDocumentos.Size = new System.Drawing.Size(145, 22);
+            this.RelDocumentos.Size = new System.Drawing.Size(183, 22);
             this.RelDocumentos.Text = "Documentos";
             // 
             // RelDocumentosCircular
@@ -394,21 +406,13 @@
             this.RelDocumentosHistorico.Size = new System.Drawing.Size(142, 22);
             this.RelDocumentosHistorico.Text = "Históricos";
             // 
-            // RelatoriosTurmas
-            // 
-            this.RelatoriosTurmas.Image = global::project_cesa.Properties.Resources.turma;
-            this.RelatoriosTurmas.Name = "RelatoriosTurmas";
-            this.RelatoriosTurmas.Size = new System.Drawing.Size(145, 22);
-            this.RelatoriosTurmas.Text = "Turmas";
-            this.RelatoriosTurmas.Click += new System.EventHandler(this.RelatoriosTurmas_Click);
-            // 
             // RelatorioHora
             // 
             this.RelatorioHora.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.RelHoraProf});
             this.RelatorioHora.Image = global::project_cesa.Properties.Resources.clock1;
             this.RelatorioHora.Name = "RelatorioHora";
-            this.RelatorioHora.Size = new System.Drawing.Size(145, 22);
+            this.RelatorioHora.Size = new System.Drawing.Size(183, 22);
             this.RelatorioHora.Text = "Horários";
             // 
             // RelHoraProf
@@ -418,6 +422,22 @@
             this.RelHoraProf.Size = new System.Drawing.Size(126, 22);
             this.RelHoraProf.Text = "Professor";
             this.RelHoraProf.Click += new System.EventHandler(this.RelHoraProf_Click);
+            // 
+            // RelatoriosTurmas
+            // 
+            this.RelatoriosTurmas.Image = global::project_cesa.Properties.Resources.turma;
+            this.RelatoriosTurmas.Name = "RelatoriosTurmas";
+            this.RelatoriosTurmas.Size = new System.Drawing.Size(183, 22);
+            this.RelatoriosTurmas.Text = "Turmas";
+            this.RelatoriosTurmas.Click += new System.EventHandler(this.RelatoriosTurmas_Click);
+            // 
+            // RelatorioVendaPeriodo
+            // 
+            this.RelatorioVendaPeriodo.Image = global::project_cesa.Properties.Resources.venda_20;
+            this.RelatorioVendaPeriodo.Name = "RelatorioVendaPeriodo";
+            this.RelatorioVendaPeriodo.Size = new System.Drawing.Size(183, 22);
+            this.RelatorioVendaPeriodo.Text = "Vendas por Periodo";
+            this.RelatorioVendaPeriodo.Click += new System.EventHandler(this.RelatorioVendaPeriodo_Click);
             // 
             // Eventos
             // 
@@ -736,13 +756,15 @@
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator1;
         private System.Windows.Forms.ToolStripMenuItem CadastrosProduto;
         private System.Windows.Forms.ToolStripMenuItem CadastrosServico;
-        private System.Windows.Forms.ToolStripMenuItem FinanceiroVenda;
         private System.Windows.Forms.ToolStripMenuItem FinanceiroMovimentacao;
         private System.Windows.Forms.ToolStripMenuItem CadastrosHorario;
         private System.Windows.Forms.ToolStripMenuItem CadastrosTurmas;
         private System.Windows.Forms.ToolStripMenuItem CadastrosDisciplinas;
         private System.Windows.Forms.ToolStripMenuItem CadastrosFornecedor;
-        private System.Windows.Forms.ToolStripMenuItem FinanceiroEstoque;
+        private System.Windows.Forms.ToolStripMenuItem FinanceiroCantina;
+        private System.Windows.Forms.ToolStripMenuItem FinanceiroCantinaEstoque;
+        private System.Windows.Forms.ToolStripMenuItem FinanceiroCantinaVenda;
+        private System.Windows.Forms.ToolStripMenuItem RelatorioVendaPeriodo;
     }
 }
 
