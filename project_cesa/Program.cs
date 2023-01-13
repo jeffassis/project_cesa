@@ -39,6 +39,8 @@ namespace project_cesa
         public static string estoqueProduto;
         public static string valorProduto;
 
+        public static string idVenda;
+
         /// <summary>
         /// Ponto de entrada principal para o aplicativo.
         /// </summary>

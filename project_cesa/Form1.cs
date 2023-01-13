@@ -203,16 +203,22 @@ namespace project_cesa
             AbreForm(2, form);
         }
 
-        private void FinanceiroEstoque_Click(object sender, EventArgs e)
+        private void FinanceiroCantinaEstoque_Click(object sender, EventArgs e)
         {
             Financeiro.FrmEstoque form = new Financeiro.FrmEstoque();
             AbreForm(2, form);
         }
 
-        private void FinanceiroVenda_Click(object sender, EventArgs e)
+        private void FinanceiroCantinaVenda_Click(object sender, EventArgs e)
         {
             Financeiro.FrmVendas form = new Financeiro.FrmVendas();
             AbreForm(2, form);
+        }
+
+        private void RelatorioVendaPeriodo_Click(object sender, EventArgs e)
+        {
+            Relatorios.Relatorio_VendaPeriodo form = new Relatorios.Relatorio_VendaPeriodo();
+            AbreForm(0, form);
         }
     }
 }
