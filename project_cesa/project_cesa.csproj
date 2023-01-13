@@ -195,6 +195,12 @@
     <Compile Include="Financeiro\Movimentacao.Designer.cs">
       <DependentUpon>Movimentacao.cs</DependentUpon>
     </Compile>
+    <Compile Include="Financeiro\Vendas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Financeiro\Vendas.Designer.cs">
+      <DependentUpon>Vendas.cs</DependentUpon>
+    </Compile>
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -328,6 +334,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Financeiro\Movimentacao.resx">
       <DependentUpon>Movimentacao.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Financeiro\Vendas.resx">
+      <DependentUpon>Vendas.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
@@ -533,6 +542,8 @@
     <None Include="Resources\movimentacao.png" />
     <None Include="Resources\forncedor_20.png" />
     <None Include="Resources\bt_save_48.png" />
+    <None Include="Resources\estoque_20.png" />
+    <None Include="Resources\venda_20.png" />
     <Content Include="SqlServerTypes\readme.htm" />
     <Content Include="SqlServerTypes\x64\msvcr120.dll">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>

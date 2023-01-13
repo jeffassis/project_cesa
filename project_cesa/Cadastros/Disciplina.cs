@@ -139,10 +139,7 @@ namespace project_cesa.Cadastros
                 {
                     // ADICIONA A CONSULTA A STRING
                     string queryUpdate = String.Format(@"
-                        UPDATE tb_disciplina SET 
-                            nome='{0}'
-                        WHERE
-                            id_disciplina={1}
+                        UPDATE tb_disciplina SET nome='{0}' WHERE id_disciplina={1}
                     ", txtNome.Text, idSelecionado);
                     // VERIFICA SE JA EXISTE
                     if (txtNome.Text != DisciplinaAntigo)
