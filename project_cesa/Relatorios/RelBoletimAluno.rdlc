@@ -572,7 +572,7 @@
   <Width>6.5in</Width>
   <Page>
     <PageHeader>
-      <Height>3.175cm</Height>
+      <Height>3.81cm</Height>
       <PrintOnFirstPage>true</PrintOnFirstPage>
       <PrintOnLastPage>true</PrintOnLastPage>
       <ReportItems>
@@ -642,7 +642,7 @@
             </Paragraph>
           </Paragraphs>
           <rd:DefaultName>Textbox8</rd:DefaultName>
-          <Top>2.37091cm</Top>
+          <Top>3.00591cm</Top>
           <Left>9.99955cm</Left>
           <Height>0.6cm</Height>
           <Width>6.09833cm</Width>
@@ -665,7 +665,7 @@
               <TextRuns>
                 <TextRun>
                   <Value>Estrada Santana Nº188
-Cacuia, Nova Iguaçu - RJ</Value>
+Cacuia, Nova Iguaçu / RJ</Value>
                   <Style>
                     <Color>Gray</Color>
                   </Style>
@@ -695,11 +695,33 @@ Cacuia, Nova Iguaçu - RJ</Value>
               </TextRuns>
               <Style />
             </Paragraph>
+            <Paragraph>
+              <TextRuns>
+                <TextRun>
+                  <Value>INEP: 33058130</Value>
+                  <Style>
+                    <Color>Gray</Color>
+                  </Style>
+                </TextRun>
+              </TextRuns>
+              <Style />
+            </Paragraph>
+            <Paragraph>
+              <TextRuns>
+                <TextRun>
+                  <Value>Tel: (21) 98054-3457</Value>
+                  <Style>
+                    <Color>Gray</Color>
+                  </Style>
+                </TextRun>
+              </TextRuns>
+              <Style />
+            </Paragraph>
           </Paragraphs>
           <rd:DefaultName>Textbox15</rd:DefaultName>
           <Top>1.05986cm</Top>
           <Left>3.25267cm</Left>
-          <Height>1.97403cm</Height>
+          <Height>2.7325cm</Height>
           <Width>6.6569cm</Width>
           <ZIndex>3</ZIndex>
           <Style>

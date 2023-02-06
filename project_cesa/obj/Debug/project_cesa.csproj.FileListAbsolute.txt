@@ -128,3 +128,4 @@ C:\Users\cmdtj\OneDrive\Área de Trabalho\Apps\project_cesa\project_cesa\obj\Deb
 C:\Users\cmdtj\OneDrive\Área de Trabalho\Apps\project_cesa\project_cesa\obj\Debug\project_cesa.Financeiro.FrmVendas.resources
 C:\Users\cmdtj\OneDrive\Área de Trabalho\Apps\project_cesa\project_cesa\obj\Debug\project_cesa.Relatorios.FrmRelatorio_Venda.resources
 C:\Users\cmdtj\OneDrive\Área de Trabalho\Apps\project_cesa\project_cesa\obj\Debug\project_cesa.Relatorios.Relatorio_VendaPeriodo.resources
+C:\Users\cmdtj\OneDrive\Área de Trabalho\Apps\project_cesa\project_cesa\obj\Debug\project_cesa.Financeiro.FrmGastos.resources

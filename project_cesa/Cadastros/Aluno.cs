@@ -322,8 +322,10 @@ namespace project_cesa.Cadastros
 
         private void BtnFoto_Click(object sender, EventArgs e)
         {
-            OpenFileDialog dialog = new OpenFileDialog();
-            dialog.Filter = "Imagens(*.jpg;*.png)|*.jpg;*.png|Todos os Arquivos(*.*)|*.*";
+            OpenFileDialog dialog = new OpenFileDialog
+            {
+                Filter = "Imagens(*.jpg;*.png)|*.jpg;*.png|Todos os Arquivos(*.*)|*.*"
+            };
             if (dialog.ShowDialog() == DialogResult.OK)
             {
                 foto = dialog.FileName.ToString();

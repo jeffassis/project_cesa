@@ -19,7 +19,6 @@ namespace project_cesa.Financeiro
         string totalVenda;
         string ultimoIdVenda;
         string exclusaoVenda;
-        string statusVenda;
 
         MySqlCommand cmd;
         DataTable dt = new DataTable();
@@ -67,7 +66,7 @@ namespace project_cesa.Financeiro
 
         private void ListarVendas()
         {
-            string queryListar = @"SELECT * FROM tb_venda ORDER BY data asc";
+            string queryListar = @"SELECT * FROM tb_venda ORDER BY data desc";
             Grid.DataSource = Conexao.dql(queryListar);
 
             FormatarDGVendas();
@@ -132,27 +131,30 @@ namespace project_cesa.Financeiro
 
         private void HabilitarCampos()
         {
-            BtnRemove.Enabled = true;
-            BtnAdd.Enabled = true;
-            BtnProduto.Enabled = true;
             txtQuantidade.Enabled = true;
+            BtnProduto.Enabled = true;
+            BtnAdd.Enabled = true;
+            BtnRemove.Enabled = true;
             txtQuantidade.Focus();
         }
 
         private void DesabilitarCampos()
         {
+            txtProduto.Enabled = false;
+            txtQuantidade.Enabled = false;
+            txtEstoque.Enabled = false;
+            txtValor.Enabled = false;
+            BtnProduto.Enabled = false;
             BtnRemove.Enabled = false;
             BtnAdd.Enabled = false;
-            BtnProduto.Enabled = false;
-            txtQuantidade.Enabled = false;
         }
 
         private void LimparCampos()
         {
             txtProduto.Text = "";
-            txtEstoque.Text = "";
             txtQuantidade.Text = "";
             txtValor.Text = "";
+            txtEstoque.Text = "";
             lblTotal.Text = "0";
         }
 
@@ -162,8 +164,7 @@ namespace project_cesa.Financeiro
             string sql = "SELECT * FROM tb_venda where data = @data order by data desc";
             cmd = new MySqlCommand(sql, vcon);
             cmd.Parameters.AddWithValue("@data", Convert.ToDateTime(DtBuscar.Text));
-            MySqlDataAdapter da = new MySqlDataAdapter();
-            da.SelectCommand = cmd;
+            MySqlDataAdapter da = new MySqlDataAdapter { SelectCommand = cmd };
             DataTable dt = new DataTable();
             da.Fill(dt);
             Grid.DataSource = dt;
@@ -174,23 +175,20 @@ namespace project_cesa.Financeiro
             FormatarDGVendas();
         }
 
-        private void BtnFechar_Click(object sender, EventArgs e)
-        {
-            Close();
-        }
-
         private void FrmVendas_Load(object sender, EventArgs e)
         {            
             ListarVendas();
+            DesabilitarCampos();
             totalVenda = "0";
             DtBuscar.Value = DateTime.Today;
         }
 
         private void BtnNovo_Click(object sender, EventArgs e)
         {
-            BtnSave.Enabled = true;
-            BtnDelete.Enabled = false;
             HabilitarCampos();
+            BtnSave.Enabled = true;
+            BtnNovo.Enabled = false;
+            BtnDelete.Enabled = false;
         }
 
         private void BtnSave_Click(object sender, EventArgs e)
@@ -224,10 +222,22 @@ namespace project_cesa.Financeiro
                     ultimoIdVenda = Convert.ToString(reader["id_venda"]);
                 }
             }
+            //SALVAR VENDA NA TABELA DE MOVIMENTACAO
+            var movCon = Conexao.ConexaoBanco();
+            string movimento = @"INSERT INTO tb_movimentacao (tipo, movimento, valor, funcionario, data, id_movimento) 
+                            VALUES (@tipo, @movimento, @valor, @funcionario, curDate(), @id_movimento)";
+            cmd = new MySqlCommand(movimento, movCon);
+            cmd.Parameters.AddWithValue("@tipo", "Entrada");
+            cmd.Parameters.AddWithValue("@movimento", "Venda");
+            cmd.Parameters.AddWithValue("@valor", Convert.ToDouble(totalVenda));
+            cmd.Parameters.AddWithValue("@funcionario", Program.nomeUsuario);
+            cmd.Parameters.AddWithValue("@id_movimento", ultimoIdVenda);
+            cmd.ExecuteNonQuery();
+            movCon.Close();
 
             //RELACIONAR OS ITENS COM A VENDA
             var upcon = Conexao.ConexaoBanco();
-            string update = @"UPDATE tb_detalhe_venda SET venda_id=@venda_id WHERE  venda_id=@id";
+            string update = @"UPDATE tb_detalhe_venda SET venda_id=@venda_id WHERE venda_id=@id";
             cmd = new MySqlCommand(update, upcon);
             cmd.Parameters.AddWithValue("@id", "0");
             cmd.Parameters.AddWithValue("@venda_id", ultimoIdVenda);
@@ -237,6 +247,8 @@ namespace project_cesa.Financeiro
             vcon.ClearAllPoolsAsync();
 
             MessageBox.Show("Venda Salva com Sucesso!", "Dados Salvo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            BtnNovo.Enabled = true;
+            BtnSave.Enabled = false;
             LimparCampos();
             DesabilitarCampos();
             ListarVendas();
@@ -273,7 +285,7 @@ namespace project_cesa.Financeiro
                 txtQuantidade.Focus();
                 return;
             }
-
+            //CODIGO DO BOTAO PARA SALVAR
             var vcon = Conexao.ConexaoBanco();
             string add = @"INSERT INTO tb_detalhe_venda (venda_id, produto, quantidade, valor_unitario, valor_total, funcionario, produto_id)
                          VALUES (@venda_id, @produto, @quantidade, @valor_unitario, @valor_total, @funcionario, @produto_id)";
@@ -292,10 +304,9 @@ namespace project_cesa.Financeiro
             var upcon = Conexao.ConexaoBanco();
             string update = @"UPDATE tb_produto SET estoque=@estoque where id_produto=@id";
             cmd = new MySqlCommand(update, upcon);
-            cmd.Parameters.AddWithValue("@estoque", Convert.ToInt32(txtEstoque.Text) - Convert.ToInt32(txtQuantidade.Text));
             cmd.Parameters.AddWithValue("@id", Program.idProduto);
-            // EXECUTA UPDATE
-            cmd.ExecuteNonQuery();
+            cmd.Parameters.AddWithValue("@estoque", Convert.ToInt32(txtEstoque.Text) - Convert.ToInt32(txtQuantidade.Text));            
+            cmd.ExecuteNonQuery(); // EXECUTA UPDATE
             upcon.Close();
             upcon.Dispose();
             upcon.ClearAllPoolsAsync();
@@ -329,7 +340,6 @@ namespace project_cesa.Financeiro
             var vcon = Conexao.ConexaoBanco();
             cmdVerificar = new MySqlCommand("SELECT * FROM tb_produto where id_produto=@id", vcon);
             cmdVerificar.Parameters.AddWithValue("@id", idProduto);
-
             reader = cmdVerificar.ExecuteReader();
             if (reader.HasRows)
             {
@@ -360,8 +370,8 @@ namespace project_cesa.Financeiro
             var upcon = Conexao.ConexaoBanco();
             string update = @"UPDATE tb_produto SET estoque=@estoque where id_produto=@id";
             cmd = new MySqlCommand(update, upcon);
-            cmd.Parameters.AddWithValue("@estoque", Convert.ToInt32(txtEstoque.Text) + Convert.ToInt32(txtQuantidade.Text));
             cmd.Parameters.AddWithValue("@id", idProduto);
+            cmd.Parameters.AddWithValue("@estoque", Convert.ToInt32(txtEstoque.Text) + Convert.ToInt32(txtQuantidade.Text));
             cmd.ExecuteNonQuery();
             upcon.Close();
             upcon.Dispose();
@@ -400,35 +410,24 @@ namespace project_cesa.Financeiro
 
         private void Grid_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            // Passa o id_venda para o relatorio
+            idVenda = Grid.CurrentRow.Cells[0].Value.ToString();
             Program.idVenda = Grid.CurrentRow.Cells[0].Value.ToString();
-
-            statusVenda = Grid.CurrentRow.Cells[3].Value.ToString();            
-            if (statusVenda == "Efetuada")
-            {
-                idVenda = Grid.CurrentRow.Cells[0].Value.ToString();
-                totalVenda = Grid.CurrentRow.Cells[1].Value.ToString();
-                lblTotal.Text = string.Format("{0:c2}", totalVenda);
-                BuscarDetalhesVenda();
-                BtnFecharGrid.Visible = true;
-                BtnAdd.Enabled = true;
-                BtnRemove.Enabled = true;
-                BtnDelete.Enabled = true;
-                exclusaoVenda = "1";
-                BtnImprimir.Enabled = true;
-            }
-            else
-            {
-                MessageBox.Show("Venda já foi cancelada!", "Venda cancelada", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-            }
+            totalVenda = Grid.CurrentRow.Cells[1].Value.ToString();
+            lblTotal.Text = string.Format("{0:c2}", totalVenda);
+            BuscarDetalhesVenda();
+            BtnFecharGrid.Visible = true;
+            BtnAdd.Enabled = true;
+            BtnRemove.Enabled = true;
+            BtnDelete.Enabled = true;
+            exclusaoVenda = "1";
+            BtnImprimir.Enabled = true;          
         }
 
         private void BuscarDetalhesVenda()
         {
             string sql = "SELECT * FROM tb_detalhe_venda WHERE venda_id="+ idVenda;
             dt = Conexao.dql(sql);
-            GridDetalhes.DataSource = dt;
-            
+            GridDetalhes.DataSource = dt;            
 
             FormatarDGDetalhes();
             GridDetalhes.Visible = true;
@@ -451,16 +450,16 @@ namespace project_cesa.Financeiro
                 {
                     //CÓDIGO DO BOTÃO PARA EXCLUIR
                     var vcon = Conexao.ConexaoBanco();
-                    string delete = "UPDATE tb_venda SET status=@status where id_venda= @id_venda";
-                    cmd = new MySqlCommand(delete, vcon);
+                    string cancela = "UPDATE tb_venda SET status=@status where id_venda=@id_venda";
+                    cmd = new MySqlCommand(cancela, vcon);
                     cmd.Parameters.AddWithValue("@status", "Cancelada");
                     cmd.Parameters.AddWithValue("@id_venda", idVenda);
                     cmd.ExecuteNonQuery();
                     vcon.Close();
                     vcon.Dispose();
-                    vcon.ClearAllPoolsAsync();
 
-                    MessageBox.Show("Venda cancelada com sucesso!", "Venda cancelada!", MessageBoxButtons.OK, MessageBoxIcon.Information);                    
+                    MessageBox.Show("Venda cancelada com sucesso!", "Venda cancelada!", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    BtnNovo.Enabled = true;
                     BtnDelete.Enabled = false;
                     LimparCampos();
                     DesabilitarCampos();
@@ -468,6 +467,17 @@ namespace project_cesa.Financeiro
                     totalVenda = "0";
                     exclusaoVenda = "";
                     BtnFecharGrid.Visible = false;
+
+                    //EXCLUSAO DO MOVIMENTO DA VENDA
+                    var delCon = Conexao.ConexaoBanco();
+                    string deleta = "DELETE FROM tb_movimentacao where id_movimento=@id and movimento=@movimento";
+                    cmd = new MySqlCommand(deleta, delCon);
+                    cmd.Parameters.AddWithValue("@id", idVenda);
+                    cmd.Parameters.AddWithValue("@movimento", "Venda");
+                    cmd.ExecuteNonQuery();
+                    delCon.Close();
+                    delCon.Dispose();
+                    delCon.ClearAllPoolsAsync();
                 }
             }
             else
@@ -483,7 +493,6 @@ namespace project_cesa.Financeiro
 
         private void BtnImprimir_Click(object sender, EventArgs e)
         {
-
             Relatorios.FrmRelatorio_Venda form = new Relatorios.FrmRelatorio_Venda();
             form.Show();
         }

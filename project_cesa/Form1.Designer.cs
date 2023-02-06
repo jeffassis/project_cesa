@@ -58,6 +58,8 @@
             this.FinanceiroCantinaVenda = new System.Windows.Forms.ToolStripMenuItem();
             this.FinanceiroMensalidades = new System.Windows.Forms.ToolStripMenuItem();
             this.FinanceiroMovimentacao = new System.Windows.Forms.ToolStripMenuItem();
+            this.FinanceiroMoviGastos = new System.Windows.Forms.ToolStripMenuItem();
+            this.FinanceiroMoviEntradaSaida = new System.Windows.Forms.ToolStripMenuItem();
             this.Relatorios = new System.Windows.Forms.ToolStripMenuItem();
             this.RelDocumentos = new System.Windows.Forms.ToolStripMenuItem();
             this.RelDocumentosCircular = new System.Windows.Forms.ToolStripMenuItem();
@@ -355,11 +357,29 @@
             // 
             // FinanceiroMovimentacao
             // 
+            this.FinanceiroMovimentacao.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.FinanceiroMoviEntradaSaida,
+            this.FinanceiroMoviGastos});
             this.FinanceiroMovimentacao.Image = global::project_cesa.Properties.Resources.movimentacao;
             this.FinanceiroMovimentacao.Name = "FinanceiroMovimentacao";
             this.FinanceiroMovimentacao.Size = new System.Drawing.Size(180, 22);
             this.FinanceiroMovimentacao.Text = "Movimentação";
-            this.FinanceiroMovimentacao.Click += new System.EventHandler(this.FinanceiroMovimentacao_Click);
+            // 
+            // FinanceiroMoviGastos
+            // 
+            this.FinanceiroMoviGastos.Image = global::project_cesa.Properties.Resources.gastos_20;
+            this.FinanceiroMoviGastos.Name = "FinanceiroMoviGastos";
+            this.FinanceiroMoviGastos.Size = new System.Drawing.Size(180, 22);
+            this.FinanceiroMoviGastos.Text = "Gastos";
+            this.FinanceiroMoviGastos.Click += new System.EventHandler(this.FinanceiroMoviGastos_Click);
+            // 
+            // FinanceiroMoviEntradaSaida
+            // 
+            this.FinanceiroMoviEntradaSaida.Image = global::project_cesa.Properties.Resources.entrada_saida_20;
+            this.FinanceiroMoviEntradaSaida.Name = "FinanceiroMoviEntradaSaida";
+            this.FinanceiroMoviEntradaSaida.Size = new System.Drawing.Size(180, 22);
+            this.FinanceiroMoviEntradaSaida.Text = "Entradas / Saidas";
+            this.FinanceiroMoviEntradaSaida.Click += new System.EventHandler(this.FinanceiroMoviEntradaSaida_Click);
             // 
             // Relatorios
             // 
@@ -765,6 +785,8 @@
         private System.Windows.Forms.ToolStripMenuItem FinanceiroCantinaEstoque;
         private System.Windows.Forms.ToolStripMenuItem FinanceiroCantinaVenda;
         private System.Windows.Forms.ToolStripMenuItem RelatorioVendaPeriodo;
+        private System.Windows.Forms.ToolStripMenuItem FinanceiroMoviGastos;
+        private System.Windows.Forms.ToolStripMenuItem FinanceiroMoviEntradaSaida;
     }
 }
 

@@ -189,6 +189,12 @@
     <Compile Include="Financeiro\Estoque.Designer.cs">
       <DependentUpon>Estoque.cs</DependentUpon>
     </Compile>
+    <Compile Include="Financeiro\Gastos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Financeiro\Gastos.Designer.cs">
+      <DependentUpon>Gastos.cs</DependentUpon>
+    </Compile>
     <Compile Include="Financeiro\Movimentacao.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -343,6 +349,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Financeiro\Estoque.resx">
       <DependentUpon>Estoque.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Financeiro\Gastos.resx">
+      <DependentUpon>Gastos.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Financeiro\Movimentacao.resx">
       <DependentUpon>Movimentacao.cs</DependentUpon>
@@ -565,6 +574,8 @@
     <None Include="Resources\estoque_20.png" />
     <None Include="Resources\venda_20.png" />
     <None Include="Resources\cantina_20.png" />
+    <None Include="Resources\gastos_20.png" />
+    <None Include="Resources\entrada_saida_20.png" />
     <Content Include="SqlServerTypes\readme.htm" />
     <Content Include="SqlServerTypes\x64\msvcr120.dll">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>

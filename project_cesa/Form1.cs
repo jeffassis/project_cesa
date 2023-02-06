@@ -184,12 +184,6 @@ namespace project_cesa
             AbreForm(2, form);
         }
 
-        private void FinanceiroMovimentacao_Click(object sender, EventArgs e)
-        {
-            Financeiro.FrmMovimentacao form = new Financeiro.FrmMovimentacao();
-            AbreForm(2, form);
-        }
-
         private void CadastrosFornecedor_Click(object sender, EventArgs e)
         {
             Cadastros.FrmFornecedor form = new Cadastros.FrmFornecedor();
@@ -219,6 +213,18 @@ namespace project_cesa
         {
             Relatorios.Relatorio_VendaPeriodo form = new Relatorios.Relatorio_VendaPeriodo();
             AbreForm(0, form);
+        }
+
+        private void FinanceiroMoviGastos_Click(object sender, EventArgs e)
+        {
+            Financeiro.FrmGastos form = new Financeiro.FrmGastos();
+            AbreForm(2, form);
+        }
+
+        private void FinanceiroMoviEntradaSaida_Click(object sender, EventArgs e)
+        {
+            Financeiro.FrmMovimentacao form = new Financeiro.FrmMovimentacao();
+            AbreForm(2, form);
         }
     }
 }

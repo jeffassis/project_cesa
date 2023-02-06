@@ -365,7 +365,7 @@
   <Width>6.5in</Width>
   <Page>
     <PageHeader>
-      <Height>3.38418cm</Height>
+      <Height>4.04688cm</Height>
       <PrintOnFirstPage>true</PrintOnFirstPage>
       <PrintOnLastPage>true</PrintOnLastPage>
       <ReportItems>
@@ -435,8 +435,8 @@
             </Paragraph>
           </Paragraphs>
           <rd:DefaultName>Textbox8</rd:DefaultName>
-          <Top>2.5196cm</Top>
-          <Left>10.11274cm</Left>
+          <Top>3.27049cm</Top>
+          <Left>10.05804cm</Left>
           <Height>0.6cm</Height>
           <Width>6.06305cm</Width>
           <ZIndex>2</ZIndex>
@@ -458,7 +458,7 @@
               <TextRuns>
                 <TextRun>
                   <Value>Estrada Santana Nº188
-Cacuia, Nova Iguaçu - RJ</Value>
+Cacuia, Nova Iguaçu / RJ</Value>
                   <Style>
                     <Color>Gray</Color>
                   </Style>
@@ -488,11 +488,33 @@ Cacuia, Nova Iguaçu - RJ</Value>
               </TextRuns>
               <Style />
             </Paragraph>
+            <Paragraph>
+              <TextRuns>
+                <TextRun>
+                  <Value>INEP: 33058130</Value>
+                  <Style>
+                    <Color>Gray</Color>
+                  </Style>
+                </TextRun>
+              </TextRuns>
+              <Style />
+            </Paragraph>
+            <Paragraph>
+              <TextRuns>
+                <TextRun>
+                  <Value>Tel: (21) 98054-3457</Value>
+                  <Style>
+                    <Color>Gray</Color>
+                  </Style>
+                </TextRun>
+              </TextRuns>
+              <Style />
+            </Paragraph>
           </Paragraphs>
           <rd:DefaultName>Textbox15</rd:DefaultName>
-          <Top>1.23376cm</Top>
-          <Left>3.38528cm</Left>
-          <Height>1.97403cm</Height>
+          <Top>1.31438cm</Top>
+          <Left>3.33058cm</Left>
+          <Height>2.7325cm</Height>
           <Width>6.6569cm</Width>
           <ZIndex>3</ZIndex>
           <Style>

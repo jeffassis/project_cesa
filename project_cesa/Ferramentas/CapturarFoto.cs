@@ -81,6 +81,7 @@ namespace project_cesa.Ferramentas
         private void CapturarFoto_FormClosing(object sender, FormClosingEventArgs e)
         {
             Encerrar();
+            this.Dispose();
         }
 
         private void FrmCapturarFoto_Load(object sender, EventArgs e)

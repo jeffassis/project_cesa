@@ -655,7 +655,7 @@
   <Width>6.5in</Width>
   <Page>
     <PageHeader>
-      <Height>3.25438cm</Height>
+      <Height>3.96876cm</Height>
       <PrintOnFirstPage>true</PrintOnFirstPage>
       <PrintOnLastPage>true</PrintOnLastPage>
       <ReportItems>
@@ -707,6 +707,39 @@
             <PaddingBottom>2pt</PaddingBottom>
           </Style>
         </Textbox>
+        <Textbox Name="Textbox8">
+          <CanGrow>true</CanGrow>
+          <KeepTogether>true</KeepTogether>
+          <Paragraphs>
+            <Paragraph>
+              <TextRuns>
+                <TextRun>
+                  <Value>=Now()</Value>
+                  <Style>
+                    <Format>D</Format>
+                    <Color>Gray</Color>
+                  </Style>
+                </TextRun>
+              </TextRuns>
+              <Style />
+            </Paragraph>
+          </Paragraphs>
+          <rd:DefaultName>Textbox8</rd:DefaultName>
+          <Top>3.1628cm</Top>
+          <Left>9.96428cm</Left>
+          <Height>0.6cm</Height>
+          <Width>6.09833cm</Width>
+          <ZIndex>2</ZIndex>
+          <Style>
+            <Border>
+              <Style>None</Style>
+            </Border>
+            <PaddingLeft>2pt</PaddingLeft>
+            <PaddingRight>2pt</PaddingRight>
+            <PaddingTop>2pt</PaddingTop>
+            <PaddingBottom>2pt</PaddingBottom>
+          </Style>
+        </Textbox>
         <Textbox Name="Textbox16">
           <CanGrow>true</CanGrow>
           <KeepTogether>true</KeepTogether>
@@ -715,7 +748,7 @@
               <TextRuns>
                 <TextRun>
                   <Value>Estrada Santana Nº188
-Cacuia, Nova Iguaçu - RJ</Value>
+Cacuia, Nova Iguaçu / RJ</Value>
                   <Style>
                     <Color>Gray</Color>
                   </Style>
@@ -745,33 +778,22 @@ Cacuia, Nova Iguaçu - RJ</Value>
               </TextRuns>
               <Style />
             </Paragraph>
-          </Paragraphs>
-          <rd:DefaultName>Textbox15</rd:DefaultName>
-          <Top>1.20793cm</Top>
-          <Left>3.13099cm</Left>
-          <Height>1.97403cm</Height>
-          <Width>6.6569cm</Width>
-          <ZIndex>2</ZIndex>
-          <Style>
-            <Border>
-              <Style>None</Style>
-            </Border>
-            <PaddingLeft>2pt</PaddingLeft>
-            <PaddingRight>2pt</PaddingRight>
-            <PaddingTop>2pt</PaddingTop>
-            <PaddingBottom>2pt</PaddingBottom>
-          </Style>
-        </Textbox>
-        <Textbox Name="Textbox8">
-          <CanGrow>true</CanGrow>
-          <KeepTogether>true</KeepTogether>
-          <Paragraphs>
             <Paragraph>
               <TextRuns>
                 <TextRun>
-                  <Value>=Now()</Value>
+                  <Value>INEP: 33058130</Value>
                   <Style>
-                    <Format>D</Format>
+                    <Color>Gray</Color>
+                  </Style>
+                </TextRun>
+              </TextRuns>
+              <Style />
+            </Paragraph>
+            <Paragraph>
+              <TextRuns>
+                <TextRun>
+                  <Value>Tel: (21) 98054-3457</Value>
+                  <Style>
                     <Color>Gray</Color>
                   </Style>
                 </TextRun>
@@ -779,11 +801,11 @@ Cacuia, Nova Iguaçu - RJ</Value>
               <Style />
             </Paragraph>
           </Paragraphs>
-          <rd:DefaultName>Textbox8</rd:DefaultName>
-          <Top>2.5278cm</Top>
-          <Left>9.96428cm</Left>
-          <Height>0.6cm</Height>
-          <Width>6.09833cm</Width>
+          <rd:DefaultName>Textbox15</rd:DefaultName>
+          <Top>1.18147cm</Top>
+          <Left>3.14684cm</Left>
+          <Height>2.7325cm</Height>
+          <Width>6.6569cm</Width>
           <ZIndex>3</ZIndex>
           <Style>
             <Border>

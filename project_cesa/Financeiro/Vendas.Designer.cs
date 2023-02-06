@@ -48,7 +48,6 @@ namespace project_cesa.Financeiro
             this.panel1 = new System.Windows.Forms.Panel();
             this.lblTotal = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
-            this.BtnFechar = new System.Windows.Forms.Button();
             this.BtnDelete = new System.Windows.Forms.Button();
             this.BtnSave = new System.Windows.Forms.Button();
             this.BtnNovo = new System.Windows.Forms.Button();
@@ -216,7 +215,6 @@ namespace project_cesa.Financeiro
             // 
             this.panel1.Controls.Add(this.lblTotal);
             this.panel1.Controls.Add(this.label6);
-            this.panel1.Controls.Add(this.BtnFechar);
             this.panel1.Controls.Add(this.BtnDelete);
             this.panel1.Controls.Add(this.BtnSave);
             this.panel1.Controls.Add(this.BtnNovo);
@@ -245,17 +243,6 @@ namespace project_cesa.Financeiro
             this.label6.Size = new System.Drawing.Size(41, 15);
             this.label6.TabIndex = 42;
             this.label6.Text = "Total:";
-            // 
-            // BtnFechar
-            // 
-            this.BtnFechar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.BtnFechar.Image = global::project_cesa.Properties.Resources.bt_fechar_24;
-            this.BtnFechar.Location = new System.Drawing.Point(545, 2);
-            this.BtnFechar.Name = "BtnFechar";
-            this.BtnFechar.Size = new System.Drawing.Size(36, 36);
-            this.BtnFechar.TabIndex = 4;
-            this.BtnFechar.UseVisualStyleBackColor = true;
-            this.BtnFechar.Click += new System.EventHandler(this.BtnFechar_Click);
             // 
             // BtnDelete
             // 
@@ -433,7 +420,6 @@ namespace project_cesa.Financeiro
         private System.Windows.Forms.DataGridView Grid;
         private System.Windows.Forms.DateTimePicker DtBuscar;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Button BtnFechar;
         private System.Windows.Forms.Button BtnDelete;
         private System.Windows.Forms.Button BtnSave;
         private System.Windows.Forms.Button BtnNovo;
